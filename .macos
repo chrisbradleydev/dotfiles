@@ -56,7 +56,6 @@ brew install \
     python \
     rust \
     watchman \
-    yarn \
     zsh \
     zsh-autosuggestions \
     zsh-completions
