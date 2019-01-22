@@ -56,7 +56,6 @@ brew install \
     python \
     rust \
     watchman \
-    yarn \
     zsh \
     zsh-autosuggestions \
     zsh-completions
@@ -108,9 +107,9 @@ brew cask install \
     vnc-viewer
 
 echo "cloning dotfiles"
-git clone git@github.com:ctbradley/dotfiles.git "${HOME}/dotfiles"
-ln -s "${HOME}/dotfiles/.bashrc" "${HOME}/.bashrc"
-ln -s "${HOME}/dotfiles/.zshrc" "${HOME}/.zshrc"
+git clone git@github.com:ctbradley/dotfiles.git "${HOME}/.dotfiles"
+ln -s "${HOME}/.dotfiles/.bashrc" "${HOME}/.bashrc"
+ln -s "${HOME}/.dotfiles/.zshrc" "${HOME}/.zshrc"
 
 ###############################################################################
 # Mac Customizations                                                          #
@@ -118,9 +117,6 @@ ln -s "${HOME}/dotfiles/.zshrc" "${HOME}/.zshrc"
 
 # Key repeat
 defaults write com.apple.universalaccess slowKey -int 0
-
-# Epanded print options
-defaults write -g PMPrintingExpandedStateForPrint -bool true
 
 ###############################################################################
 # Other Customizations                                                        #
@@ -305,6 +301,7 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+
 # Follow the keyboard focus while zoomed in
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
@@ -547,6 +544,7 @@ sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (
 
 # Add a spacer to the left side of the Dock (where the applications are)
 #defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+
 # Add a spacer to the right side of the Dock (where the Trash is)
 #defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
@@ -834,6 +832,7 @@ defaults write com.apple.iCal IncludeDebugMenu -bool true
 
 # Use plain text mode for new TextEdit documents
 defaults write com.apple.TextEdit RichText -int 0
+
 # Open and save files as UTF-8 in TextEdit
 defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
