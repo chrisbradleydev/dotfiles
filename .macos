@@ -118,9 +118,6 @@ ln -s "${HOME}/.dotfiles/.zshrc" "${HOME}/.zshrc"
 # Key repeat
 defaults write com.apple.universalaccess slowKey -int 0
 
-# Epanded print options
-defaults write -g PMPrintingExpandedStateForPrint -bool true
-
 ###############################################################################
 # Other Customizations                                                        #
 ###############################################################################
