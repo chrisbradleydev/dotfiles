@@ -108,9 +108,9 @@ brew cask install \
     vnc-viewer
 
 echo "cloning dotfiles"
-git clone git@github.com:ctbradley/dotfiles.git "${HOME}/dotfiles"
-ln -s "${HOME}/dotfiles/.bashrc" "${HOME}/.bashrc"
-ln -s "${HOME}/dotfiles/.zshrc" "${HOME}/.zshrc"
+git clone git@github.com:ctbradley/dotfiles.git "${HOME}/.dotfiles"
+ln -s "${HOME}/.dotfiles/.bashrc" "${HOME}/.bashrc"
+ln -s "${HOME}/.dotfiles/.zshrc" "${HOME}/.zshrc"
 
 ###############################################################################
 # Mac Customizations                                                          #
