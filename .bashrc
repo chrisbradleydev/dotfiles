@@ -25,7 +25,7 @@ alias cdhub="cd ~/Repos/github.com"
 alias cdlab="cd ~/Repos/gitlab.com"
 
 # Paths
-export PATH="/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin:$PATH"
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 export PATH="/Users/chrisbradley/.composer/vendor/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
