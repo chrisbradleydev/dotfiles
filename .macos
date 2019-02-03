@@ -54,6 +54,7 @@ brew install \
     mysql@5.7 \
     postgresql \
     python \
+    redis \
     rust \
     watchman \
     zsh \
