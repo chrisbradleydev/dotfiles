@@ -62,7 +62,7 @@ brew install \
     zsh-completions
 
 # yarn: without node because we'll get it from installing n later
-brew install yarn --without-node
+brew install yarn --ignore-dependencies
 
 echo "installing node (via n-install)"
 curl -L https://git.io/n-install | bash
