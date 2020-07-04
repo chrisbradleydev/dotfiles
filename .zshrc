@@ -112,7 +112,7 @@ plugins=(
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Custom sources
-fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(/usr/local/share/zsh/site-functions $fpath)
 source $ZSH/oh-my-zsh.sh
 source ~/.bashrc
 
