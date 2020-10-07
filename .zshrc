@@ -124,3 +124,12 @@ if [ -f '/Users/chrisbradley/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ch
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/chrisbradley/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/chrisbradley/google-cloud-sdk/completion.zsh.inc'; fi
+
+# fuzzy finder autocomplete (https://github.com/junegunn/fzf)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# kubectl autocomplete (https://github.com/kubernetes/kubectl)
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
+# stern autocomplete (https://github.com/wercker/stern)
+[[ /usr/local/bin/stern ]] && source <(stern --completion=zsh)
