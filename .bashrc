@@ -1,26 +1,41 @@
-# Aliases
-alias bcl="brew cask list"
-alias bsl="brew services list"
+# brew
+alias b="brew"
+alias bc="brew cask"
+alias bs="brew services"
 alias buu="brew update && brew upgrade && brew cleanup"
-alias c="code ."
+
+# composer
+alias c="composer"
+alias ci="composer install"
+
+# directory
 alias cd..="cd .."
+alias cdbin="cd /usr/local/bin"
 alias cdbit="cd ~/Repos/bitbucket.org"
 alias cdhub="cd ~/Repos/github.com"
 alias cdlab="cd ~/Repos/gitlab.com"
-alias ci="composer install"
+alias ll="ls -lah"
+alias o="open ."
+
+#docker
 alias d="docker"
 alias dc="docker-compose"
 alias dcl="docker ps -a"
 alias dcu="docker-compose up"
+alias dil="docker images"
+alias dir="docker image rm"
 alias dnl="docker network ls"
 alias ds="docker stop"
 alias dsp="docker system prune -af"
+
+# git
 alias ga="git add ."
 alias gc="git commit -n"
 alias gca="git commit -n --amend --no-edit"
 alias gcb="git checkout -b"
 alias gcd="git checkout develop"
 alias gcm="git checkout master"
+alias gcp="git checkout -"
 alias gfo="git fetch origin develop:develop"
 alias gfp="git push --force-with-lease"
 alias gl="git log --graph --oneline --decorate"
@@ -34,15 +49,38 @@ alias gsc="git stash clear"
 alias gsd="git stash drop"
 alias gsl="git stash list"
 alias gsp="git stash pop"
-alias hc="history -c"
+
+# helm
+alias hgm="helm get manifest"
+alias hi="helm install"
+alias hid="helm install --debug --dry-run"
+alias hl="helm ls"
+alias hsh="helm search hub"
+alias hsr="helm search repo"
+alias hu="helm uninstall"
+
+# history
 alias hg="history | grep"
+
+# kubernetes
 alias k="kubectl"
+alias kc="kubectl create"
 alias kcg="kubectl config get-contexts"
 alias kcu="kubectl config use-context"
-alias ll="ls -lah"
+alias kd="kubectl describe"
+alias kg="kubectl get"
+
+# minikube
 alias mk="minikube"
+
+# node
+alias nv="node -v"
+
+# npm
 alias naf="npm audit fix"
+alias nc="npm ci"
 alias ng="npm list -g --depth=0"
+alias ni="npm i"
 alias nrb="npm run build"
 alias nrd="npm run dev"
 alias nrl="npm run lint"
@@ -51,16 +89,22 @@ alias nrss="npm run ssr:serve"
 alias nrst="npm run start"
 alias nrt="npm run test"
 alias nrw="npm run watch"
-alias nv="node -v"
-alias o="open ."
+
+# sublime text
 alias stb="st ~/.bashrc"
 alias stz="st ~/.zshrc"
 alias stzh="st ~/.zsh_history"
+
+# vscode
+alias vs="code ."
+
+# yarn
 alias yb="yarn build"
+alias yd="yarn dev"
 alias yg="yarn global list"
 alias ys="yarn serve"
 
-# Paths
+# environment variables
 export HOMEBREW_NO_ANALYTICS=1
 export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
 export CPPFLAGS="-I/usr/local/opt/readline/include"
@@ -70,7 +114,9 @@ export GOPATH="$HOME/Documents/go"
 export PATH="$GOPATH/bin:$PATH"
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 export PATH="/Users/chrisbradley/.composer/vendor/bin:$PATH"
+export PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
 export PATH="/usr/local/opt/go/libexec/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
