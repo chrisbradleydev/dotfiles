@@ -76,11 +76,17 @@ alias kd="kubectl describe"
 alias ked="kubectl edit"
 alias kex="kubectl exec -it"
 alias kg="kubectl get"
+alias kgi="kubectl get ingress"
+alias kgn="kubectl get nodes"
+alias kgp="kubectl get pods"
+alias kgs="kubectl get services"
 alias kp="kubectl proxy"
 alias ks="kubectl scale"
 
 # minikube
 alias mk="minikube"
+alias mka="minikube addons"
+alias mks="minikube service"
 
 # node
 alias nv="node -v"
@@ -88,8 +94,10 @@ alias nv="node -v"
 # npm
 alias naf="npm audit fix"
 alias nc="npm ci"
-alias ng="npm list -g --depth=0"
-alias ni="npm i"
+alias ng="npm list --global --depth=0"
+alias ni="npm install"
+alias nid="npm install --global"
+alias nig="npm install --save-dev"
 alias nrb="npm run build"
 alias nrd="npm run dev"
 alias nrl="npm run lint"
@@ -98,9 +106,11 @@ alias nrss="npm run ssr:serve"
 alias nrst="npm run start"
 alias nrt="npm run test"
 alias nrw="npm run watch"
+alias nu="npm uninstall"
 
 # sublime text
 alias stb="st ~/.bashrc"
+alias sth="st /etc/hosts"
 alias stz="st ~/.zshrc"
 alias stzh="st ~/.zsh_history"
 
