@@ -53,12 +53,14 @@ alias gsl="git stash list"
 alias gsp="git stash pop"
 
 # helm
-alias hgm="helm get manifest"
+alias h="helm"
+alias hc="helm create"
+alias hg="helm get"
 alias hi="helm install"
 alias hid="helm install --debug --dry-run"
-alias hl="helm ls"
-alias hsh="helm search hub"
-alias hsr="helm search repo"
+alias hl="helm lint"
+alias hp="helm package"
+alias hs="helm search"
 alias hu="helm uninstall"
 
 # history
