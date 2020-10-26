@@ -19,12 +19,14 @@ alias o="open ."
 
 #docker
 alias d="docker"
+alias db="docker build"
 alias dc="docker-compose"
 alias dcl="docker ps -a"
 alias dcu="docker-compose up"
 alias dil="docker images"
 alias dir="docker image rm"
 alias dnl="docker network ls"
+alias dp="docker push"
 alias ds="docker stop"
 alias dsp="docker system prune -af"
 
@@ -68,7 +70,9 @@ alias kc="kubectl create"
 alias kcg="kubectl config get-contexts"
 alias kcu="kubectl config use-context"
 alias kd="kubectl describe"
+alias ke="kubectl edit"
 alias kg="kubectl get"
+alias ks="kubectl scale"
 
 # minikube
 alias mk="minikube"
