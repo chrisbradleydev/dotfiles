@@ -66,12 +66,14 @@ alias hg="history | grep"
 
 # kubernetes
 alias k="kubectl"
+alias ka="kubectl apply"
 alias kc="kubectl create"
 alias kcg="kubectl config get-contexts"
 alias kcu="kubectl config use-context"
 alias kd="kubectl describe"
 alias ke="kubectl edit"
 alias kg="kubectl get"
+alias kp="kubectl proxy"
 alias ks="kubectl scale"
 
 # minikube
