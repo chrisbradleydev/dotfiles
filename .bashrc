@@ -1,12 +1,15 @@
 # brew
 alias b="brew"
 alias bc="brew cask"
+alias bi="brew install"
 alias bs="brew services"
+alias bu="brew uninstall"
 alias buu="brew update && brew upgrade && brew cleanup"
 
 # composer
 alias c="composer"
 alias ci="composer install"
+alias cu="composer uninstall"
 
 # directory
 alias cd..="cd .."
@@ -38,6 +41,7 @@ alias gcb="git checkout -b"
 alias gcd="git checkout develop"
 alias gcm="git checkout master"
 alias gcp="git checkout -"
+alias gd="git diff"
 alias gfo="git fetch origin develop:develop"
 alias gfp="git push --force-with-lease"
 alias gl="git log --graph --oneline --decorate"
@@ -82,6 +86,7 @@ alias kgp="kubectl get pods"
 alias kgs="kubectl get services"
 alias kp="kubectl proxy"
 alias ks="kubectl scale"
+alias kt="kubectl top"
 
 # minikube
 alias mk="minikube"
