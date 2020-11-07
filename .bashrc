@@ -8,8 +8,10 @@ alias buu="brew update && brew upgrade && brew cleanup"
 
 # composer
 alias c="composer"
+alias cda="composer dump-autoload"
 alias ci="composer install"
 alias cu="composer uninstall"
+alias cv="composer --version"
 
 # directory
 alias cd..="cd .."
