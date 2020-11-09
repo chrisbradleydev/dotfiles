@@ -2,6 +2,7 @@
 alias b="brew"
 alias bc="brew cask"
 alias bi="brew install"
+alias bl="brew list"
 alias bs="brew services"
 alias bu="brew uninstall"
 alias buu="brew update && brew upgrade && brew cleanup"
