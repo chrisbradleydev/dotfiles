@@ -1,0 +1,13 @@
+#!/bin/bash
+
+export CLICOLOR=1
+export CLOUDSDK_PYTHON=/usr/local/opt/python@3.8/libexec/bin/python
+export GOPATH=$HOME/go
+export HOMEBREW_NO_ANALYTICS=1
+export NVM_AUTOLOAD=1
+export PATH=$GOPATH/bin:$PATH
+export PATH=/usr/local/bin/php:$PATH
+export PATH=/usr/local/lib/ruby/gems/2.7.0/bin:$PATH
+export PATH=/usr/local/opt/openjdk/bin:$PATH
+export PATH=/usr/local/opt/ruby/bin:$PATH
+export PATH=/usr/local/sbin:$PATH

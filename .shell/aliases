@@ -1,9 +1,17 @@
+#!/bin/bash
+
 # brew
 alias b="brew"
 alias bc="brew cask"
+alias bci="brew cask install"
+alias bcu="brew cask uninstall"
+alias bd="brew doctor"
+alias bh="brew help"
 alias bi="brew install"
 alias bl="brew list"
 alias bs="brew services"
+alias bsl="brew services list"
+alias bt="brew tap"
 alias bu="brew uninstall"
 alias buu="brew update && brew upgrade && brew cleanup"
 
@@ -59,6 +67,9 @@ alias gsd="git stash drop"
 alias gsl="git stash list"
 alias gsp="git stash pop"
 
+# grep
+alias grep="grep --color=auto"
+
 # helm
 alias h="helm"
 alias hc="helm create"
@@ -72,6 +83,10 @@ alias hu="helm uninstall"
 
 # history
 alias hg="history | grep"
+
+# ip
+alias ip4="dig @resolver1.opendns.com A myip.opendns.com +short -4"
+alias ip6="dig @resolver1.opendns.com AAAA myip.opendns.com +short -6"
 
 # kubernetes
 alias k="kubectl"
@@ -121,8 +136,11 @@ alias nrw="npm run watch"
 alias nu="npm uninstall"
 
 # sublime text
-alias stb="st ~/.bashrc"
+alias sta="st ~/.shell/aliases"
+alias ste="st ~/.shell/exports"
+alias stf="st ~/.shell/functions"
 alias sth="st /etc/hosts"
+alias sts="st /etc/shells"
 alias stz="st ~/.zshrc"
 alias stzh="st ~/.zsh_history"
 
@@ -134,20 +152,3 @@ alias yb="yarn build"
 alias yd="yarn dev"
 alias yg="yarn global list"
 alias ys="yarn serve"
-
-# environment variables
-export HOMEBREW_NO_ANALYTICS=1
-export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
-export CPPFLAGS="-I/usr/local/opt/readline/include"
-export LDFLAGS="-L/usr/local/opt/readline/lib"
-export RUST_SRC_PATH="/usr/local/share/rust/rust_src"
-export GOPATH="$HOME/Documents/go"
-export PATH="$GOPATH/bin:$PATH"
-export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
-export PATH="/Users/chrisbradley/.composer/vendor/bin:$PATH"
-export PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"
-export PATH="/usr/local/opt/go/libexec/bin:$PATH"
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export PATH="/usr/local/opt/ruby/bin:$PATH"
