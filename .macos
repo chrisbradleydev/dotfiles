@@ -193,8 +193,8 @@ defaults write com.apple.screencapture type -string "jpg"
 # disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 
-# disable subpixel font rendering
-defaults write NSGlobalDomain AppleFontSmoothing -int 0
+# enable subpixel font rendering
+defaults write NSGlobalDomain AppleFontSmoothing -int 1
 
 # enable font smoothing
 defaults write NSGlobalDomain CGFontRenderingFontSmoothingDisabled -bool false
