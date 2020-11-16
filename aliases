@@ -106,6 +106,12 @@ alias kp="kubectl proxy"
 alias ks="kubectl scale"
 alias kt="kubectl top"
 
+# macos
+alias dd="defaults delete"
+alias dr="defaults read"
+alias dw="defaults write"
+alias plcat="plutil -convert xml1 -o -"
+
 # minikube
 alias mk="minikube"
 alias mka="minikube addons"
