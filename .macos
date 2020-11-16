@@ -196,7 +196,7 @@ defaults write com.apple.screencapture disable-shadow -bool true
 # disable subpixel font rendering
 defaults write NSGlobalDomain AppleFontSmoothing -int 0
 
-# disable font smoothing
+# enable font smoothing
 defaults write NSGlobalDomain CGFontRenderingFontSmoothingDisabled -bool false
 
 ###############################################################################
