@@ -142,12 +142,12 @@ alias nrw="npm run watch"
 alias nu="npm uninstall"
 
 # sublime text
-alias sta="st ~/.shell/aliases"
-alias ste="st ~/.shell/exports"
-alias stf="st ~/.shell/functions"
+alias sta="st ~/.dotfiles/.aliases"
+alias ste="st ~/.dotfiles/.exports"
+alias stf="st ~/.dotfiles/.functions"
 alias sth="st /etc/hosts"
 alias sts="st /etc/shells"
-alias stz="st ~/.zshrc"
+alias stz="st ~/.dotfiles/.zshrc"
 alias stzh="st ~/.zsh_history"
 
 # vscode
