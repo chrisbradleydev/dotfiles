@@ -97,7 +97,8 @@ echo "brew uninstall unnecessary packages"
 brew uninstall node --ignore-dependencies
 
 echo "clone dotfiles"
-git clone git@github.com:chrisbradleydev/dotfiles.git "${HOME}/.dotfiles"
+git clone https://github.com/chrisbradleydev/dotfiles.git "${HOME}/.dotfiles"
+mkdir "${HOME}/.shell"
 ln -s "${HOME}/.dotfiles/.aliases" "${HOME}/.shell/aliases"
 ln -s "${HOME}/.dotfiles/.exports" "${HOME}/.shell/exports"
 ln -s "${HOME}/.dotfiles/.functions" "${HOME}/.shell/functions"
@@ -249,9 +250,6 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool false
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
-
-# show item info to the right of the icons on the desktop
-/usr/libexec/PlistBuddy -c "Set DesktopViewSettings:IconViewSettings:labelOnBottom false" ~/Library/Preferences/com.apple.finder.plist
 
 # enable snap-to-grid for icons on the desktop and in other icon views
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
