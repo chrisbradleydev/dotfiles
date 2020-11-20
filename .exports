@@ -7,6 +7,7 @@ export HOMEBREW_NO_ANALYTICS=1
 export NVM_AUTOLOAD=1
 export PATH=$GOPATH/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.composer/vendor/bin:$PATH
 export PATH=/usr/local/bin/php:$PATH
 export PATH=/usr/local/lib/ruby/gems/2.7.0/bin:$PATH
 export PATH=/usr/local/opt/openjdk/bin:$PATH
