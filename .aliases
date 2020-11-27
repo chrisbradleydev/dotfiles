@@ -3,8 +3,8 @@
 # brew
 alias b="brew"
 alias bc="brew cask"
-alias bci="brew cask install"
-alias bcu="brew cask uninstall"
+alias bci="brew install --cask"
+alias bcu="brew uninstall --cask"
 alias bd="brew doctor"
 alias bh="brew help"
 alias bi="brew install"
