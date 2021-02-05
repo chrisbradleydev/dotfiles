@@ -1,5 +1,8 @@
 skip_global_compinit=1
-export ZPLUG_HOME="${HOME}/.zplug"
+export ZPLUG_HOME="$HOME/.zplug"
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=10000000
+export SAVEHIST=10000000
 
 # check if zplug is installed
 if [[ ! -d ~/.zplug ]]; then
