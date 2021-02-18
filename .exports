@@ -11,5 +11,7 @@ export PATH=$HOME/.composer/vendor/bin:$PATH
 export PATH=/usr/local/bin/php:$PATH
 export PATH=/usr/local/lib/ruby/gems/2.7.0/bin:$PATH
 export PATH=/usr/local/opt/openjdk/bin:$PATH
+export PATH=/usr/local/opt/php@7.4/bin:$PATH
+export PATH=/usr/local/opt/php@7.4/sbin:$PATH
 export PATH=/usr/local/opt/ruby/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
