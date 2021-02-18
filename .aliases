@@ -20,6 +20,7 @@ alias c="composer"
 alias cda="composer dump-autoload"
 alias cg="composer global"
 alias ci="composer install"
+alias cr="composer require"
 alias cu="composer uninstall"
 alias cv="composer --version"
 
