@@ -12,6 +12,7 @@ if [[ ! -d ~/.zplug ]]; then
 fi
 source $ZPLUG_HOME/init.zsh
 
+autoload -Uz add-zsh-hook
 autoload -Uz compinit
 if [[ $(date +'%j') != $(stat -f '%Sm' -t '%j' $ZPLUG_HOME/zcompdump) ]]; then
   compinit
