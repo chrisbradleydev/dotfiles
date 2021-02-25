@@ -1,3 +1,4 @@
+# zmodload zsh/zprof
 skip_global_compinit=1
 export ZPLUG_HOME="$HOME/.zplug"
 export HISTFILE="$HOME/.zsh_history"
@@ -10,7 +11,13 @@ if [[ ! -d ~/.zplug ]]; then
   source $ZPLUG_HOME/init.zsh && zplug update
 fi
 source $ZPLUG_HOME/init.zsh
-autoload -U compinit && compinit -u -C -d "$ZPLUG_HOME/zcompdump"
+
+autoload -Uz compinit
+if [[ $(date +'%j') != $(stat -f '%Sm' -t '%j' $ZPLUG_HOME/zcompdump) ]]; then
+  compinit
+else
+  compinit -C
+fi
 
 # apply and customize spaceship theme
 zplug "denysdovhan/spaceship-prompt", as:theme
@@ -31,9 +38,7 @@ zplug "plugins/fzf", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/github", from:oh-my-zsh
 zplug "plugins/golang", from:oh-my-zsh
-zplug "plugins/httpie", from:oh-my-zsh
 zplug "plugins/kubectl", from:oh-my-zsh
-zplug "plugins/last-working-dir", from:oh-my-zsh
 zplug "plugins/nvm", from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh
 zplug "plugins/rust", from:oh-my-zsh
@@ -48,7 +53,7 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # ensure packages are installed then load
 zplug check || zplug install
-zplug load
+zplug load # --verbose
 
 # bind up and down arrow keys
 if zplug check "zsh-users/zsh-history-substring-search"; then
