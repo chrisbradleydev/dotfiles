@@ -15,9 +15,9 @@ source $ZPLUG_HOME/init.zsh
 autoload -Uz add-zsh-hook
 autoload -Uz compinit
 if [[ $(date +'%j') != $(stat -f '%Sm' -t '%j' $ZPLUG_HOME/zcompdump) ]]; then
-  compinit
+  compinit -d "$ZPLUG_HOME/zcompdump"
 else
-  compinit -C
+  compinit -u -C -d "$ZPLUG_HOME/zcompdump"
 fi
 
 # apply and customize spaceship theme
