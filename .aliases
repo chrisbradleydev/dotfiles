@@ -2,17 +2,17 @@
 
 # brew
 alias b="brew"
-alias bc="brew cask"
-alias bci="brew install --cask"
-alias bcu="brew uninstall --cask"
+alias bc="brew cleanup"
 alias bd="brew doctor"
 alias bh="brew help"
 alias bi="brew install"
+alias bic="brew install --cask"
 alias bl="brew list"
 alias bs="brew services"
 alias bsl="brew services list"
 alias bt="brew tap"
 alias bu="brew uninstall"
+alias buc="brew uninstall --cask"
 alias buu="brew update && brew upgrade && brew cleanup"
 
 # composer
