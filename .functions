@@ -2,11 +2,11 @@
 
 auto_switch_node_version() {
     if [[ -f .nvmrc ]]; then
-        CURRENT_NODE_VERSION=$(nvm current 2>&1)
+        CURRENT_NODE_VERSION=$(fnm current 2>&1)
         REQUESTED_NODE_VERSION=v$(cat .nvmrc)
         MAJOR_RELEASE=${CURRENT_NODE_VERSION:0:${#REQUESTED_NODE_VERSION}}
         if [[ $REQUESTED_NODE_VERSION != $MAJOR_RELEASE ]]; then
-            nvm use > /dev/null 2>&1 || nvm install
+            fnm use > /dev/null 2>&1 || fnm install
         fi
     fi
 }
