@@ -60,6 +60,9 @@ if zplug check "zsh-users/zsh-history-substring-search"; then
   bindkey '^[[B' history-substring-search-down
 fi
 
+# fnm
+eval "$(fnm env)"
+
 # custom sources
 source ~/.shell/aliases
 source ~/.shell/exports
