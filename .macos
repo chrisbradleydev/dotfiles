@@ -34,6 +34,7 @@ brew install \
   composer \
   cowsay \
   deno \
+  fnm \
   fortune \
   fzf \
   git \
