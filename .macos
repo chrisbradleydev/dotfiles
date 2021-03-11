@@ -64,6 +64,7 @@ brew install \
 echo "brew casks"
 brew cask install \
   alfred \
+  balenaetcher \
   brave-browser \
   dash \
   discord \
@@ -80,13 +81,13 @@ brew cask install \
   imazing \
   insomnia \
   iterm2 \
-  kite \
   microsoft-edge \
   mongodb-compass \
   ngrok \
   opera \
   postman \
-  sequel-pro \
+  redis \
+  sequel-ace \
   slack \
   spotify \
   sublime-text \
