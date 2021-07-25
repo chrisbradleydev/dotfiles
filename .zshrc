@@ -1,9 +1,9 @@
 # zmodload zsh/zprof
 skip_global_compinit=1
-export ZPLUG_HOME="$HOME/.zplug"
-export HISTFILE="$HOME/.zsh_history"
-export HISTSIZE=10000000
-export SAVEHIST=10000000
+ZPLUG_HOME=~/.zplug
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
 
 # check if zplug is installed
 if [[ ! -d ~/.zplug ]]; then
@@ -12,16 +12,12 @@ if [[ ! -d ~/.zplug ]]; then
 fi
 source $ZPLUG_HOME/init.zsh
 
-autoload -Uz add-zsh-hook
-autoload -Uz compinit
-if [[ $(date +'%j') != $(stat -f '%Sm' -t '%j' $ZPLUG_HOME/zcompdump) ]]; then
-  compinit -d "$ZPLUG_HOME/zcompdump"
-else
-  compinit -u -C -d "$ZPLUG_HOME/zcompdump"
-fi
+autoload -U add-zsh-hook
+autoload -U compinit; compinit
 
 # apply and customize spaceship theme
 zplug "denysdovhan/spaceship-prompt", as:theme
+SPACESHIP_CHAR_SYMBOL=❯
 SPACESHIP_GCLOUD_SHOW=false
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 
