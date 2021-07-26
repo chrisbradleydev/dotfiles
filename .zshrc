@@ -22,6 +22,7 @@ share_history
 
 # apply and customize spaceship theme
 zplug "denysdovhan/spaceship-prompt", as:theme
+SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_CHAR_SYMBOL=❯
 SPACESHIP_GCLOUD_SHOW=false
 SPACESHIP_PROMPT_ADD_NEWLINE=false
