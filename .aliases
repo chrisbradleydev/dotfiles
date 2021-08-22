@@ -160,6 +160,9 @@ alias pamm="php artisan make:model"
 alias pams="php artisan make:seeder"
 alias pamt="php artisan make:test"
 
+# sail
+alias sail="[ -f sail ] && bash sail || bash ./vendor/bin/sail"
+
 # sublime text
 alias sta="st ~/.dotfiles/.aliases"
 alias ste="st ~/.dotfiles/.exports"
