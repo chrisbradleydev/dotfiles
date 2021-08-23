@@ -29,11 +29,19 @@ brew tap teamookla/speedtest
 echo "brew packages"
 brew install \
   ack \
+  asciinema \
   autojump \
+  awscli \
   bat \
+  cocoapods \
   composer \
   cowsay \
   deno \
+  dnsmasq \
+  dog \
+  elixir \
+  ffmpeg \
+  fish \
   fnm \
   fortune \
   fzf \
@@ -41,8 +49,13 @@ brew install \
   gitlab-runner \
   go \
   helm \
+  htop \
+  httpd \
   httpie \
+  imagemagick \
+  irssi \
   jq \
+  jrnl \
   k6 \
   k9s \
   kubernetes-cli \
@@ -52,24 +65,42 @@ brew install \
   mysql \
   php \
   postgresql \
+  protobuf \
+  redis \
   ruby \
   rustup \
+  siege \
+  smartmontools \
   speedtest \
+  sqlite \
   stern \
   terraform \
+  unbound \
+  watchman \
   wget \
   yarn \
+  youtube-dl \
   zsh
 
 echo "brew casks"
-brew cask install \
+brew install --cask \
+  ableton-live-suite \
+  adobe-creative-cloud \
   alfred \
+  anaconda \
+  audacity \
   balenaetcher \
   brave-browser \
+  chromedriver \
+  daisydisk \
   dash \
+  deluge \
   discord \
   dissenter-browser \
   docker \
+  drivedx \
+  element \
+  exodus \
   firefox \
   font-fira-code \
   font-hack \
@@ -80,20 +111,34 @@ brew cask install \
   grammarly \
   imazing \
   insomnia \
+  intellij-idea-ce \
   iterm2 \
+  keepassxc \
+  keka \
   microsoft-edge \
   mongodb-compass \
+  native-access \
   ngrok \
+  notion \
+  obs \
+  openemu \
   opera \
+  pandora \
   postman \
-  redis \
+  pycharm-ce \
+  raspberry-pi-imager \
   sequel-ace \
+  signal \
   slack \
   spotify \
   sublime-text \
   tor-browser \
   virtualbox \
-  visual-studio-code
+  visual-studio-code \
+  vlc \
+  vmware-fusion \
+  vnc-viewer \
+  xdm
 
 echo "brew uninstall unnecessary packages"
 brew uninstall node --ignore-dependencies
