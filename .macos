@@ -89,6 +89,7 @@ brew install --cask \
   alfred \
   anaconda \
   audacity \
+  authy \
   balenaetcher \
   brave-browser \
   chromedriver \
