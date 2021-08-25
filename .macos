@@ -138,8 +138,7 @@ brew install --cask \
   visual-studio-code \
   vlc \
   vmware-fusion \
-  vnc-viewer \
-  xdm
+  vnc-viewer
 
 echo "brew uninstall unnecessary packages"
 brew uninstall node --ignore-dependencies
