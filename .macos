@@ -66,6 +66,7 @@ brew install \
   php \
   postgresql \
   protobuf \
+  python@3.8 \
   redis \
   ruby \
   rustup \
