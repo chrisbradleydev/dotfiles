@@ -145,7 +145,13 @@ brew install --cask \
   zoom
 
 echo "brew uninstall unnecessary packages"
-brew uninstall node --ignore-dependencies
+brew uninstall node node@14 --ignore-dependencies
+
+echo "composer packages"
+composer global require \
+  laravel/installer \
+  laravel/valet \
+  squizlabs/php_codesniffer
 
 echo "clone dotfiles"
 git clone https://github.com/chrisbradleydev/dotfiles.git "${HOME}/.dotfiles"
