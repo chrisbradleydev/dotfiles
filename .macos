@@ -114,6 +114,7 @@ brew install --cask \
   insomnia \
   intellij-idea-ce \
   iterm2 \
+  jitsi \
   keepassxc \
   keka \
   microsoft-edge \
@@ -133,6 +134,7 @@ brew install --cask \
   slack \
   spotify \
   sublime-text \
+  telegram \
   tor-browser \
   virtualbox \
   visual-studio-code \
