@@ -165,8 +165,12 @@ ln -s "${HOME}/.dotfiles/.zshrc" "${HOME}/.zshrc"
 # General UI/UX                                                               #
 ###############################################################################
 
+# set appearance
+defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
+
 # set accent color
-defaults delete NSGlobalDomain AppleAccentColor # Blue
+# defaults delete NSGlobalDomain AppleAccentColor # multicolor
+defaults write NSGlobalDomain AppleAccentColor -integer 4 # Blue
 # defaults write NSGlobalDomain AppleAccentColor -integer 5 # Purple
 # defaults write NSGlobalDomain AppleAccentColor -integer 6 # Pink
 # defaults write NSGlobalDomain AppleAccentColor -integer 0 # Red
@@ -176,7 +180,8 @@ defaults delete NSGlobalDomain AppleAccentColor # Blue
 # defaults write NSGlobalDomain AppleAccentColor -integer -1 # Graphite
 
 # set highlight color
-defaults delete NSGlobalDomain AppleHighlightColor # Blue
+defaults delete NSGlobalDomain AppleHighlightColor # accent color
+# defaults write NSGlobalDomain AppleHighlightColor -string "0.698039 0.843137 1.000000 Blue"
 # defaults write NSGlobalDomain AppleHighlightColor -string "0.968627 0.831373 1.000000 Purple"
 # defaults write NSGlobalDomain AppleHighlightColor -string "1.000000 0.749020 0.823529 Pink"
 # defaults write NSGlobalDomain AppleHighlightColor -string "1.000000 0.733333 0.721569 Red"
