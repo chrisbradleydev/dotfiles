@@ -75,6 +75,7 @@ brew install \
   speedtest \
   sqlite \
   stern \
+  telnet \
   terraform \
   unbound \
   watchman \
