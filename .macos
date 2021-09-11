@@ -118,6 +118,7 @@ brew install --cask \
   jitsi \
   keepassxc \
   keka \
+  ledger-live \
   microsoft-edge \
   mongodb-compass \
   native-access \
