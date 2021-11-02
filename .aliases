@@ -137,6 +137,7 @@ alias nv="node -v"
 # npm
 alias naf="npm audit fix"
 alias nc="npm ci"
+alias ncc="npm cache clean --force"
 alias ng="npm list --global --depth=0"
 alias nh="npm home"
 alias ni="npm install"
