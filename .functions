@@ -11,4 +11,16 @@ auto_switch_node_version() {
     fi
 }
 
+auto_update_quokka_node_path() {
+    if [[ -f ~/.quokka/config.json ]]; then
+        CURRENT_NODE_PATH=$(which node 2>&1)
+        QUOKKA_NODE_PATH=$(cat ~/.quokka/config.json | jq '.node' | xargs 2>&1)
+        if [[ $CURRENT_NODE_PATH != $QUOKKA_NODE_PATH ]]; then
+            CONFIG_JSON="$(jq --arg node_path "$CURRENT_NODE_PATH" '.node = $node_path' ~/.quokka/config.json)" && \
+            echo $CONFIG_JSON > ~/.quokka/config.json
+        fi
+    fi
+}
+
 add-zsh-hook chpwd auto_switch_node_version
+add-zsh-hook chpwd auto_update_quokka_node_path
