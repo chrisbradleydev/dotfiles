@@ -61,7 +61,7 @@ brew install \
   kubernetes-cli \
   maven \
   minikube \
-  mongodb-community \
+  mongosh \
   mysql \
   php \
   postgresql \
@@ -73,6 +73,7 @@ brew install \
   siege \
   smartmontools \
   speedtest \
+  sponge \
   sqlite \
   stern \
   telnet \
