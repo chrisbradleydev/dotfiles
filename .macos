@@ -63,6 +63,7 @@ brew install \
   minikube \
   mongosh \
   mysql \
+  nginx \
   php \
   postgresql \
   protobuf \
