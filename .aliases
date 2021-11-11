@@ -33,6 +33,8 @@ alias cdhub="cd ~/Repos/github.com"
 alias cdlab="cd ~/Repos/gitlab.com"
 alias ll="ls -lah"
 alias o="open ."
+alias obb="open ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/Brave\ Browser\ Private.app"
+alias obc="open ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/Google\ Chrome\ Incognito.app"
 
 #docker
 alias d="docker"
