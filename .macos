@@ -58,6 +58,7 @@ brew install \
   jrnl \
   k6 \
   k9s \
+  kind \
   kubernetes-cli \
   maven \
   minikube \
