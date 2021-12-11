@@ -16,9 +16,11 @@ autoload -U add-zsh-hook
 autoload -U compinit; compinit
 
 # options
-setopt hist_ignore_dups \
-inc_append_history \
-share_history
+setopt append_history \
+  hist_ignore_dups \
+  hist_reduce_blanks \
+  inc_append_history \
+  share_history \
 
 # apply and customize spaceship theme
 zplug "denysdovhan/spaceship-prompt", as:theme
