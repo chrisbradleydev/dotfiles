@@ -36,7 +36,7 @@ alias o="open ."
 alias obb="open ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/Brave\ Browser\ Private.app"
 alias obc="open ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/Google\ Chrome\ Incognito.app"
 
-#docker
+# docker
 alias d="docker"
 alias db="docker build"
 alias dc="docker-compose"
