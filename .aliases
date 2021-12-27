@@ -165,6 +165,7 @@ alias pamc="php artisan make:component"
 alias pamm="php artisan make:model"
 alias pams="php artisan make:seeder"
 alias pamt="php artisan make:test"
+alias pv="php --version"
 
 # sail
 alias sail="[ -f sail ] && bash sail || bash ./vendor/bin/sail"
