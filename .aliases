@@ -58,7 +58,7 @@ alias dv="docker volume"
 # git
 alias ga="git add ."
 alias gc-="git checkout -"
-alias gc="git commit -n"
+alias gc="git commit"
 alias gca="git commit -n --amend --no-edit"
 alias gcb="git checkout -b"
 alias gcd="git checkout develop"
