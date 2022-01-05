@@ -77,3 +77,6 @@ source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.z
 
 # stern autocomplete
 [[ /usr/local/bin/stern ]] && source <(stern --completion=zsh)
+
+# profiling with zprof
+# zprof
