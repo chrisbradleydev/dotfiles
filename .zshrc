@@ -12,8 +12,8 @@ if [[ ! -d $ZPLUG_HOME ]]; then
 fi
 source $ZPLUG_HOME/init.zsh
 
-autoload -U add-zsh-hook
-autoload -U compinit; compinit
+autoload -Uz add-zsh-hook
+autoload -Uz compinit; compinit
 
 # options
 setopt append_history \
