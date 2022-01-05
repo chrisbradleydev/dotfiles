@@ -6,7 +6,7 @@ HISTSIZE=20000
 SAVEHIST=20000
 
 # check if zplug is installed
-if [[ ! -d $ZPLUG_HOME ]]; then
+if [ ! -d $ZPLUG_HOME ]; then
   git clone https://github.com/zplug/zplug $ZPLUG_HOME
   source $ZPLUG_HOME/init.zsh && zplug update
 fi
