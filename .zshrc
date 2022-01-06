@@ -36,6 +36,7 @@ zplug "plugins/chucknorris", from:oh-my-zsh
 zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "plugins/colorize", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
+zplug "plugins/dirhistory", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/docker-compose", from:oh-my-zsh
 zplug "plugins/fzf", from:oh-my-zsh
