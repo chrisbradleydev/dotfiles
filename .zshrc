@@ -31,7 +31,6 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 # load oh-my-zsh
 zplug "plugins/autojump", from:oh-my-zsh
 zplug "plugins/battery", from:oh-my-zsh
-zplug "plugins/brew", from:oh-my-zsh
 zplug "plugins/chucknorris", from:oh-my-zsh
 zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "plugins/colorize", from:oh-my-zsh
