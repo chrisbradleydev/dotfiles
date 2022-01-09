@@ -61,6 +61,7 @@ brew install \
   kind \
   kubernetes-cli \
   maven \
+  mcfly \
   minikube \
   mongosh \
   mysql \
@@ -81,6 +82,7 @@ brew install \
   stern \
   telnet \
   terraform \
+  tldr \
   unbound \
   watchman \
   wget \
