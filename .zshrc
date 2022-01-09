@@ -61,8 +61,11 @@ if zplug check "zsh-users/zsh-history-substring-search"; then
   bindkey '^[[B' history-substring-search-down
 fi
 
-# fnm
+# https://github.com/Schniz/fnm
 eval "$(fnm env)"
+
+# https://github.com/cantino/mcfly
+eval "$(mcfly init zsh)"
 
 # custom sources
 source ~/.shell/aliases
