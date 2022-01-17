@@ -58,6 +58,7 @@ alias dv="docker volume"
 
 # git
 alias ga="git add ."
+alias gb="git branch"
 alias gc-="git checkout -"
 alias gc="git commit"
 alias gca="git commit -n --amend --no-edit"
