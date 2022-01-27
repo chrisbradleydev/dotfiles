@@ -60,6 +60,7 @@ brew install \
   k9s \
   kind \
   kubernetes-cli \
+  lsusb \
   maven \
   mcfly \
   minikube \
