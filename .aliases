@@ -161,6 +161,8 @@ alias pamc="php artisan make:component"
 alias pamm="php artisan make:model"
 alias pams="php artisan make:seeder"
 alias pamt="php artisan make:test"
+alias pasi="php artisan sail:install"
+alias pat="php artisan test"
 alias pv="php --version"
 
 # sail
