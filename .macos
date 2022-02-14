@@ -12,13 +12,28 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
+# Initialization                                                              #
+###############################################################################
+
+echo "constants"
+NAME=$(eval "dscl . -read "/Users/$(whoami | awk '{print $1}')" RealName | sed -n 's/^ //g;2p'")
+USERNAME=$(whoami)
+NAME_ARRAY=($NAME)
+ARRAY_LENGTH=${#NAME_ARRAY[@]}
+[[ $ARRAY_LENGTH -eq 2 ]] && FIRST_NAME=${NAME_ARRAY[0]} || FIRST_NAME="First"
+[[ $ARRAY_LENGTH -eq 2 ]] && LAST_NAME=${NAME_ARRAY[1]} || LAST_NAME="Last"
+[[ $(sysctl -n machdep.cpu.brand_string) == Apple* ]] && M1=true || M1=false
+[[ $M1 ]] && CPU="M1" || CPU="Intel"
+
+###############################################################################
 # Homebrew                                                                    #
 ###############################################################################
 
-echo "Hello $(whoami)! Let's get you set up."
+echo "Hello $FIRST_NAME $LAST_NAME! Let's get your $CPU Mac set up."
+read -p "Press [ENTER] to continue..."
 
-echo "install homebrew"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+echo "homebrew"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo "brew taps"
 brew tap homebrew/cask-fonts
@@ -29,146 +44,186 @@ brew tap snyk/tap
 brew tap teamookla/speedtest
 
 echo "brew packages"
-brew install \
-  ack \
-  asciinema \
-  autojump \
-  awscli \
-  bat \
-  cocoapods \
-  composer \
-  cowsay \
-  deno \
-  dnsmasq \
-  dog \
-  elixir \
-  ffmpeg \
-  fish \
-  fnm \
-  fortune \
-  fzf \
-  git \
-  gitlab-runner \
-  go \
-  helm \
-  htop \
-  httpd \
-  httpie \
-  imagemagick \
-  irssi \
-  jq \
-  jrnl \
-  k6 \
-  k9s \
-  kind \
-  kubernetes-cli \
-  kustomize \
-  lsusb \
-  maven \
-  mcfly \
-  minikube \
-  mongosh \
-  mysql \
-  nginx \
-  php \
-  postgresql \
-  protobuf \
-  python@3.8 \
-  redis \
-  ruby \
-  rustup \
-  siege \
-  skaffold \
-  smartmontools \
-  speedtest \
-  sponge \
-  sqlite \
-  stern \
-  telnet \
-  terraform \
-  tldr \
-  unbound \
-  watchman \
-  wget \
-  yarn \
-  youtube-dl \
-  zsh
+PACKAGES=(
+ack
+asciinema
+autojump
+awscli
+bat
+cocoapods
+composer
+cowsay
+deno
+dnsmasq
+dog
+elixir
+ffmpeg
+fish
+fnm
+fortune
+fzf
+git
+gitlab-runner
+go
+helm
+htop
+httpd
+httpie
+imagemagick
+irssi
+jq
+jrnl
+k6
+k9s
+kind
+kubernetes-cli
+kustomize
+lsusb
+maven
+mcfly
+minikube
+mongosh
+mysql
+nginx
+php
+postgresql
+protobuf
+python@3.8
+redis
+ruby
+rustup
+siege
+skaffold
+smartmontools
+speedtest
+sponge
+sqlite
+stern
+telnet
+terraform
+tldr
+unbound
+watchman
+wget
+yarn
+youtube-dl
+zsh
+)
+
+for i in "${PACKAGES[@]}"
+do
+  echo "brew install $i"
+  brew install $i
+done
 
 echo "brew casks"
-brew install --cask \
-  ableton-live-suite \
-  adobe-creative-cloud \
-  airtable \
-  alfred \
-  app-cleaner \
-  audacity \
-  authy \
-  balenaetcher \
-  brave-browser \
-  chromedriver \
-  daisydisk \
-  dash \
-  deluge \
-  discord \
-  dissenter-browser \
-  docker \
-  drivedx \
-  element \
-  exodus \
-  firefox \
-  font-hack \
-  font-inconsolata \
-  font-inconsolata-for-powerline \
-  google-chrome \
-  google-cloud-sdk \
-  grammarly \
-  imazing \
-  insomnia \
-  intellij-idea-ce \
-  iterm2 \
-  jitsi \
-  keepassxc \
-  keka \
-  ledger-live \
-  microsoft-edge \
-  mongodb-compass \
-  native-access \
-  ngrok \
-  notion \
-  obs \
-  openemu \
-  opera \
-  pandora \
-  postman \
-  private-internet-access \
-  protonvpn \
-  pycharm-ce \
-  raspberry-pi-imager \
-  sequel-ace \
-  signal \
-  slack \
-  spotify \
-  sublime-text \
-  telegram \
-  tiled \
-  tor-browser \
-  typora \
-  virtualbox \
-  visual-studio-code \
-  vlc \
-  vmware-fusion \
-  vnc-viewer \
-  wrk \
-  zoom
+CASKS=(
+ableton-live-suite
+adobe-creative-cloud
+airtable
+alfred
+app-cleaner
+audacity
+authy
+automake
+balenaetcher
+brave-browser
+chromedriver
+coreutils
+daisydisk
+dash
+deluge
+discord
+dissenter-browser
+docker
+drivedx
+electron-cash
+electrum
+element
+exodus
+firefox
+font-hack
+font-inconsolata
+font-inconsolata-for-powerline
+google-chrome
+google-cloud-sdk
+grammarly
+imazing
+insomnia
+intellij-idea-ce
+iterm2
+jitsi
+keepassxc
+keka
+ledger-live
+microsoft-edge
+mongodb-compass
+native-access
+ngrok
+notion
+obs
+openemu
+opera
+pandora
+postman
+private-internet-access
+protonvpn
+pycharm-ce
+raspberry-pi-imager
+sequel-ace
+signal
+slack
+spotify
+sublime-text
+telegram
+tiled
+tor-browser
+typora
+virtualbox
+visual-studio-code
+vlc
+vmware-fusion
+vnc-viewer
+wrk
+zoom
+)
+
+for i in "${CASKS[@]}"
+do
+  echo "brew install cask $i"
+  brew install --cask $i
+done
 
 echo "brew uninstall unnecessary packages"
 brew uninstall node node@14 --ignore-dependencies
 
-echo "composer packages"
+###############################################################################
+# Node / NPM                                                                  #
+###############################################################################
+
+echo "node and npm"
+eval "$(fnm env)"
+cat > ~/.nvmrc <<EOL
+14
+EOL
+fnm install --lts
+fnm install 14
+fnm use 14
+
+###############################################################################
+# PHP / Composer                                                              #
+###############################################################################
+
+echo "php and composer"
+composer global update
 composer global require \
   laravel/installer \
   laravel/valet \
   squizlabs/php_codesniffer
+
+###############################################################################
+# Shell                                                                       #
+###############################################################################
 
 echo "clone dotfiles"
 git clone https://github.com/chrisbradleydev/dotfiles.git "${HOME}/.dotfiles"
