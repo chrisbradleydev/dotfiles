@@ -15,6 +15,11 @@ source $ZPLUG_HOME/init.zsh
 autoload -Uz add-zsh-hook
 autoload -Uz compinit; compinit
 
+# aliases, exports, and functions
+source ~/.shell/aliases
+source ~/.shell/exports
+source ~/.shell/functions
+
 # options
 setopt append_history \
   hist_ignore_dups \
@@ -66,11 +71,6 @@ eval "$(fnm env)"
 
 # https://github.com/cantino/mcfly
 eval "$(mcfly init zsh)"
-
-# custom sources
-source ~/.shell/aliases
-source ~/.shell/exports
-source ~/.shell/functions
 
 # google cloud sdk path and autocomplete
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
