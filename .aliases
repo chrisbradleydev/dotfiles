@@ -27,6 +27,7 @@ alias cu="composer uninstall"
 alias cv="composer --version"
 
 # directory
+alias cd-="cd -"
 alias cd..="cd .."
 alias cdbin="cd /usr/local/bin"
 alias cdbit="cd ~/Repos/bitbucket.org"
