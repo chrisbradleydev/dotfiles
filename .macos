@@ -36,12 +36,20 @@ echo "homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo "brew taps"
-brew tap homebrew/cask-fonts
-brew tap homebrew/cask-versions
-brew tap mongodb/brew
-brew tap shivammathur/php
-brew tap snyk/tap
-brew tap teamookla/speedtest
+TAPS=(
+homebrew/cask-fonts
+homebrew/cask-versions
+mongodb/brew
+shivammathur/php
+snyk/tap
+teamookla/speedtest
+)
+
+for i in "${TAPS[@]}"
+do
+  echo "brew tap $i"
+  brew tap $i
+done
 
 echo "brew packages"
 PACKAGES=(
