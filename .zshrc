@@ -69,6 +69,9 @@ fi
 # https://github.com/Schniz/fnm
 eval "$(fnm env)"
 
+# https://github.com/jenv/jenv
+eval "$(jenv init -)"
+
 # https://github.com/cantino/mcfly
 eval "$(mcfly init zsh)"
 
