@@ -34,5 +34,5 @@ auto_update_quokka_node_path() {
 }
 
 add-zsh-hook chpwd auto_switch_node_version
-add-zsh-hook chpwd auto_switch_php_version
+# add-zsh-hook chpwd auto_switch_php_version
 add-zsh-hook chpwd auto_update_quokka_node_path
