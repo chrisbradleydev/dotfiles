@@ -79,6 +79,7 @@ httpd
 httpie
 imagemagick
 irssi
+jenv
 jq
 jrnl
 k6
@@ -161,7 +162,6 @@ imazing
 insomnia
 intellij-idea-ce
 iterm2
-jenv
 jitsi
 keepassxc
 keka
