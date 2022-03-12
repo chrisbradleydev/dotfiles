@@ -157,7 +157,6 @@ alias nrss="npm run ssr:serve"
 alias nrst="npm run start"
 alias nrt="npm run test"
 alias nrw="npm run watch"
-alias nu="npm uninstall"
 
 # php
 alias pa="php artisan"
