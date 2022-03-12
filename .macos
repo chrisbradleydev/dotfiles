@@ -77,6 +77,8 @@ helm
 htop
 httpd
 httpie
+i2p
+i2pd
 imagemagick
 irssi
 jenv
@@ -93,7 +95,9 @@ mcfly
 minikube
 mongosh
 mysql
+neovim
 nginx
+nushell
 php
 postgresql
 protobuf
@@ -107,6 +111,7 @@ smartmontools
 speedtest
 sponge
 sqlite
+starship
 stern
 telnet
 terraform
@@ -130,6 +135,7 @@ CASKS=(
 ableton-live-suite
 adobe-creative-cloud
 airtable
+alacritty
 alfred
 app-cleaner
 audacity
@@ -144,7 +150,6 @@ daisydisk
 dash
 deluge
 discord
-dissenter-browser
 docker
 drivedx
 electron-cash
@@ -155,6 +160,7 @@ firefox
 font-hack
 font-inconsolata
 font-inconsolata-for-powerline
+font-jetbrains-mono-nerd-font
 google-chrome
 google-cloud-sdk
 grammarly
@@ -166,15 +172,12 @@ jitsi
 keepassxc
 keka
 ledger-live
-microsoft-edge
 mongodb-compass
 native-access
 ngrok
 notion
 obs
 openemu
-opera
-pandora
 postman
 private-internet-access
 protonvpn
