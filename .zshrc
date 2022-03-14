@@ -2,8 +2,8 @@
 skip_global_compinit=1
 ZPLUG_HOME=~/.zplug
 HISTFILE=~/.zsh_history
-HISTSIZE=20000
-SAVEHIST=20000
+HISTSIZE=30000
+SAVEHIST=30000
 
 # check if zplug is installed
 if [[ ! -d $ZPLUG_HOME ]]; then
