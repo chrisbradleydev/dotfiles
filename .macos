@@ -56,10 +56,12 @@ PACKAGES=(
 ack
 asciinema
 autojump
+automake
 awscli
 bat
 cocoapods
 composer
+coreutils
 cowsay
 deno
 dnsmasq
@@ -119,6 +121,7 @@ tldr
 unbound
 watchman
 wget
+wrk
 yarn
 youtube-dl
 zsh
@@ -140,12 +143,10 @@ alfred
 app-cleaner
 audacity
 authy
-automake
 balenaetcher
 bisq
 brave-browser
 chromedriver
-coreutils
 daisydisk
 dash
 deluge
@@ -178,6 +179,7 @@ ngrok
 notion
 obs
 openemu
+phpstorm
 postman
 private-internet-access
 protonvpn
@@ -197,7 +199,6 @@ visual-studio-code
 vlc
 vmware-fusion
 vnc-viewer
-wrk
 zoom
 )
 
