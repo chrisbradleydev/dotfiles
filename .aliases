@@ -58,7 +58,7 @@ alias dnr="docker network rm"
 alias dp="docker push"
 alias dr="docker rm"
 alias ds="docker stop"
-alias dsp="docker system prune -af"
+alias dsp="docker system prune"
 alias dvl="docker volume ls"
 alias dvr="docker volume rm"
 
