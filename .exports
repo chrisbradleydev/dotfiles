@@ -1,5 +1,6 @@
 #!/bin/bash
 
+export ARCH=$(uname -m)
 export CLICOLOR=1
 export CLOUDSDK_PYTHON=/usr/local/opt/python@3.8/libexec/bin/python
 export GOPATH=$HOME/go
