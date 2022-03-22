@@ -16,14 +16,15 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 echo "constants"
+ARCH=$(uname -m)
+HOST_UID=$(id -u)
 NAME=$(eval "dscl . -read "/Users/$(whoami | awk '{print $1}')" RealName | sed -n 's/^ //g;2p'")
 USERNAME=$(whoami)
 NAME_ARRAY=($NAME)
 ARRAY_LENGTH=${#NAME_ARRAY[@]}
 [[ $ARRAY_LENGTH -eq 2 ]] && FIRST_NAME=${NAME_ARRAY[0]} || FIRST_NAME="First"
 [[ $ARRAY_LENGTH -eq 2 ]] && LAST_NAME=${NAME_ARRAY[1]} || LAST_NAME="Last"
-[[ $(sysctl -n machdep.cpu.brand_string) == Apple* ]] && M1=true || M1=false
-[[ $M1 ]] && CPU="M1" || CPU="Intel"
+[[ $ARCH == "arm64" ]] && CPU="M1" || CPU="Intel"
 
 ###############################################################################
 # Homebrew                                                                    #
