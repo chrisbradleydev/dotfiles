@@ -101,6 +101,7 @@ mysql
 neovim
 nginx
 nushell
+openssl
 php
 postgresql
 protobuf
@@ -150,6 +151,7 @@ brave-browser
 chromedriver
 daisydisk
 dash
+db-browser-for-sqlite
 deluge
 discord
 docker
