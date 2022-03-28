@@ -60,6 +60,7 @@ autojump
 automake
 awscli
 bat
+cmatrix
 cocoapods
 composer
 coreutils
@@ -92,6 +93,7 @@ k9s
 kind
 kubernetes-cli
 kustomize
+lolcat
 lsusb
 maven
 mcfly
