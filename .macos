@@ -102,6 +102,7 @@ mongosh
 mysql
 neovim
 nginx
+nmap
 nushell
 openssl
 php
@@ -205,6 +206,7 @@ visual-studio-code
 vlc
 vmware-fusion
 vnc-viewer
+wireshark
 zoom
 )
 
