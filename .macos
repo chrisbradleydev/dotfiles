@@ -59,6 +59,7 @@ asciinema
 autojump
 automake
 awscli
+bash
 bat
 cmatrix
 cocoapods
@@ -78,9 +79,11 @@ git
 gitlab-runner
 go
 helm
+heroku/brew/heroku
 htop
 httpd
 httpie
+httpstat
 i2p
 i2pd
 imagemagick
@@ -120,6 +123,7 @@ sponge
 sqlite
 starship
 stern
+stripe/stripe-cli/stripe
 telnet
 terraform
 tldr
@@ -151,6 +155,7 @@ authy
 balenaetcher
 bisq
 brave-browser
+charles
 chromedriver
 daisydisk
 dash
@@ -174,6 +179,7 @@ grammarly
 imazing
 insomnia
 intellij-idea-ce
+ipfs
 iterm2
 jitsi
 keepassxc
