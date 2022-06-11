@@ -40,7 +40,6 @@ echo "brew taps"
 TAPS=(
 homebrew/cask-fonts
 homebrew/cask-versions
-mongodb/brew
 shivammathur/php
 snyk/tap
 teamookla/speedtest
