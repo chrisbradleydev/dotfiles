@@ -24,7 +24,7 @@ NAME_ARRAY=($NAME)
 ARRAY_LENGTH=${#NAME_ARRAY[@]}
 [[ $ARRAY_LENGTH -eq 2 ]] && FIRST_NAME=${NAME_ARRAY[0]} || FIRST_NAME="First"
 [[ $ARRAY_LENGTH -eq 2 ]] && LAST_NAME=${NAME_ARRAY[1]} || LAST_NAME="Last"
-[[ $ARCH == "arm64" ]] && CPU="M1" || CPU="Intel"
+[[ $ARCH == "arm64" ]] && CPU="Apple silicon" || CPU="Intel"
 
 ###############################################################################
 # Homebrew                                                                    #
