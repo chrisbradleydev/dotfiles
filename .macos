@@ -130,6 +130,7 @@ telnet
 terraform
 tldr
 unbound
+vercel-cli
 watchman
 wget
 wrk
