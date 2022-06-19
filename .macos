@@ -105,12 +105,14 @@ mcfly
 minikube
 mongosh
 mysql
+mysql-client
 neovim
 nginx
 nmap
 nushell
 openssl
 php
+planetscale/tap/pscale
 postgresql
 protobuf
 python@3.8
