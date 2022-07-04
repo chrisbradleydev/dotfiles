@@ -120,7 +120,7 @@ protobuf
 python@3.8
 redis
 ruby
-rustup
+rustup-init
 siege
 skaffold
 smartmontools
