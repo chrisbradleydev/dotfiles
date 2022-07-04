@@ -65,6 +65,7 @@ cocoapods
 composer
 coreutils
 cowsay
+datree
 deno
 dnsmasq
 dog
@@ -139,6 +140,7 @@ wget
 wrk
 yarn
 youtube-dl
+yq
 zsh
 )
 
