@@ -1,10 +1,13 @@
 #!/bin/bash
 
+# homebrew exports
+eval "$($(which brew) shellenv)"
+
+# constants
 export ARCH=$(uname -m)
 export CLICOLOR=1
 export CLOUDSDK_PYTHON=/usr/local/opt/python@3.8/libexec/bin/python
 export HOMEBREW_NO_ANALYTICS=1
-export HOMEBREW_PATH=$(brew --prefix)
 export HOST_UID=$(id -u)
 export NVM_AUTOLOAD=1
 export BUN_INSTALL=$HOME/.bun
@@ -12,6 +15,8 @@ export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export CARGO_HOME=$HOME/.cargo
 export RUSTUP_HOME=$HOME/.rustup
+
+# paths
 export PATH=$BUN_INSTALL/bin:$PATH
 export PATH=$CARGO_HOME/bin:$PATH
 export PATH=$GOBIN:$PATH
