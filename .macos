@@ -15,23 +15,54 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Initialization                                                              #
 ###############################################################################
 
-echo "constants"
-ARCH=$(uname -m)
-HOST_UID=$(id -u)
-NAME=$(eval "dscl . -read "/Users/$(whoami | awk '{print $1}')" RealName | sed -n 's/^ //g;2p'")
-USERNAME=$(whoami)
-NAME_ARRAY=($NAME)
-ARRAY_LENGTH=${#NAME_ARRAY[@]}
-[[ $ARRAY_LENGTH -eq 2 ]] && FIRST_NAME=${NAME_ARRAY[0]} || FIRST_NAME="First"
-[[ $ARRAY_LENGTH -eq 2 ]] && LAST_NAME=${NAME_ARRAY[1]} || LAST_NAME="Last"
-[[ $ARCH == "arm64" ]] && CPU="Apple silicon" || CPU="Intel"
+echo "exports"
+# constants - intentionally duplicated from .exports
+export ARCH=$(uname -m)
+[[ $ARCH == "arm64" ]] \
+  && export CPU="Apple silicon" \
+  && export HOMEBREW_PREFIX=/opt/homebrew \
+  && export HOMEBREW_REPOSITORY=$HOMEBREW_PREFIX
+[[ $ARCH == "x86_64" ]] \
+  && export CPU="Intel" \
+  && export HOMEBREW_PREFIX=/usr/local \
+  && export HOMEBREW_REPOSITORY=$HOMEBREW_PREFIX/Homebrew
+export HOMEBREW_CELLAR=$HOMEBREW_PREFIX/Cellar
+export MANPATH=$HOMEBREW_PREFIX/share/man
+export INFOPATH=$HOMEBREW_PREFIX/share/info
+export CLICOLOR=1
+export CLOUDSDK_PYTHON=/usr/local/opt/python@3.8/libexec/bin/python
+export HOMEBREW_NO_ANALYTICS=1
+export HOST_UID=$(id -u)
+export USERNAME=$(whoami)
+export NAME=$(eval "dscl . -read "/Users/$(whoami | awk '{print $1}')" RealName | sed -n 's/^ //g;2p'")
+export NAME_ARRAY=($NAME)
+export NAME_ARRAY_LENGTH=${#NAME_ARRAY[@]}
+[[ $NAME_ARRAY_LENGTH -eq 2 ]] && export FIRST_NAME=${NAME_ARRAY[0]} || export FIRST_NAME="Jedi"
+[[ $NAME_ARRAY_LENGTH -eq 2 ]] && export LAST_NAME=${NAME_ARRAY[1]} || export LAST_NAME="Master"
+export NVM_AUTOLOAD=1
+export BUN_INSTALL=$HOME/.bun
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export CARGO_HOME=$HOME/.cargo
+export RUSTUP_HOME=$HOME/.rustup
+
+# paths - intentionally duplicated from .exports
+export PATH=$BUN_INSTALL/bin:$PATH
+export PATH=$CARGO_HOME/bin:$PATH
+export PATH=$GOBIN:$PATH
+export PATH=$HOME/.composer/vendor/bin:$PATH
+export PATH=$HOME/.jenv/bin:$PATH
+export PATH=$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH
+export PATH=/usr/local/lib/ruby/gems/2.7.0/bin:$PATH
+export PATH=/usr/local/opt/openjdk/bin:$PATH
+export PATH=/usr/local/opt/ruby/bin:$PATH
+
+echo "Hello $FIRST_NAME $LAST_NAME! Let's get your $CPU Mac set up."
+read -p "Press [ENTER] to continue..."
 
 ###############################################################################
 # Homebrew                                                                    #
 ###############################################################################
-
-echo "Hello $FIRST_NAME $LAST_NAME! Let's get your $CPU Mac set up."
-read -p "Press [ENTER] to continue..."
 
 echo "homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
