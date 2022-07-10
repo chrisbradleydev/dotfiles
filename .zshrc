@@ -72,12 +72,17 @@ eval "$(jenv init -)"
 # https://github.com/cantino/mcfly
 eval "$(mcfly init zsh)"
 
-# google cloud sdk path and autocomplete
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+# bun completions
+[[ -s $HOME/.bun/_bun ]] && source $HOME/.bun/_bun
 
-# stern autocomplete
-[[ /usr/local/bin/stern ]] && source <(stern --completion=zsh)
+# google cloud sdk completions
+[[ -s $HOMEBREW_PATH/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc ]] \
+  && source $HOMEBREW_PATH/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+[[ -s $HOMEBREW_PATH/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc ]] \
+  && source $HOMEBREW_PATH/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+
+# stern completions
+[[ -s /usr/local/bin/stern ]] && source <(stern --completion=zsh)
 
 # profiling with zprof
 # zprof
