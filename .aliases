@@ -16,6 +16,17 @@ alias bu="brew uninstall"
 alias buc="brew uninstall --cask"
 alias buu="brew update && brew upgrade && brew cleanup"
 
+# browser
+SE_DOCUMENTS="$HOME/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents"
+alias dbb="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt com.brave.Browser"
+alias dbbn="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt com.brave.Browser.nightly"
+alias dbc="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt com.google.Chrome"
+alias dbcc="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt com.google.Chrome.canary"
+alias dbs="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt com.apple.Safari"
+alias dbsp="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt com.apple.SafariTechnologyPreview"
+alias obb="open $SE_DOCUMENTS/Brave\ Browser\ Private.app"
+alias obc="open $SE_DOCUMENTS/Google\ Chrome\ Incognito.app"
+
 # composer
 alias c="composer"
 alias cda="composer dump-autoload"
@@ -35,8 +46,6 @@ alias cdhub="cd ~/Repos/github.com"
 alias cdlab="cd ~/Repos/gitlab.com"
 alias ll="ls -lah"
 alias o="open ."
-alias obb="open ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/Brave\ Browser\ Private.app"
-alias obc="open ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/Google\ Chrome\ Incognito.app"
 
 # docker
 alias d="docker"
