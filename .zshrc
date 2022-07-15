@@ -76,10 +76,11 @@ eval "$(mcfly init zsh)"
 [[ -s $HOME/.bun/_bun ]] && source $HOME/.bun/_bun
 
 # google cloud sdk completions
-[[ -s $HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc ]] \
-  && source $HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
-[[ -s $HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc ]] \
-  && source $HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+GC_SDK="$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
+[[ -s $GC_SDK/path.zsh.inc ]] \
+  && source $GC_SDK/path.zsh.inc
+[[ -s $GC_SDK/completion.zsh.inc ]] \
+  && source $GC_SDK/completion.zsh.inc
 
 # stern completions
 [[ -s /usr/local/bin/stern ]] && source <(stern --completion=zsh)
