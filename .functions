@@ -1,36 +1,36 @@
 #!/bin/bash
 
 auto_switch_node_version() {
-    if [[ -f .nvmrc ]]; then
-        CURRENT_NODE_VERSION=$(fnm current)
-        REQUESTED_NODE_VERSION=v$(cat .nvmrc)
-        MAJOR_RELEASE=${CURRENT_NODE_VERSION:0:${#REQUESTED_NODE_VERSION}}
-        if [[ $REQUESTED_NODE_VERSION != $MAJOR_RELEASE ]]; then
-            fnm use > /dev/null 2>&1 || fnm install
-        fi
+  if [[ -f .nvmrc ]]; then
+    CURRENT_NODE_VERSION=$(fnm current)
+    REQUESTED_NODE_VERSION=v$(cat .nvmrc)
+    MAJOR_RELEASE=${CURRENT_NODE_VERSION:0:${#REQUESTED_NODE_VERSION}}
+    if [[ $REQUESTED_NODE_VERSION != $MAJOR_RELEASE ]]; then
+      fnm use > /dev/null 2>&1 || fnm install
     fi
+  fi
 }
 
 auto_switch_php_version() {
-    if [[ -f .valetphprc ]]; then
-        FULL_PHP_VERSION=$(php -v | grep ^PHP | awk '{print $2}')
-        TRIMMED_PHP_VERSION=php@${FULL_PHP_VERSION:0:3}
-        REQUESTED_PHP_VERSION=$(cat .valetphprc)
-        if [[ $REQUESTED_PHP_VERSION != $TRIMMED_PHP_VERSION ]]; then
-            valet use
-        fi
+  if [[ -f .valetphprc ]]; then
+    FULL_PHP_VERSION=$(php -v | grep ^PHP | awk '{print $2}')
+    TRIMMED_PHP_VERSION=php@${FULL_PHP_VERSION:0:3}
+    REQUESTED_PHP_VERSION=$(cat .valetphprc)
+    if [[ $REQUESTED_PHP_VERSION != $TRIMMED_PHP_VERSION ]]; then
+      valet use
     fi
+  fi
 }
 
 auto_update_quokka_node_path() {
-    if [[ -f ~/.quokka/config.json ]]; then
-        CURRENT_NODE_PATH=$(which node)
-        QUOKKA_NODE_PATH=$(cat ~/.quokka/config.json | jq '.node' | xargs)
-        if [[ $CURRENT_NODE_PATH != $QUOKKA_NODE_PATH ]]; then
-            CONFIG_JSON="$(jq --arg node_path "$CURRENT_NODE_PATH" '.node = $node_path' ~/.quokka/config.json)" && \
-            echo $CONFIG_JSON > ~/.quokka/config.json
-        fi
+  if [[ -f ~/.quokka/config.json ]]; then
+    CURRENT_NODE_PATH=$(which node)
+    QUOKKA_NODE_PATH=$(cat ~/.quokka/config.json | jq '.node' | xargs)
+    if [[ $CURRENT_NODE_PATH != $QUOKKA_NODE_PATH ]]; then
+      CONFIG_JSON="$(jq --arg node_path "$CURRENT_NODE_PATH" '.node = $node_path' ~/.quokka/config.json)" && \
+      echo $CONFIG_JSON > ~/.quokka/config.json
     fi
+  fi
 }
 
 add-zsh-hook chpwd auto_switch_node_version
