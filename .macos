@@ -134,6 +134,7 @@ k9s
 kind
 kompose
 kubernetes-cli
+kubeseal
 kustomize
 lolcat
 lsusb
