@@ -198,7 +198,7 @@ alias stz="st ~/.dotfiles/.zshrc"
 alias stzh="st ~/.zsh_history"
 
 # vscode
-alias vs="code ."
+alias vs="open . -a \"Visual Studio Code\""
 
 # yarn
 alias yb="yarn build"
