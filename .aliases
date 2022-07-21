@@ -40,10 +40,6 @@ alias cv="composer --version"
 # directory
 alias cd-="cd -"
 alias cd..="cd .."
-alias cdbin="cd /usr/local/bin"
-alias cdbit="cd ~/Repos/bitbucket.org"
-alias cdhub="cd ~/Repos/github.com"
-alias cdlab="cd ~/Repos/gitlab.com"
 alias ll="ls -lah"
 alias o="open ."
 
