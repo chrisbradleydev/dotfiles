@@ -63,6 +63,10 @@ if zplug check "zsh-users/zsh-history-substring-search"; then
   bindkey '^[[B' history-substring-search-down
 fi
 
+# bind option + left and option + right
+bindkey '^[^[[D' backward-word
+bindkey '^[^[[C' forward-word
+
 # https://github.com/Schniz/fnm
 eval "$(fnm env)"
 
