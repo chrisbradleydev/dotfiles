@@ -103,6 +103,7 @@ datree
 deno
 dnsmasq
 dog
+dotnet
 elixir
 ffmpeg
 fish
@@ -111,6 +112,7 @@ fnm
 fortune
 fzf
 git
+git-lfs
 gitlab-runner
 go
 helm
@@ -254,7 +256,9 @@ telegram
 tiled
 tor-browser
 typora
+unity-hub
 virtualbox
+visual-studio
 visual-studio-code
 vlc
 vmware-fusion
