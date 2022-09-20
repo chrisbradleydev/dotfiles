@@ -76,6 +76,9 @@ eval "$(jenv init -)"
 # https://github.com/cantino/mcfly
 eval "$(mcfly init zsh)"
 
+# https://github.com/rbenv/rbenv
+eval "$(rbenv init - zsh)"
+
 # bun completions
 [[ -s $HOME/.bun/_bun ]] && source $HOME/.bun/_bun
 
