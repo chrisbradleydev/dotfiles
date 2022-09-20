@@ -55,10 +55,9 @@ export PATH=$CARGO_HOME/bin:$PATH
 export PATH=$GOBIN:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
 export PATH=$HOME/.jenv/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$PATH
 export PATH=$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH
-export PATH=/usr/local/lib/ruby/gems/2.7.0/bin:$PATH
 export PATH=/usr/local/opt/openjdk/bin:$PATH
-export PATH=/usr/local/opt/ruby/bin:$PATH
 
 echo "Hello $FIRST_NAME $LAST_NAME! Let's get your $CPU Mac set up."
 read -p "Press [ENTER] to continue..."
@@ -157,7 +156,8 @@ postgresql
 protobuf
 python@3.8
 redis
-ruby
+rbenv
+ruby-build
 rustup-init
 siege
 skaffold
