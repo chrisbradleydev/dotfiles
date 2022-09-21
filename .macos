@@ -57,7 +57,8 @@ export PATH=$HOME/.composer/vendor/bin:$PATH
 export PATH=$HOME/.jenv/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
 export PATH=$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH
-export PATH=/usr/local/opt/openjdk/bin:$PATH
+export PATH=$HOMEBREW_PREFIX/opt/curl/bin:$PATH
+export PATH=$HOMEBREW_PREFIX/opt/openjdk/bin:$PATH
 
 echo "Hello $FIRST_NAME $LAST_NAME! Let's get your $CPU Mac set up."
 read -p "Press [ENTER] to continue..."
