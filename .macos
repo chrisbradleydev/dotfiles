@@ -155,9 +155,10 @@ php
 planetscale/tap/pscale
 postgresql
 protobuf
+pstree
 python@3.8
-redis
 rbenv
+redis
 ruby-build
 rustup-init
 siege
