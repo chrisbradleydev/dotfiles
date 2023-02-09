@@ -172,7 +172,7 @@ starship
 stern
 stripe/stripe-cli/stripe
 telnet
-terraform
+tfenv
 tldr
 unbound
 vercel-cli
