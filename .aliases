@@ -121,24 +121,15 @@ alias ip6="dig @resolver1.opendns.com AAAA myip.opendns.com +short -6"
 # kubernetes
 alias k="kubectl"
 alias kaf="kubectl apply -f"
-alias kccc="kubectl config current-context"
-alias kcgc="kubectl config get-contexts"
-alias kcuc="kubectl config use-context"
-alias kdd="kubectl delete deployment"
+alias kcc='kubectl config use-context "$(klc | fzf -e | sed "s/^..//")"'
+alias kcn='kubectl config set-context --current --namespace "$(kln | fzf -e | sed "s/^..//")"'
 alias kex="kubectl exec -it"
-alias kga="kubectl get all"
-alias kgaa="kubectl get all --all-namespaces"
-alias kgd="kubectl get deployments"
-alias kgi="kubectl get ingress"
-alias kgn="kubectl get nodes"
-alias kgns="kubectl get namespaces"
-alias kgp="kubectl get pods"
-alias kgr="kubectl get replicasets"
-alias kgs="kubectl get services"
-alias kl="kubectl logs"
-alias klf="kubectl logs -f"
+alias kga="kubectl get all --all-namespaces"
+alias klc='kubectl config get-contexts -o name | sed "s/^/  /;\|^  $(krc)$|s/ /*/"'
+alias kln='kubectl get -o name ns | sed "s|^.*/|  |;\|^  $(krn)$|s/ /*/"'
 alias kpf="kubectl port-forward"
-alias ksd="kubectl scale deployment"
+alias krc="kubectl config current-context"
+alias krn='kubectl config get-contexts --no-headers "$(krc)" | awk "{print \$5}" | sed "s/^$/default/"'
 
 # minikube
 alias mk="minikube"
