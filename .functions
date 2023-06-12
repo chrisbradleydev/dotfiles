@@ -1,6 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
-auto_switch_node_version() {
+preexec () {
+  echo "\U21B3 \033[1;4;33m${1}\033[0m run on \033[32m`date "+%Y-%m-%d %H:%M:%S"`\033[0m"
+}
+
+auto_switch_node_version () {
   if [[ -f .nvmrc ]]; then
     CURRENT_NODE_VERSION=$(fnm current)
     REQUESTED_NODE_VERSION=v$(cat .nvmrc)
@@ -11,18 +15,7 @@ auto_switch_node_version() {
   fi
 }
 
-auto_switch_php_version() {
-  if [[ -f .valetphprc ]]; then
-    FULL_PHP_VERSION=$(php -v | grep ^PHP | awk '{print $2}')
-    TRIMMED_PHP_VERSION=php@${FULL_PHP_VERSION:0:3}
-    REQUESTED_PHP_VERSION=$(cat .valetphprc)
-    if [[ $REQUESTED_PHP_VERSION != $TRIMMED_PHP_VERSION ]]; then
-      valet use
-    fi
-  fi
-}
-
-auto_update_quokka_node_path() {
+auto_update_quokka_node_path () {
   if [[ -f ~/.quokka/config.json ]]; then
     CURRENT_NODE_PATH=$(which node)
     QUOKKA_NODE_PATH=$(cat ~/.quokka/config.json | jq '.node' | xargs)
@@ -34,5 +27,4 @@ auto_update_quokka_node_path() {
 }
 
 add-zsh-hook chpwd auto_switch_node_version
-# add-zsh-hook chpwd auto_switch_php_version
 add-zsh-hook chpwd auto_update_quokka_node_path
