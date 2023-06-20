@@ -184,6 +184,9 @@ alias sts="st /etc/shells"
 alias stz="st ~/.dotfiles/.zshrc"
 alias stzh="st ~/.zsh_history"
 
+# terraform
+alias tf="terraform"
+
 # vscode
 alias vs="open . -a \"Visual Studio Code\""
 
