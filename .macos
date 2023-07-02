@@ -115,6 +115,7 @@ git
 git-lfs
 gitlab-runner
 glab
+gnupg
 go
 helm
 heroku/brew/heroku
