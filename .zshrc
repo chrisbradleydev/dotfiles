@@ -89,8 +89,5 @@ GC_SDK="$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
 [[ -s $GC_SDK/completion.zsh.inc ]] \
   && source $GC_SDK/completion.zsh.inc
 
-# stern completions
-[[ -s /usr/local/bin/stern ]] && source <(stern --completion=zsh)
-
 # profiling with zprof
 # zprof
