@@ -83,7 +83,7 @@ eval "$(rbenv init - zsh)"
 [[ -s $HOME/.bun/_bun ]] && source $HOME/.bun/_bun
 
 # google cloud sdk completions
-GC_SDK="$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
+GC_SDK="$HOMEBREW_PREFIX/share/google-cloud-sdk"
 [[ -s $GC_SDK/path.zsh.inc ]] \
   && source $GC_SDK/path.zsh.inc
 [[ -s $GC_SDK/completion.zsh.inc ]] \
