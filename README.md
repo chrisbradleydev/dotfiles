@@ -1,7 +1,10 @@
 # dotfiles
 
-Config settings for various apps, editors, and linters.
+Clone the repository to home directory and execute the `.macos` script.
 
-Any suggestions? Let me know...
-
-Enjoy! 😁
+```sh
+cd
+git clone https://github.com/chrisbradleydev/dotfiles.git .dotfiles
+cd .dotfiles
+./macos
+```
