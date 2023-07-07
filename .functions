@@ -1,10 +1,10 @@
 #!/usr/bin/env zsh
 
-preexec () {
+preexec() {
   echo "\U21B3 \033[1;4;33m${1}\033[0m run on \033[32m`date "+%Y-%m-%d %H:%M:%S"`\033[0m"
 }
 
-auto_switch_node_version () {
+auto_switch_node_version() {
   if [[ -f .nvmrc ]]; then
     CURRENT_NODE_VERSION=$(fnm current)
     REQUESTED_NODE_VERSION=v$(cat .nvmrc)
@@ -15,7 +15,7 @@ auto_switch_node_version () {
   fi
 }
 
-auto_update_quokka_node_path () {
+auto_update_quokka_node_path() {
   if [[ -f ~/.quokka/config.json ]]; then
     CURRENT_NODE_PATH=$(which node)
     QUOKKA_NODE_PATH=$(cat ~/.quokka/config.json | jq '.node' | xargs)
