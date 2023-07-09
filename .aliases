@@ -98,6 +98,8 @@ alias gsp="git stash pop"
 
 # golang
 alias gbo="go build -o"
+alias gmt="go mod tidy"
+alias gr.="go run ."
 alias grm="go run main.go"
 
 # grep
