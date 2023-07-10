@@ -33,7 +33,7 @@ SPACESHIP_CHAR_SYMBOL=❯
 SPACESHIP_GCLOUD_SHOW=false
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 
-# load oh-my-zsh
+# oh-my-zsh plugins
 zplug "plugins/autojump", from:oh-my-zsh
 zplug "plugins/battery", from:oh-my-zsh
 zplug "plugins/chucknorris", from:oh-my-zsh
@@ -47,11 +47,20 @@ zplug "plugins/macos", from:oh-my-zsh
 zplug "plugins/rust", from:oh-my-zsh
 zplug "plugins/sublime", from:oh-my-zsh
 
-# load miscellaneous
+# miscellaneous plugins
+zplug "Aloxaf/fzf-tab"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-history-substring-search", defer:3
+
+# plugin options
+export FZF_DEFAULT_OPTS="\
+  --border\
+  --height=60%\
+  --layout=reverse\
+  --no-sort\
+  --prompt=\"ಠ_ಠ \""
 
 # ensure packages are installed then load
 zplug check || zplug install
@@ -83,11 +92,9 @@ eval "$(rbenv init - zsh)"
 [[ -s $HOME/.bun/_bun ]] && source $HOME/.bun/_bun
 
 # google cloud sdk completions
-GC_SDK="$HOMEBREW_PREFIX/share/google-cloud-sdk"
-[[ -s $GC_SDK/path.zsh.inc ]] \
-  && source $GC_SDK/path.zsh.inc
-[[ -s $GC_SDK/completion.zsh.inc ]] \
-  && source $GC_SDK/completion.zsh.inc
+GC_SDK=$HOMEBREW_PREFIX/share/google-cloud-sdk
+[[ -s $GC_SDK/completion.zsh.inc ]] && source $GC_SDK/completion.zsh.inc
+[[ -s $GC_SDK/path.zsh.inc ]] && source $GC_SDK/path.zsh.inc
 
 # profiling with zprof
 # zprof
