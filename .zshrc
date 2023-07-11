@@ -55,12 +55,7 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
 
 # plugin options
-export FZF_DEFAULT_OPTS="\
-  --border\
-  --height=60%\
-  --layout=reverse\
-  --no-sort\
-  --prompt=\"ಠ_ಠ \""
+export FZF_DEFAULT_OPTS="--border --layout=reverse --no-sort --prompt=\"ಠ_ಠ \""
 
 # ensure packages are installed then load
 zplug check || zplug install
