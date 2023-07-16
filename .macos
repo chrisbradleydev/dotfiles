@@ -75,6 +75,7 @@ gitlab-runner
 glab
 gnupg
 go
+golang-migrate
 helm
 heroku/brew/heroku
 htop
