@@ -12,8 +12,10 @@ if [[ ! -d $ZPLUG_HOME ]]; then
 fi
 source $ZPLUG_HOME/init.zsh
 
+fpath=(~/.local/share/zsh/functions $fpath)
 autoload -Uz add-zsh-hook
-autoload -Uz compinit; compinit
+autoload -Uz compinit
+compinit -u
 
 # aliases, exports, and functions
 source ~/.shell/aliases
