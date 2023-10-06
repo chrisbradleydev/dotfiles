@@ -39,6 +39,7 @@ export RUSTUP_HOME=$HOME/.rustup
 export PATH=$BUN_INSTALL/bin:$PATH
 export PATH=$CARGO_HOME/bin:$PATH
 export PATH=$GOBIN:$PATH
+export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
 export PATH=$HOME/.jenv/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
