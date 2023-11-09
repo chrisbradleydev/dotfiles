@@ -115,6 +115,7 @@ alias hid="helm install --debug --dry-run"
 alias hl="helm lint"
 alias hp="helm package"
 alias hs="helm search"
+alias ht="helm template"
 alias hu="helm uninstall"
 
 # history
