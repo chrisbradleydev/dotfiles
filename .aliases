@@ -102,6 +102,7 @@ alias gsp="git stash pop"
 alias gbo="go build -o"
 alias gmt="go mod tidy"
 alias gr.="go run ."
+alias grr.="go run -race ."
 alias grm="go run main.go"
 
 # grep
