@@ -46,12 +46,14 @@ done
 echo "brew packages"
 PACKAGES=(
 ack
+ansible
 asciinema
 autojump
 automake
 awscli
 bash
 bat
+btop
 cmatrix
 cocoapods
 composer
@@ -63,7 +65,9 @@ dnsmasq
 dog
 dotnet
 elixir
+exiftool
 ffmpeg
+figlet
 fish
 flyctl
 fnm
@@ -119,14 +123,16 @@ planetscale/tap/pscale
 postgresql
 protobuf
 pstree
-python@3.8
+python@3.9
 rbenv
 redis
 ruby-build
 rustup-init
+shivammathur/php/php@8.1
 siege
 skaffold
 smartmontools
+snyk
 speedtest
 sponge
 sqlite
@@ -144,6 +150,7 @@ wrk
 yarn
 youtube-dl
 yq
+zig
 zsh
 )
 
@@ -159,21 +166,24 @@ ableton-live-suite
 adobe-creative-cloud
 airtable
 alacritty
+alex313031-thorium
 alfred
 audacity
 authy
 balenaetcher
+bartender
 bisq
 brave-browser
 charles
 chromedriver
 daisydisk
-dash
+dash6
 db-browser-for-sqlite
 deluge
 discord
 docker
 drivedx
+dropbox
 electron-cash
 electrum
 electrum-ltc
@@ -187,11 +197,13 @@ font-jetbrains-mono-nerd-font
 google-chrome
 google-cloud-sdk
 grammarly
+http-toolkit
 imazing
 insomnia
 intellij-idea-ce
 ipfs
 iterm2
+izotope-product-portal
 jitsi
 karabiner-elements
 keepassxc
@@ -200,6 +212,7 @@ ledger-live
 lens
 logi-options-plus
 maccleaner-pro
+microsoft-office
 minecraft
 mongodb-compass
 native-access
@@ -210,6 +223,7 @@ owncloud
 phpstorm
 postman
 private-internet-access
+protonmail-bridge
 protonvpn
 pycharm-ce
 raspberry-pi-imager
@@ -219,6 +233,7 @@ signal
 slack
 spotify
 sublime-text
+tableplus
 telegram
 tiled
 tor-browser
