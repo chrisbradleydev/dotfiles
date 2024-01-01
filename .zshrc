@@ -86,6 +86,9 @@ eval "$(mcfly init zsh)"
 # https://github.com/pyenv/pyenv
 eval "$(pyenv init -)"
 
+# https://github.com/pyenv/pyenv-virtualenv
+eval "$(pyenv virtualenv-init -)"
+
 # https://github.com/rbenv/rbenv
 eval "$(rbenv init - zsh)"
 
