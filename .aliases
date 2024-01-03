@@ -146,6 +146,9 @@ alias mk="minikube"
 alias mka="minikube addons"
 alias mks="minikube service"
 
+# neovim
+alias vim="nvim"
+
 # node
 alias nv="node -v"
 
