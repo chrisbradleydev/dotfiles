@@ -139,9 +139,9 @@ sqlite
 starship
 stern
 stripe/stripe-cli/stripe
-telnet
 tfenv
 tldr
+tmux
 unbound
 vercel-cli
 watchman
