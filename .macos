@@ -30,6 +30,7 @@ echo "homebrew"
 
 echo "brew taps"
 TAPS=(
+hashicorp/tap
 homebrew/cask-fonts
 homebrew/cask-versions
 shivammathur/php
@@ -59,6 +60,7 @@ cocoapods
 composer
 coreutils
 cowsay
+datawire/blackbird/telepresence-arm64
 datree
 deno
 dnsmasq
@@ -80,6 +82,7 @@ glab
 gnupg
 go
 golang-migrate
+hashicorp/tap/vault
 helm
 heroku/brew/heroku
 htop
@@ -118,6 +121,7 @@ nginx
 nmap
 nushell
 openssl
+pgcli
 php
 planetscale/tap/pscale
 postgresql
