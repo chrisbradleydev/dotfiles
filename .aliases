@@ -197,6 +197,7 @@ alias stq="st ~/.quokka/config.json"
 alias sts="st /etc/shells"
 alias stz="st ~/.dotfiles/.zshrc"
 alias stzh="st ~/.zsh_history"
+alias stzp="st ~/.zprofile"
 
 # terraform
 alias tf="terraform"
