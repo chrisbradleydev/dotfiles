@@ -96,8 +96,6 @@ imagemagick
 ipcalc
 irssi
 jenv
-jesseduffield/lazydocker/lazydocker
-jesseduffield/lazygit/lazygit
 jq
 jrnl
 jwbargsten/misc/defbro
@@ -109,7 +107,6 @@ kubernetes-cli
 kubeseal
 kustomize
 lolcat
-lsusb
 maven
 mcfly
 minikube
