@@ -37,7 +37,6 @@ SPACESHIP_GCLOUD_SHOW=false
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 
 # oh-my-zsh plugins
-zplug "plugins/autojump", from:oh-my-zsh
 zplug "plugins/battery", from:oh-my-zsh
 zplug "plugins/chucknorris", from:oh-my-zsh
 zplug "plugins/colored-man-pages", from:oh-my-zsh
@@ -91,6 +90,9 @@ eval "$(pyenv virtualenv-init -)"
 
 # https://github.com/rbenv/rbenv
 eval "$(rbenv init - zsh)"
+
+# https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init zsh)"
 
 # bun completions
 [[ -s $HOME/.bun/_bun ]] && source $HOME/.bun/_bun
