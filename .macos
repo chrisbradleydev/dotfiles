@@ -49,7 +49,6 @@ PACKAGES=(
 ack
 ansible
 asciinema
-autojump
 automake
 awscli
 bash
@@ -152,6 +151,7 @@ yarn
 youtube-dl
 yq
 zig
+zoxide
 zsh
 )
 
