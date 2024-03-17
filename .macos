@@ -123,6 +123,8 @@ planetscale/tap/pscale
 postgresql
 protobuf
 pstree
+pyenv
+pyenv-virtualenv
 python@3.9
 rbenv
 redis
