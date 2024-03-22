@@ -125,12 +125,11 @@ protobuf
 pstree
 pyenv
 pyenv-virtualenv
-python@3.9
 rbenv
 redis
 ruby-build
 rustup-init
-shivammathur/php/php@8.1
+shivammathur/php/php@8.2
 siege
 skaffold
 smartmontools
