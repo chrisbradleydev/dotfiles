@@ -119,7 +119,6 @@ nushell
 openssl
 pgcli
 php
-planetscale/tap/pscale
 postgresql
 protobuf
 pstree
