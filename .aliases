@@ -23,6 +23,8 @@ alias dbc="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt com.google.Chrome"
 alias dbcc="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt com.google.Chrome.canary"
 alias dbs="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt com.apple.Safari"
 alias dbsp="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt com.apple.SafariTechnologyPreview"
+alias dbf="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt org.mozilla.firefox"
+alias dbfn="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt org.mozilla.nightly"
 alias obb="open $SE_DOCUMENTS/Brave\ Browser\ Private.app"
 alias obc="open $SE_DOCUMENTS/Google\ Chrome\ Incognito.app"
 
