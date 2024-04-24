@@ -119,7 +119,7 @@ nushell
 openssl
 pgcli
 php
-postgresql
+postgresql@15
 protobuf
 pstree
 pyenv
