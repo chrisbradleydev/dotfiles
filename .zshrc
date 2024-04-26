@@ -76,6 +76,9 @@ bindkey '^[^[[C' forward-word
 # https://github.com/Schniz/fnm
 eval "$(fnm env)"
 
+# https://github.com/helm/helm
+source <(helm completion zsh)
+
 # https://github.com/jenv/jenv
 eval "$(jenv init -)"
 
