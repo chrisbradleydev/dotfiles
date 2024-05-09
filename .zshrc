@@ -82,6 +82,9 @@ source <(helm completion zsh)
 # https://github.com/jenv/jenv
 eval "$(jenv init -)"
 
+# https://github.com/kubernetes/kubernetes
+source <(kubectl completion zsh)
+
 # https://github.com/cantino/mcfly
 eval "$(mcfly init zsh)"
 
