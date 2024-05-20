@@ -31,8 +31,6 @@ echo "homebrew"
 echo "brew taps"
 TAPS=(
 hashicorp/tap
-homebrew/cask-fonts
-homebrew/cask-versions
 shivammathur/php
 snyk/tap
 teamookla/speedtest
