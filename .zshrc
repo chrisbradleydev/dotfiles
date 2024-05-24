@@ -111,8 +111,10 @@ GC_SDK=$HOMEBREW_PREFIX/share/google-cloud-sdk
 [[ -s $GC_SDK/completion.zsh.inc ]] && source $GC_SDK/completion.zsh.inc
 [[ -s $GC_SDK/path.zsh.inc ]] && source $GC_SDK/path.zsh.inc
 
-# platform-operator completions
-[[ -s $HOME/go/bin/platctl ]] && source <($HOME/go/bin/platctl completion zsh)
+if [[ "$(whoami)" == "chris_bradley" ]]; then
+  # platform-operator completions
+  [[ -s $HOME/go/bin/platctl ]] && source <($HOME/go/bin/platctl completion zsh)
+fi
 
 # profiling with zprof
 # zprof
