@@ -206,6 +206,7 @@ alias tf="terraform"
 
 # vscode
 alias vs="open . -a \"Visual Studio Code\""
+alias vsd="open ~/.dotfiles -a \"Visual Studio Code\""
 
 # yarn
 alias yb="yarn build"
