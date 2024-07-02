@@ -73,6 +73,10 @@ fi
 bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word
 
+# bind shift + tab
+# https://github.com/zsh-users/zsh-autosuggestions#key-bindings
+bindkey '^[[Z' autosuggest-execute
+
 # https://github.com/Schniz/fnm
 eval "$(fnm env)"
 
