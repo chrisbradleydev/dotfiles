@@ -122,9 +122,6 @@ alias hs="helm search"
 alias ht="helm template"
 alias hu="helm uninstall"
 
-# history
-alias hg="history | grep"
-
 # ip
 alias ip="ifconfig -l | xargs -n1 ipconfig getifaddr"
 alias ip4="dig @resolver1.opendns.com A myip.opendns.com +short -4"
