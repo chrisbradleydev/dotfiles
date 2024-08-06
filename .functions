@@ -34,5 +34,11 @@ auto_update_quokka_node_path () {
   fi
 }
 
+kubernetes_context_and_namespace () {
+  local _Y="\033[1;4;33m"
+  local RS="\033[0m"
+  echo "  Context: ${_Y}$(krc)${RS}\nNamespace: ${_Y}$(krn)${RS}"
+}
+
 # https://zsh.sourceforge.io/Doc/Release/Functions.html
 add-zsh-hook chpwd auto_update_quokka_node_path
