@@ -136,6 +136,7 @@ alias kex="kubectl exec -it"
 alias kga="kubectl get all --all-namespaces"
 alias klc='kubectl config get-contexts -o name | sed "s/^/  /;\|^  $(krc)$|s/ /*/"'
 alias kln='kubectl get -o name ns | sed "s|^.*/|  |;\|^  $(krn)$|s/ /*/"'
+alias ko='kubernetes_context_and_namespace'
 alias kpf="kubectl port-forward"
 alias krc="kubectl config current-context"
 alias krn='kubectl config get-contexts --no-headers "$(krc)" | awk "{print \$5}" | sed "s/^$/default/"'
