@@ -255,7 +255,7 @@ do
 done
 
 echo "brew uninstall unnecessary packages"
-brew uninstall node node@14 --ignore-dependencies
+brew uninstall node --ignore-dependencies
 
 ###############################################################################
 # Node / NPM                                                                  #
@@ -263,12 +263,12 @@ brew uninstall node node@14 --ignore-dependencies
 
 echo "node and npm"
 eval "$(fnm env)"
-cat > ~/.nvmrc <<EOL
-14
-EOL
+cat > ~/.nvmrc <<EOF
+20
+EOF
 fnm install --lts
-fnm install 14
-fnm use 14
+fnm install 20
+fnm use 20
 
 ###############################################################################
 # PHP / Composer                                                              #
