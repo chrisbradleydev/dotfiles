@@ -258,6 +258,27 @@ echo "brew uninstall unnecessary packages"
 brew uninstall node --ignore-dependencies
 
 ###############################################################################
+# Go                                                                          #
+###############################################################################
+
+echo "go installs"
+GO_INSTALLS=(
+github.com/air-verse/air@latest
+github.com/rakyll/hey
+github.com/spf13/cobra-cli@latest
+github.com/wagoodman/dive@latest
+golang.org/x/pkgsite/cmd/pkgsite@latest
+honnef.co/go/tools/cmd/staticcheck@latest
+mvdan.cc/gofumpt@latest
+)
+
+for i in "${GO_INSTALLS[@]}"
+do
+  echo "go install $i"
+  go install $i
+done
+
+###############################################################################
 # Node / NPM                                                                  #
 ###############################################################################
 
