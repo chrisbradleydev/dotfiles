@@ -263,19 +263,24 @@ brew uninstall node --ignore-dependencies
 
 echo "go installs"
 GO_INSTALLS=(
-github.com/air-verse/air@latest
+github.com/air-verse/air
+github.com/mgechev/revive
 github.com/rakyll/hey
-github.com/spf13/cobra-cli@latest
-github.com/wagoodman/dive@latest
-golang.org/x/pkgsite/cmd/pkgsite@latest
-honnef.co/go/tools/cmd/staticcheck@latest
-mvdan.cc/gofumpt@latest
+github.com/spf13/cobra-cli
+github.com/wagoodman/dive
+golang.org/x/pkgsite/cmd/pkgsite
+golang.org/x/tools/cmd/goimports
+golang.org/x/tools/cmd/stringer
+golang.org/x/vuln/cmd/govulncheck
+google.golang.org/protobuf/cmd/protoc-gen-go
+honnef.co/go/tools/cmd/staticcheck
+mvdan.cc/gofumpt
 )
 
 for i in "${GO_INSTALLS[@]}"
 do
   echo "go install $i"
-  go install $i
+  go install $i@latest
 done
 
 ###############################################################################
