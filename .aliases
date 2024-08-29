@@ -72,7 +72,7 @@ alias dvl="docker volume ls"
 alias dvr="docker volume rm"
 
 # git
-alias ga="git add -p"
+alias ga="git add ."
 alias gb="git branch"
 alias gc-="git checkout -"
 alias gc.="git checkout ."
