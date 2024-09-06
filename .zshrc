@@ -25,6 +25,7 @@ source ~/.shell/functions
 # options
 setopt append_history \
   hist_ignore_dups \
+  hist_ignore_space \
   hist_reduce_blanks \
   inc_append_history
 
