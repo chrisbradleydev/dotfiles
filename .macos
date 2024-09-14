@@ -110,6 +110,7 @@ minikube
 mongosh
 mysql
 mysql-client
+mysql@8.4
 neovim
 nginx
 nmap
