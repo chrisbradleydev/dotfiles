@@ -47,7 +47,7 @@ alias o="open ."
 
 # docker
 alias d="docker"
-alias db="docker build"
+alias dbt="docker build -t"
 alias dc="docker compose"
 alias dcb="docker compose build"
 alias dcd="docker compose down"
