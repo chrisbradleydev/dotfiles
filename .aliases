@@ -140,6 +140,7 @@ alias ko='kubernetes_context_and_namespace'
 alias kpf="kubectl port-forward"
 alias krc="kubectl config current-context"
 alias krn='kubectl config get-contexts --no-headers "$(krc)" | awk "{print \$5}" | sed "s/^$/default/"'
+alias ksr='kubectl scale --replicas'
 
 # minikube
 alias mk="minikube"
