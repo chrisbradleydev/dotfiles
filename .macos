@@ -126,7 +126,7 @@ pyenv-virtualenv
 rbenv
 redis
 ruby-build
-rustup-init
+rustup
 shivammathur/php/php@8.2
 siege
 skaffold
