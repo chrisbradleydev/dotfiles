@@ -265,6 +265,7 @@ brew uninstall node --ignore-dependencies
 echo "go installs"
 GO_INSTALLS=(
 github.com/air-verse/air
+github.com/bojand/ghz/cmd/ghz
 github.com/mgechev/revive
 github.com/rakyll/hey
 github.com/spf13/cobra-cli
