@@ -18,9 +18,9 @@ autoload -Uz compinit
 compinit -u
 
 # aliases, exports, and functions
-source ~/.shell/aliases
-source ~/.shell/exports
-source ~/.shell/functions
+source ~/.dotfiles/.aliases
+source ~/.dotfiles/.exports
+source ~/.dotfiles/.functions
 
 # options
 setopt append_history \
