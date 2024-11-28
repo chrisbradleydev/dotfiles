@@ -316,10 +316,6 @@ composer global require \
 
 echo "clone dotfiles"
 git clone https://github.com/chrisbradleydev/dotfiles.git "${HOME}/.dotfiles"
-mkdir "${HOME}/.shell"
-ln -s "${HOME}/.dotfiles/.aliases" "${HOME}/.shell/aliases"
-ln -s "${HOME}/.dotfiles/.exports" "${HOME}/.shell/exports"
-ln -s "${HOME}/.dotfiles/.functions" "${HOME}/.shell/functions"
 ln -s "${HOME}/.dotfiles/.vimrc" "${HOME}/.vimrc"
 ln -s "${HOME}/.dotfiles/.zshrc" "${HOME}/.zshrc"
 
