@@ -274,6 +274,7 @@ github.com/wagoodman/dive
 golang.org/x/pkgsite/cmd/pkgsite
 golang.org/x/tools/cmd/goimports
 golang.org/x/tools/cmd/stringer
+golang.org/x/tools/go/analysis/passes/fieldalignment/cmd/fieldalignment
 golang.org/x/vuln/cmd/govulncheck
 google.golang.org/grpc/cmd/protoc-gen-go-grpc
 google.golang.org/protobuf/cmd/protoc-gen-go
