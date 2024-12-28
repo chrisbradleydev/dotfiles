@@ -319,6 +319,7 @@ composer global require \
 
 echo "clone dotfiles"
 git clone https://github.com/chrisbradleydev/dotfiles.git "${HOME}/.dotfiles"
+ln -s "${HOME}/.dotfiles/nvim" "${HOME}/.config/nvim"
 ln -s "${HOME}/.dotfiles/.vimrc" "${HOME}/.vimrc"
 ln -s "${HOME}/.dotfiles/.zshrc" "${HOME}/.zshrc"
 
