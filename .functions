@@ -1,43 +1,43 @@
 #!/usr/bin/env zsh
 
-preexec () {
-  # https://en.wikipedia.org/wiki/ANSI_escape_code
-  local  G="\033[0;32m"
-  local _G="\033[1;4;32m"
-  local  B="\033[0;34m"
-  local _B="\033[1;4;34m"
-  local  Y="\033[0;33m"
-  local _Y="\033[1;4;33m"
-  local RS="\033[0m"
-  echo "${G}\U21B3${RS} ${_Y}${1}${RS} ${B}@${RE} ${G}$(date '+%Y-%m-%d %H:%M:%S')${RS}"
+preexec() {
+	# https://en.wikipedia.org/wiki/ANSI_escape_code
+	local G="\033[0;32m"
+	local _G="\033[1;4;32m"
+	local B="\033[0;34m"
+	local _B="\033[1;4;34m"
+	local Y="\033[0;33m"
+	local _Y="\033[1;4;33m"
+	local RS="\033[0m"
+	echo "${G}\U21B3${RS} ${_Y}${1}${RS} ${B}@${RE} ${G}$(date '+%Y-%m-%d %H:%M:%S')${RS}"
 }
 
-auto_switch_node_version () {
-  if [[ -f .nvmrc ]]; then
-    CURRENT_NODE_VERSION=$(fnm current)
-    REQUESTED_NODE_VERSION=v$(cat .nvmrc)
-    MAJOR_RELEASE=${CURRENT_NODE_VERSION:0:${#REQUESTED_NODE_VERSION}}
-    if [[ $REQUESTED_NODE_VERSION != $MAJOR_RELEASE ]]; then
-      fnm use > /dev/null 2>&1 || fnm install
-    fi
-  fi
+auto_switch_node_version() {
+	if [[ -f .nvmrc ]]; then
+		CURRENT_NODE_VERSION=$(fnm current)
+		REQUESTED_NODE_VERSION=v$(cat .nvmrc)
+		MAJOR_RELEASE=${CURRENT_NODE_VERSION:0:${#REQUESTED_NODE_VERSION}}
+		if [[ $REQUESTED_NODE_VERSION != $MAJOR_RELEASE ]]; then
+			fnm use >/dev/null 2>&1 || fnm install
+		fi
+	fi
 }
 
-auto_update_quokka_node_path () {
-  if [[ -f ~/.quokka/config.json ]]; then
-    CURRENT_NODE_PATH=$(which node)
-    QUOKKA_NODE_PATH=$(cat ~/.quokka/config.json | jq '.node' | xargs)
-    if [[ $CURRENT_NODE_PATH != $QUOKKA_NODE_PATH ]]; then
-      CONFIG_JSON="$(jq --arg node_path "$CURRENT_NODE_PATH" '.node = $node_path' ~/.quokka/config.json)" && \
-      echo $CONFIG_JSON > ~/.quokka/config.json
-    fi
-  fi
+auto_update_quokka_node_path() {
+	if [[ -f ~/.quokka/config.json ]]; then
+		CURRENT_NODE_PATH=$(which node)
+		QUOKKA_NODE_PATH=$(cat ~/.quokka/config.json | jq '.node' | xargs)
+		if [[ $CURRENT_NODE_PATH != $QUOKKA_NODE_PATH ]]; then
+			CONFIG_JSON="$(jq --arg node_path "$CURRENT_NODE_PATH" '.node = $node_path' ~/.quokka/config.json)" &&
+				echo $CONFIG_JSON >~/.quokka/config.json
+		fi
+	fi
 }
 
-kubernetes_context_and_namespace () {
-  local _Y="\033[1;4;33m"
-  local RS="\033[0m"
-  echo "  Context: ${_Y}$(krc)${RS}\nNamespace: ${_Y}$(krn)${RS}"
+kubernetes_context_and_namespace() {
+	local _Y="\033[1;4;33m"
+	local RS="\033[0m"
+	echo "  Context: ${_Y}$(krc)${RS}\nNamespace: ${_Y}$(krn)${RS}"
 }
 
 # https://zsh.sourceforge.io/Doc/Release/Functions.html
