@@ -1,0 +1,7 @@
+confirm-close-surface = false
+
+font-family = JetBrainsMono Nerd Font Mono
+font-feature = -liga
+font-size = 15
+
+theme = Dracula
