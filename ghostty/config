@@ -1,7 +1,14 @@
+auto-update = check
+
 confirm-close-surface = false
 
-font-family = JetBrainsMono Nerd Font Mono
+font-family = JetBrainsMonoNL Nerd Font
 font-feature = -liga
 font-size = 15
 
 theme = Dracula
+
+window-decoration = true
+window-padding-balance = true
+window-padding-x = 10
+window-padding-y = 0
