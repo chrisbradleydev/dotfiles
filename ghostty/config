@@ -10,5 +10,6 @@ theme = Dracula
 
 window-decoration = true
 window-padding-balance = true
+window-padding-color = extend
 window-padding-x = 10
 window-padding-y = 10
