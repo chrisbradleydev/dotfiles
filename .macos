@@ -219,6 +219,7 @@ CASKS=(
 	mongodb-compass
 	monitorcontrol
 	native-access
+	netnewswire
 	ngrok
 	obs
 	openemu
