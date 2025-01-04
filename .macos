@@ -148,6 +148,7 @@ PACKAGES=(
 	tmux
 	unbound
 	vercel-cli
+	w3m
 	watchman
 	wget
 	wrk
