@@ -34,6 +34,12 @@ auto_update_quokka_node_path() {
 	fi
 }
 
+google() {
+	query=$(perl -MURI::Escape -e 'print uri_escape($ARGV[0])' "$*")
+	url="https://google.com/search?q=$query"
+	w3m "$url"
+}
+
 kubernetes_context_and_namespace() {
 	local _Y="\033[1;4;33m"
 	local RS="\033[0m"
