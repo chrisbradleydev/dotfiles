@@ -79,6 +79,7 @@ PACKAGES=(
 	git-lfs
 	gitlab-runner
 	glab
+	gnu-sed
 	gnupg
 	go
 	golang-migrate
