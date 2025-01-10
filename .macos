@@ -103,6 +103,7 @@ PACKAGES=(
 	k6
 	k9s
 	kind
+	knot
 	kompose
 	kubernetes-cli
 	kubeseal
