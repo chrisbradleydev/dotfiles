@@ -75,6 +75,7 @@ PACKAGES=(
 	fnm
 	fortune
 	fzf
+	gh
 	git
 	git-lfs
 	gitlab-runner
