@@ -1,0 +1,52 @@
+plugins:
+  blame:
+    shortCut: Shift-B
+    confirm: false
+    description: "Blame"
+    scopes:
+      - all
+    command: sh
+    background: false
+    args:
+      - -c
+      - "kubectl blame $RESOURCE_NAME $NAME -n $NAMESPACE --context $CONTEXT | less"
+  debug:
+    shortCut: Shift-D
+    description: Add debug container
+    scopes:
+      - containers
+    command: bash
+    background: false
+    confirm: true
+    args:
+      - -c
+      - "kubectl debug -it -n=$NAMESPACE $POD --target=$NAME --image=nicolaka/netshoot:v0.11 --share-processes -- bash"
+  stern:
+    shortCut: Ctrl-L
+    confirm: false
+    description: "Logs <stern>"
+    scopes:
+      - po
+    command: kubectl
+    background: false
+    args:
+      - kubectl
+      - stern
+      - --tail
+      - 10
+      - $FILTER
+      - -n
+      - $NAMESPACE
+      - --context
+      - $CONTEXT
+  watch-events:
+    shortCut: Shift-E
+    confirm: false
+    description: Get Events
+    scopes:
+      - all
+    command: sh
+    background: false
+    args:
+      - -c
+      - "watch -n 5 kubectl get events --context $CONTEXT --namespace $NAMESPACE --field-selector involvedObject.name=$NAME"

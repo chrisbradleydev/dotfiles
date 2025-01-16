@@ -1,0 +1,41 @@
+hotKeys:
+  shift-1:
+    shortCut: Shift-1
+    description: View helm
+    command: helm
+  shift-2:
+    shortCut: Shift-2
+    description: View deployments
+    command: deployments
+  shift-3:
+    shortCut: Shift-3
+    description: View pods
+    command: pods
+  shift-4:
+    shortCut: Shift-4
+    description: View services
+    command: services
+  shift-5:
+    shortCut: Shift-5
+    description: View virtualservices
+    command: virtualservices
+  shift-6:
+    shortCut: Shift-6
+    description: View sqlinstances
+    command: sqlinstances
+  shift-7:
+    shortCut: Shift-7
+    description: View redisinstances
+    command: redisinstances
+  shift-8:
+    shortCut: Shift-8
+    description: View pubsubtopics
+    command: pubsubtopics
+  shift-9:
+    shortCut: Shift-9
+    description: View pubsubsubscriptions
+    command: pubsubsubscriptions
+  shift-0:
+    shortCut: Shift-0
+    description: Popeye
+    command: popeye

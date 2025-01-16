@@ -1,0 +1,21 @@
+aliases:
+  ap:   authorizationpolicies
+  cr:   clusterroles
+  crb:  clusterrolebindings
+  dp:   deployments
+  iamm: iampolicymembers
+  iamp: iampolicies
+  iams: iamserviceaccounts
+  jo:   jobs
+  np:   networkpolicies
+  pss:  pubsubsubscriptions
+  pst:  pubsubtopics
+  rb:   rolebindings
+  ri:   redisinstances
+  ro:   roles
+  sd:   sqldatabases
+  sec:  v1/secrets
+  si:   sqlinstances
+  su:   sqlusers
+  tel:  telemetries.telemetry.istio.io
+  vs:   virtualservices
