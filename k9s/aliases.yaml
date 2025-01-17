@@ -2,6 +2,8 @@ aliases:
   ap:   authorizationpolicies
   cr:   clusterroles
   crb:  clusterrolebindings
+  dda:  datadogagents
+  ddm:  datadogmonitors
   dp:   deployments
   iamm: iampolicymembers
   iamp: iampolicies
