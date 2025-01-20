@@ -78,6 +78,9 @@ bindkey '^[^[[C' forward-word
 # https://github.com/zsh-users/zsh-autosuggestions#key-bindings
 bindkey '^[[Z' autosuggest-execute
 
+# https://cli.github.com
+source <(gh completion -s zsh)
+
 # https://github.com/Schniz/fnm
 eval "$(fnm env)"
 
