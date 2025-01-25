@@ -187,6 +187,9 @@ alias pv="php --version"
 # sail
 alias sail="[ -f sail ] && bash sail || bash ./vendor/bin/sail"
 
+# ssh
+alias ssh="TERM=xterm-256color ssh"
+
 # sublime text
 alias sta="st ~/.dotfiles/.aliases"
 alias stc="st ~/.ssh/config"
