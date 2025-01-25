@@ -49,6 +49,7 @@ echo "brew packages"
 PACKAGES=(
 	ack
 	ansible
+	ansible-lint
 	asciinema
 	automake
 	awscli
