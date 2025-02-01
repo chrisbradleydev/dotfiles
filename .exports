@@ -3,13 +3,13 @@
 # constants
 export ARCH=$(uname -m)
 [[ $ARCH == "arm64" ]] &&
-	export CPU="Apple silicon" &&
-	export HOMEBREW_PREFIX=/opt/homebrew &&
-	export HOMEBREW_REPOSITORY=$HOMEBREW_PREFIX
+    export CPU="Apple silicon" &&
+    export HOMEBREW_PREFIX=/opt/homebrew &&
+    export HOMEBREW_REPOSITORY=$HOMEBREW_PREFIX
 [[ $ARCH == "x86_64" ]] &&
-	export CPU="Intel" &&
-	export HOMEBREW_PREFIX=/usr/local &&
-	export HOMEBREW_REPOSITORY=$HOMEBREW_PREFIX/Homebrew
+    export CPU="Intel" &&
+    export HOMEBREW_PREFIX=/usr/local &&
+    export HOMEBREW_REPOSITORY=$HOMEBREW_PREFIX/Homebrew
 export HOMEBREW_FORCE_BREWED_CURL=1
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
@@ -27,8 +27,8 @@ export NAME_ARRAY_LENGTH=${#NAME_ARRAY[@]}
 export FIRST_NAME="Jedi"
 export LAST_NAME="Master"
 [[ $NAME_ARRAY_LENGTH -eq 2 ]] &&
-	export FIRST_NAME=${NAME_ARRAY[0]} &&
-	export LAST_NAME=${NAME_ARRAY[1]}
+    export FIRST_NAME=${NAME_ARRAY[0]} &&
+    export LAST_NAME=${NAME_ARRAY[1]}
 export NVM_AUTOLOAD=1
 export BUN_INSTALL=$HOME/.bun
 export GOPATH=$HOME/go
