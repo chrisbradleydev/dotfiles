@@ -43,7 +43,6 @@ use = [
 # super necessary plugins
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
-use = ["{{ name }}.zsh"]
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
 [plugins.zsh-syntax-highlighting]
