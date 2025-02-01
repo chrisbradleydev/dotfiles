@@ -7,8 +7,8 @@ SAVEHIST=30000
 
 # check if zplug is installed
 if [[ ! -d $ZPLUG_HOME ]]; then
-	git clone https://github.com/zplug/zplug $ZPLUG_HOME
-	source $ZPLUG_HOME/init.zsh && zplug update
+    git clone https://github.com/zplug/zplug $ZPLUG_HOME
+    source $ZPLUG_HOME/init.zsh && zplug update
 fi
 source $ZPLUG_HOME/init.zsh
 
@@ -24,13 +24,13 @@ source ~/.dotfiles/.functions
 
 # options
 setopt append_history \
-	hist_ignore_dups \
-	hist_ignore_space \
-	hist_reduce_blanks \
-	inc_append_history
+    hist_ignore_dups \
+    hist_ignore_space \
+    hist_reduce_blanks \
+    inc_append_history
 
 # apply and customize spaceship theme
-zplug "denysdovhan/spaceship-prompt", as:theme
+zplug "spaceship-prompt/spaceship-prompt", as:theme
 SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_CHAR_SYMBOL=❯
 SPACESHIP_DOCKER_SHOW=false
@@ -66,8 +66,8 @@ zplug load # --verbose
 
 # bind up and down arrow keys
 if zplug check "zsh-users/zsh-history-substring-search"; then
-	bindkey '^[[A' history-substring-search-up
-	bindkey '^[[B' history-substring-search-down
+    bindkey '^[[A' history-substring-search-up
+    bindkey '^[[B' history-substring-search-down
 fi
 
 # bind option + left and option + right
@@ -123,8 +123,8 @@ GC_SDK=$HOMEBREW_PREFIX/share/google-cloud-sdk
 [[ -s $GC_SDK/path.zsh.inc ]] && source $GC_SDK/path.zsh.inc
 
 if [[ "$(whoami)" == "chris_bradley" ]]; then
-	# platform-operator completions
-	[[ -s $HOME/go/bin/platctl ]] && source <($HOME/go/bin/platctl completion zsh)
+    # platform-operator completions
+    [[ -s $HOME/go/bin/platctl ]] && source <($HOME/go/bin/platctl completion zsh)
 fi
 
 # profiling with zprof
