@@ -1,0 +1,54 @@
+# `sheldon` configuration file
+# ----------------------------
+#
+# You can modify this file directly or you can use one of the following
+# `sheldon` commands which are provided to assist in editing the config file:
+#
+# - `sheldon add` to add a new plugin to the config file
+# - `sheldon edit` to open up the config file in the default editor
+# - `sheldon remove` to remove a plugin from the config file
+#
+# See the documentation for more https://github.com/rossmacarthur/sheldon#readme
+
+shell = "zsh"
+
+[templates]
+# https://sheldon.cli.rs/Examples.html#deferred-loading-of-plugins-in-zsh
+defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
+
+[plugins]
+# defer
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+# prompt
+[plugins.spaceship]
+github = "spaceship-prompt/spaceship-prompt"
+
+# fzf
+[plugins.fzf-tab]
+github = "Aloxaf/fzf-tab"
+
+# oh-my-zsh
+[plugins.oh-my-zsh]
+github = "ohmyzsh/ohmyzsh"
+use = [
+    "plugins/colored-man-pages/colored-man-pages.plugin.zsh",
+    "plugins/colorize/colorize.plugin.zsh",
+    "plugins/command-not-found/command-not-found.plugin.zsh",
+    "plugins/dirhistory/dirhistory.plugin.zsh",
+    "plugins/sublime/sublime.plugin.zsh",
+]
+
+# super necessary plugins
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+use = ["{{ name }}.zsh"]
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
+[plugins.zsh-history-substring-search]
+github = "zsh-users/zsh-history-substring-search"
+apply = ["defer"]
