@@ -10,9 +10,9 @@ sudo -v
 
 # keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do
-    sudo -n true
-    sleep 60
-    kill -0 "$$" || exit
+  sudo -n true
+  sleep 60
+  kill -0 "$$" || exit
 done 2>/dev/null &
 
 ###############################################################################
@@ -34,234 +34,235 @@ echo "homebrew"
 
 echo "brew taps"
 TAPS=(
-    hashicorp/tap
-    shivammathur/php
-    snyk/tap
-    teamookla/speedtest
+  hashicorp/tap
+  shivammathur/php
+  snyk/tap
+  teamookla/speedtest
 )
 
 for i in "${TAPS[@]}"; do
-    echo "brew tap $i"
-    brew tap $i
+  echo "brew tap $i"
+  brew tap $i
 done
 
 echo "brew packages"
 PACKAGES=(
-    ack
-    ansible
-    ansible-lint
-    asciinema
-    automake
-    awscli
-    bash
-    bat
-    btop
-    cmatrix
-    cocoapods
-    composer
-    coreutils
-    cowsay
-    datawire/blackbird/telepresence-arm64
-    datree
-    deno
-    dnsmasq
-    dog
-    dotnet
-    elixir
-    exiftool
-    ffmpeg
-    figlet
-    fish
-    flyctl
-    fnm
-    fortune
-    fzf
-    gh
-    git
-    git-lfs
-    gitlab-runner
-    glab
-    gnu-sed
-    gnupg
-    go
-    golang-migrate
-    hashicorp/tap/vault
-    helm
-    heroku/brew/heroku
-    htop
-    httpd
-    httpie
-    httpstat
-    hub
-    i2p
-    i2pd
-    imagemagick
-    ipcalc
-    irssi
-    jenv
-    jq
-    jrnl
-    jwbargsten/misc/defbro
-    k6
-    kind
-    knot
-    kompose
-    kubernetes-cli
-    kubeseal
-    kustomize
-    lolcat
-    maven
-    mcfly
-    minikube
-    mongosh
-    mysql
-    mysql-client
-    mysql@8.4
-    neovim
-    nginx
-    nmap
-    nushell
-    openssl
-    pgcli
-    php
-    postgresql@15
-    protobuf
-    pstree
-    pyenv
-    pyenv-virtualenv
-    rbenv
-    redis
-    ruby-build
-    rustup
-    sheldon
-    shivammathur/php/php@8.2
-    siege
-    skaffold
-    smartmontools
-    snyk
-    speedtest
-    sponge
-    sqlite
-    starship
-    stern
-    stripe/stripe-cli/stripe
-    tfenv
-    tilt-dev/tap/tilt
-    tldr
-    tmux
-    unbound
-    vercel-cli
-    w3m
-    watchman
-    wget
-    wrk
-    yarn
-    youtube-dl
-    yq
-    zig
-    zoxide
-    zsh
+  ack
+  ansible
+  ansible-lint
+  asciinema
+  automake
+  awscli
+  bash
+  bat
+  btop
+  cmatrix
+  cocoapods
+  composer
+  coreutils
+  cowsay
+  datawire/blackbird/telepresence-arm64
+  datree
+  deno
+  dnsmasq
+  dog
+  dotnet
+  elixir
+  exiftool
+  ffmpeg
+  figlet
+  fish
+  flyctl
+  fnm
+  fortune
+  fzf
+  gh
+  git
+  git-lfs
+  gitlab-runner
+  glab
+  gnu-sed
+  gnupg
+  go
+  golang-migrate
+  hashicorp/tap/vault
+  helm
+  heroku/brew/heroku
+  htop
+  httpd
+  httpie
+  httpstat
+  hub
+  i2p
+  i2pd
+  imagemagick
+  ipcalc
+  irssi
+  jenv
+  jq
+  jrnl
+  jwbargsten/misc/defbro
+  k6
+  kind
+  knot
+  kompose
+  kubernetes-cli
+  kubeseal
+  kustomize
+  lolcat
+  maven
+  mcfly
+  minikube
+  mongosh
+  mysql
+  mysql-client
+  mysql@8.4
+  neovim
+  nginx
+  nmap
+  nushell
+  openssl
+  pgcli
+  php
+  postgresql@15
+  protobuf
+  pstree
+  pyenv
+  pyenv-virtualenv
+  rbenv
+  redis
+  ruby-build
+  rustup
+  sheldon
+  shivammathur/php/php@8.2
+  siege
+  skaffold
+  smartmontools
+  snyk
+  speedtest
+  sponge
+  sqlite
+  starship
+  stern
+  stripe/stripe-cli/stripe
+  tfenv
+  tilt-dev/tap/tilt
+  tldr
+  tmux
+  unbound
+  vercel-cli
+  w3m
+  watch
+  watchman
+  wget
+  wrk
+  yarn
+  youtube-dl
+  yq
+  zig
+  zoxide
+  zsh
 )
 
 for i in "${PACKAGES[@]}"; do
-    echo "brew install $i"
-    brew install $i
+  echo "brew install $i"
+  brew install $i
 done
 
 echo "brew casks"
 CASKS=(
-    ableton-live-suite
-    adobe-creative-cloud
-    airtable
-    alacritty
-    alex313031-thorium
-    alfred
-    audacity
-    authy
-    balenaetcher
-    bartender
-    bisq
-    brave-browser
-    charles
-    chromedriver
-    daisydisk
-    dash6
-    db-browser-for-sqlite
-    deluge
-    discord
-    docker
-    drivedx
-    dropbox
-    electron-cash
-    electrum
-    electrum-ltc
-    element
-    exodus
-    firefox
-    font-hack
-    font-inconsolata
-    font-inconsolata-for-powerline
-    font-jetbrains-mono-nerd-font
-    ghostty
-    google-chrome
-    google-cloud-sdk
-    http-toolkit
-    imazing
-    insomnia
-    intellij-idea-ce
-    ipfs
-    iterm2
-    izotope-product-portal
-    jitsi
-    karabiner-elements
-    keepassxc
-    keka
-    ledger-live
-    lens
-    maccleaner-pro
-    microsoft-office
-    minecraft
-    mongodb-compass
-    monitorcontrol
-    native-access
-    netnewswire
-    ngrok
-    obs
-    openemu
-    owncloud
-    phpstorm
-    podman-desktop
-    postman
-    private-internet-access
-    protonmail-bridge
-    protonvpn
-    pycharm-ce
-    raspberry-pi-imager
-    redisinsight
-    sequel-ace
-    signal
-    slack
-    spotify
-    sublime-text
-    tableplus
-    telegram
-    tiled
-    tor-browser
-    typora
-    unity-hub
-    virtualbox
-    visual-studio
-    visual-studio-code
-    vlc
-    vmware-fusion
-    vnc-viewer
-    wireshark
-    zoom
+  ableton-live-suite
+  adobe-creative-cloud
+  airtable
+  alacritty
+  alex313031-thorium
+  alfred
+  audacity
+  authy
+  balenaetcher
+  bartender
+  bisq
+  brave-browser
+  charles
+  chromedriver
+  daisydisk
+  dash6
+  db-browser-for-sqlite
+  deluge
+  discord
+  docker
+  drivedx
+  dropbox
+  electron-cash
+  electrum
+  electrum-ltc
+  element
+  exodus
+  firefox
+  font-hack
+  font-inconsolata
+  font-inconsolata-for-powerline
+  font-jetbrains-mono-nerd-font
+  ghostty
+  google-chrome
+  google-cloud-sdk
+  http-toolkit
+  imazing
+  insomnia
+  intellij-idea-ce
+  ipfs
+  iterm2
+  izotope-product-portal
+  jitsi
+  karabiner-elements
+  keepassxc
+  keka
+  ledger-live
+  lens
+  maccleaner-pro
+  microsoft-office
+  minecraft
+  mongodb-compass
+  monitorcontrol
+  native-access
+  netnewswire
+  ngrok
+  obs
+  openemu
+  owncloud
+  phpstorm
+  podman-desktop
+  postman
+  private-internet-access
+  protonmail-bridge
+  protonvpn
+  pycharm-ce
+  raspberry-pi-imager
+  redisinsight
+  sequel-ace
+  signal
+  slack
+  spotify
+  sublime-text
+  tableplus
+  telegram
+  tiled
+  tor-browser
+  typora
+  unity-hub
+  virtualbox
+  visual-studio
+  visual-studio-code
+  vlc
+  vmware-fusion
+  vnc-viewer
+  wireshark
+  zoom
 )
 
 for i in "${CASKS[@]}"; do
-    echo "brew install cask $i"
-    brew install --cask $i
+  echo "brew install cask $i"
+  brew install --cask $i
 done
 
 echo "brew uninstall unnecessary packages"
@@ -273,35 +274,35 @@ brew uninstall node --ignore-dependencies
 
 echo "go installs"
 GO_INSTALLS=(
-    fybrik.io/crdoc
-    github.com/a-h/templ/cmd/templ
-    github.com/air-verse/air
-    github.com/alexkohler/cfmt
-    github.com/bojand/ghz/cmd/ghz
-    github.com/derailed/k9s
-    github.com/derailed/popeye
-    github.com/golangci/golangci-lint/cmd/golangci-lint
-    github.com/homeport/dyff/cmd/dyff
-    github.com/mgechev/revive
-    github.com/rakyll/hey
-    github.com/romshark/templier
-    github.com/segmentio/golines
-    github.com/spf13/cobra-cli
-    github.com/wagoodman/dive
-    golang.org/x/pkgsite/cmd/pkgsite
-    golang.org/x/tools/cmd/goimports
-    golang.org/x/tools/cmd/stringer
-    golang.org/x/tools/go/analysis/passes/fieldalignment/cmd/fieldalignment
-    golang.org/x/vuln/cmd/govulncheck
-    google.golang.org/grpc/cmd/protoc-gen-go-grpc
-    google.golang.org/protobuf/cmd/protoc-gen-go
-    honnef.co/go/tools/cmd/staticcheck
-    mvdan.cc/gofumpt
+  fybrik.io/crdoc
+  github.com/a-h/templ/cmd/templ
+  github.com/air-verse/air
+  github.com/alexkohler/cfmt
+  github.com/bojand/ghz/cmd/ghz
+  github.com/derailed/k9s
+  github.com/derailed/popeye
+  github.com/golangci/golangci-lint/cmd/golangci-lint
+  github.com/homeport/dyff/cmd/dyff
+  github.com/mgechev/revive
+  github.com/rakyll/hey
+  github.com/romshark/templier
+  github.com/segmentio/golines
+  github.com/spf13/cobra-cli
+  github.com/wagoodman/dive
+  golang.org/x/pkgsite/cmd/pkgsite
+  golang.org/x/tools/cmd/goimports
+  golang.org/x/tools/cmd/stringer
+  golang.org/x/tools/go/analysis/passes/fieldalignment/cmd/fieldalignment
+  golang.org/x/vuln/cmd/govulncheck
+  google.golang.org/grpc/cmd/protoc-gen-go-grpc
+  google.golang.org/protobuf/cmd/protoc-gen-go
+  honnef.co/go/tools/cmd/staticcheck
+  mvdan.cc/gofumpt
 )
 
 for i in "${GO_INSTALLS[@]}"; do
-    echo "go install $i"
-    go install $i@latest
+  echo "go install $i"
+  go install $i@latest
 done
 
 ###############################################################################
@@ -324,9 +325,9 @@ fnm use 20
 echo "php and composer"
 composer global update
 composer global require \
-    laravel/installer \
-    laravel/valet \
-    squizlabs/php_codesniffer
+  laravel/installer \
+  laravel/valet \
+  squizlabs/php_codesniffer
 
 ###############################################################################
 # Shell                                                                       #
@@ -518,9 +519,9 @@ sudo chflags nohidden /Volumes
 
 # expand File Info panes
 defaults write com.apple.finder FXInfoPanesExpanded -dict \
-    General -bool true \
-    OpenWith -bool true \
-    Privileges -bool true
+  General -bool true \
+  OpenWith -bool true \
+  Privileges -bool true
 
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
@@ -760,28 +761,28 @@ sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Vol
 # 	MENU_WEBSEARCH             (send search queries to Apple)
 # 	MENU_OTHER
 defaults write com.apple.spotlight orderedItems -array \
-    '{"enabled" = 1;"name" = "APPLICATIONS";}' \
-    '{"enabled" = 1;"name" = "SYSTEM_PREFS";}' \
-    '{"enabled" = 1;"name" = "DIRECTORIES";}' \
-    '{"enabled" = 1;"name" = "PDF";}' \
-    '{"enabled" = 1;"name" = "FONTS";}' \
-    '{"enabled" = 0;"name" = "DOCUMENTS";}' \
-    '{"enabled" = 0;"name" = "MESSAGES";}' \
-    '{"enabled" = 0;"name" = "CONTACT";}' \
-    '{"enabled" = 0;"name" = "EVENT_TODO";}' \
-    '{"enabled" = 0;"name" = "IMAGES";}' \
-    '{"enabled" = 0;"name" = "BOOKMARKS";}' \
-    '{"enabled" = 0;"name" = "MUSIC";}' \
-    '{"enabled" = 0;"name" = "MOVIES";}' \
-    '{"enabled" = 0;"name" = "PRESENTATIONS";}' \
-    '{"enabled" = 0;"name" = "SPREADSHEETS";}' \
-    '{"enabled" = 0;"name" = "SOURCE";}' \
-    '{"enabled" = 0;"name" = "MENU_DEFINITION";}' \
-    '{"enabled" = 0;"name" = "MENU_OTHER";}' \
-    '{"enabled" = 0;"name" = "MENU_CONVERSION";}' \
-    '{"enabled" = 0;"name" = "MENU_EXPRESSION";}' \
-    '{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
-    '{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
+  '{"enabled" = 1;"name" = "APPLICATIONS";}' \
+  '{"enabled" = 1;"name" = "SYSTEM_PREFS";}' \
+  '{"enabled" = 1;"name" = "DIRECTORIES";}' \
+  '{"enabled" = 1;"name" = "PDF";}' \
+  '{"enabled" = 1;"name" = "FONTS";}' \
+  '{"enabled" = 0;"name" = "DOCUMENTS";}' \
+  '{"enabled" = 0;"name" = "MESSAGES";}' \
+  '{"enabled" = 0;"name" = "CONTACT";}' \
+  '{"enabled" = 0;"name" = "EVENT_TODO";}' \
+  '{"enabled" = 0;"name" = "IMAGES";}' \
+  '{"enabled" = 0;"name" = "BOOKMARKS";}' \
+  '{"enabled" = 0;"name" = "MUSIC";}' \
+  '{"enabled" = 0;"name" = "MOVIES";}' \
+  '{"enabled" = 0;"name" = "PRESENTATIONS";}' \
+  '{"enabled" = 0;"name" = "SPREADSHEETS";}' \
+  '{"enabled" = 0;"name" = "SOURCE";}' \
+  '{"enabled" = 0;"name" = "MENU_DEFINITION";}' \
+  '{"enabled" = 0;"name" = "MENU_OTHER";}' \
+  '{"enabled" = 0;"name" = "MENU_CONVERSION";}' \
+  '{"enabled" = 0;"name" = "MENU_EXPRESSION";}' \
+  '{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
+  '{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
 # Load new settings before rebuilding the index
 killall mds >/dev/null 2>&1
 # Make sure indexing is enabled for the main volume
@@ -938,21 +939,21 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 ###############################################################################
 
 for app in "Activity Monitor" \
-    "Address Book" \
-    "Calendar" \
-    "cfprefsd" \
-    "Contacts" \
-    "Dock" \
-    "Finder" \
-    "Google Chrome Canary" \
-    "Google Chrome" \
-    "Mail" \
-    "Messages" \
-    "Photos" \
-    "Safari" \
-    "SystemUIServer" \
-    "Terminal" \
-    "iCal"; do
-    killall "${app}" &>/dev/null
+  "Address Book" \
+  "Calendar" \
+  "cfprefsd" \
+  "Contacts" \
+  "Dock" \
+  "Finder" \
+  "Google Chrome Canary" \
+  "Google Chrome" \
+  "Mail" \
+  "Messages" \
+  "Photos" \
+  "Safari" \
+  "SystemUIServer" \
+  "Terminal" \
+  "iCal"; do
+  killall "${app}" &>/dev/null
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
