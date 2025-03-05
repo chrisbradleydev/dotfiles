@@ -35,7 +35,6 @@ echo "homebrew"
 echo "brew taps"
 TAPS=(
     hashicorp/tap
-    shivammathur/php
     snyk/tap
     teamookla/speedtest
 )
@@ -87,6 +86,7 @@ PACKAGES=(
     golang-migrate
     hashicorp/tap/vault
     helm
+    helmify
     heroku/brew/heroku
     htop
     httpd
@@ -123,7 +123,7 @@ PACKAGES=(
     nushell
     openssl
     pgcli
-    php
+    php@8.4
     postgresql@15
     protobuf
     pstree
@@ -134,7 +134,6 @@ PACKAGES=(
     ruby-build
     rustup
     sheldon
-    shivammathur/php/php@8.2
     siege
     skaffold
     smartmontools
@@ -146,7 +145,7 @@ PACKAGES=(
     stern
     stripe/stripe-cli/stripe
     tfenv
-    tilt-dev/tap/tilt
+    tilt
     tldr
     tmux
     unbound
