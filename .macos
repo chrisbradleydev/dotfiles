@@ -336,10 +336,13 @@ rustup default stable
 
 echo "rust installs"
 RUST_INSTALLS=(
+    atac
+    glim-tui
     just
     serie
     tealdeer
     tokei
+    welle
 )
 
 for i in "${RUST_INSTALLS[@]}"; do
