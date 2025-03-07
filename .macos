@@ -311,11 +311,10 @@ done
 echo "node and npm"
 eval "$(fnm env)"
 cat >~/.nvmrc <<EOF
-20
+22
 EOF
 fnm install --lts
-fnm install 20
-fnm use 20
+fnm use 22
 
 ###############################################################################
 # PHP / Composer                                                              #
@@ -329,7 +328,27 @@ composer global require \
     squizlabs/php_codesniffer
 
 ###############################################################################
-# Shell                                                                       #
+# Rust                                                                        #
+###############################################################################
+
+echo "set rust default toolchain"
+rustup default stable
+
+echo "rust installs"
+RUST_INSTALLS=(
+    just
+    serie
+    tealdeer
+    tokei
+)
+
+for i in "${RUST_INSTALLS[@]}"; do
+    echo "cargo install $i"
+    cargo install --locked $i
+done
+
+###############################################################################
+# Symlinks                                                                    #
 ###############################################################################
 
 echo "clone dotfiles"
