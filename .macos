@@ -184,6 +184,7 @@ CASKS=(
     brave-browser
     charles
     chromedriver
+    cryptomator
     daisydisk
     dash6
     db-browser-for-sqlite
