@@ -96,6 +96,8 @@ GC_SDK=$HOMEBREW_PREFIX/share/google-cloud-sdk
 if [[ "$(whoami)" == "chris_bradley" ]]; then
     # platform-operator completions
     [[ -s $HOME/go/bin/platctl ]] && source <($HOME/go/bin/platctl completion zsh)
+    # sweetctl completions
+    [[ -s $HOME/go/bin/sweetctl ]] && source <($HOME/go/bin/sweetctl completion zsh)
 fi
 
 # profiling with zprof
