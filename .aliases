@@ -13,7 +13,7 @@ alias bs="brew services"
 alias bt="brew tap"
 alias bu="brew uninstall"
 alias buc="brew uninstall --cask"
-alias buu="brew update && brew upgrade && brew cleanup"
+alias buu="brew update && brew upgrade"
 
 # browser
 SE_DOCUMENTS="$HOME/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents"
