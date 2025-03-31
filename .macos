@@ -316,6 +316,11 @@ EOF
 fnm install --lts
 fnm use 22
 
+npm i -g \
+    @johnlindquist/ghx \
+    @johnlindquist/file-forge \
+    @johnlindquist/worktree
+
 ###############################################################################
 # PHP / Composer                                                              #
 ###############################################################################
