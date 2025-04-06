@@ -36,6 +36,7 @@ export GOBIN=$GOPATH/bin
 export CARGO_HOME=$HOME/.cargo
 export RUSTUP_HOME=$HOME/.rustup
 export PYENV_ROOT=$HOME/.pyenv
+export PNPM_HOME=$HOME/Library/pnpm
 
 # paths
 export PATH=$BUN_INSTALL/bin:$PATH
@@ -52,3 +53,4 @@ export PATH=$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH
 export PATH=$HOMEBREW_PREFIX/opt/curl/bin:$PATH
 export PATH=$HOMEBREW_PREFIX/opt/openjdk/bin:$PATH
 export PATH=$HOMEBREW_PREFIX/opt/postgresql@15/bin:$PATH
+export PATH=$PNPM_HOME:$PATH
