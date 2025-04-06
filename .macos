@@ -316,10 +316,16 @@ EOF
 fnm install --lts
 fnm use 22
 
-npm i -g \
-    @johnlindquist/ghx \
-    @johnlindquist/file-forge \
+NPM_INSTALLS=(
+    @johnlindquist/file-forge
+    @johnlindquist/ghx
     @johnlindquist/worktree
+)
+
+for i in "${NPM_INSTALLS[@]}"; do
+    echo "npm install $i"
+    npm i -g $i
+done
 
 ###############################################################################
 # PHP / Composer                                                              #
@@ -327,10 +333,17 @@ npm i -g \
 
 echo "php and composer"
 composer global update
-composer global require \
-    laravel/installer \
-    laravel/valet \
+
+COMPOSER_INSTALLS=(
+    laravel/installer
+    laravel/valet
     squizlabs/php_codesniffer
+)
+
+for i in "${COMPOSER_INSTALLS[@]}"; do
+    echo "composer install $i"
+    composer global require $i
+done
 
 ###############################################################################
 # Rust                                                                        #
