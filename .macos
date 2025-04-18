@@ -280,6 +280,7 @@ GO_INSTALLS=(
     github.com/bojand/ghz/cmd/ghz
     github.com/derailed/k9s
     github.com/derailed/popeye
+    github.com/go-delve/delve/cmd/dlv
     github.com/golangci/golangci-lint/cmd/golangci-lint
     github.com/homeport/dyff/cmd/dyff
     github.com/mgechev/revive
