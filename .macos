@@ -149,6 +149,7 @@ PACKAGES=(
     tilt
     tldr
     tmux
+    tree
     unbound
     vercel-cli
     w3m
