@@ -82,6 +82,9 @@ eval "$(pyenv virtualenv-init -)"
 # https://github.com/rbenv/rbenv
 eval "$(rbenv init - zsh)"
 
+# https://github.com/regclient/regclient
+eval "$(regctl completion zsh)"
+
 # https://github.com/ajeetdsouza/zoxide
 eval "$(zoxide init zsh)"
 
