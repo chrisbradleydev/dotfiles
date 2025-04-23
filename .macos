@@ -65,6 +65,7 @@ PACKAGES=(
     deno
     dnsmasq
     dog
+    dos2unix
     dotnet
     elixir
     exiftool
