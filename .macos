@@ -131,6 +131,7 @@ PACKAGES=(
     pyenv-virtualenv
     rbenv
     redis
+    regclient
     ruby-build
     rustup
     sheldon
