@@ -55,6 +55,9 @@ eval "$(fnm env)"
 # https://cli.github.com
 source <(gh completion -s zsh)
 
+# https://gitlab.com/gitlab-org/cli
+source <(glab completion -s zsh)
+
 # https://github.com/helm/helm
 source <(helm completion zsh)
 
