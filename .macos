@@ -127,6 +127,7 @@ PACKAGES=(
     php@8.4
     postgresql@15
     protobuf
+    protoc-gen-grpc-web
     pstree
     pyenv
     pyenv-virtualenv
@@ -283,6 +284,7 @@ GO_INSTALLS=(
     github.com/bojand/ghz/cmd/ghz
     github.com/derailed/k9s
     github.com/derailed/popeye
+    github.com/favadi/protoc-go-inject-tag
     github.com/go-delve/delve/cmd/dlv
     github.com/golangci/golangci-lint/cmd/golangci-lint
     github.com/homeport/dyff/cmd/dyff
