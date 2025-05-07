@@ -285,6 +285,7 @@ GO_INSTALLS=(
     github.com/derailed/k9s
     github.com/derailed/popeye
     github.com/favadi/protoc-go-inject-tag
+    github.com/fullstorydev/grpcurl/cmd/grpcurl
     github.com/go-delve/delve/cmd/dlv
     github.com/golangci/golangci-lint/cmd/golangci-lint
     github.com/homeport/dyff/cmd/dyff
