@@ -75,6 +75,7 @@ PACKAGES=(
     flyctl
     fnm
     fortune
+    fswatch
     fzf
     gh
     git
