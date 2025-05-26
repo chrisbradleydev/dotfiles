@@ -47,4 +47,4 @@ kubernetes_context_and_namespace() {
 }
 
 # https://zsh.sourceforge.io/Doc/Release/Functions.html
-add-zsh-hook chpwd auto_update_quokka_node_path
+# add-zsh-hook chpwd auto_update_quokka_node_path
