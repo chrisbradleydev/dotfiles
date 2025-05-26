@@ -150,8 +150,8 @@ PACKAGES=(
     stripe/stripe-cli/stripe
     tfenv
     tilt
-    tldr
     tmux
+    tor
     tree
     unbound
     vercel-cli
