@@ -93,6 +93,7 @@ PACKAGES=(
     htop
     httpd
     httpie
+    httping
     httpstat
     hub
     i2p
