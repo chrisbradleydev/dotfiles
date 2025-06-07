@@ -124,7 +124,7 @@ alias ht="helm template"
 alias hu="helm uninstall"
 
 # ip
-alias ip="ifconfig -l | xargs -n1 ipconfig getifaddr"
+alias ipl="ifconfig -l | xargs -n1 ipconfig getifaddr"
 alias ip4="dig @resolver1.opendns.com A myip.opendns.com +short -4"
 alias ip6="dig @resolver1.opendns.com AAAA myip.opendns.com +short -6"
 
