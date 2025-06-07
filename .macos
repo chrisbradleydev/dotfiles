@@ -100,6 +100,7 @@ PACKAGES=(
     i2pd
     imagemagick
     ipcalc
+    iproute2mac
     irssi
     jenv
     jq
@@ -122,6 +123,7 @@ PACKAGES=(
     mysql@8.4
     neovim
     nginx
+    ngrok
     nmap
     nushell
     openssl
@@ -231,7 +233,6 @@ CASKS=(
     monitorcontrol
     native-access
     netnewswire
-    ngrok
     obs
     openemu
     owncloud
