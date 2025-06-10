@@ -1,3 +1,13 @@
+syntax on
+set autoindent
 set ignorecase
-set smartcase
 set incsearch
+set list
+set listchars=tab:\|-,trail:_
+set nocompatible
+set number
+set ruler
+set shiftwidth=4
+set smartcase
+set tabstop=4
+set textwidth=80
