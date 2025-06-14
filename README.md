@@ -1,10 +1,22 @@
 # dotfiles
 
-Clone the repository to home directory and execute the `.macos` script.
+> Living that shell life
+
+## Prerequisites
+
+- macOS
+
+## Installation
+
+### Clone the Repository
 
 ```sh
-cd
 git clone https://github.com/chrisbradleydev/dotfiles.git .dotfiles
 cd .dotfiles
+```
+
+### Run the guided setup script
+
+```sh
 ./macos
 ```
