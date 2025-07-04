@@ -298,6 +298,7 @@ GO_INSTALLS=(
     github.com/segmentio/golines
     github.com/spf13/cobra-cli
     github.com/wagoodman/dive
+    github.com/yannh/kubeconform/cmd/kubeconform
     golang.org/x/pkgsite/cmd/pkgsite
     golang.org/x/tools/cmd/goimports
     golang.org/x/tools/cmd/stringer
