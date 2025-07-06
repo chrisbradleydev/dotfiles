@@ -145,6 +145,7 @@ PACKAGES=(
     skaffold
     smartmontools
     snyk
+    sops
     speedtest
     sponge
     sqlite
