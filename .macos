@@ -88,6 +88,7 @@ PACKAGES=(
     golang-migrate
     hashicorp/tap/vault
     helm
+    helmfile
     helmify
     heroku/brew/heroku
     htop
