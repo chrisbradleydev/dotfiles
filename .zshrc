@@ -35,8 +35,8 @@ setopt append_history \
     inc_append_history
 
 # bind up and down arrow keys
-bindkey '$terminfo[kcuu1]' history-substring-search-up
-bindkey '$terminfo[kcud1]' history-substring-search-down
+bindkey '\eOA' history-substring-search-up
+bindkey '\eOB' history-substring-search-down
 
 ## bind option + left and option + right
 #bindkey '^[^[[D' backward-word
