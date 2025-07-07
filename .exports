@@ -36,6 +36,7 @@ export RUSTUP_HOME=$HOME/.rustup
 export PYENV_ROOT=$HOME/.pyenv
 export PNPM_HOME=$HOME/Library/pnpm
 export GLAB_SEND_TELEMETRY=false
+export GPG_TTY=$(tty)
 
 # paths
 export PATH=$BUN_INSTALL/bin:$PATH
