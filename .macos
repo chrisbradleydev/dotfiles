@@ -330,6 +330,7 @@ fnm install --lts
 fnm use 22
 
 NPM_INSTALLS=(
+    @google/gemini-cli
     @johnlindquist/file-forge
     @johnlindquist/ghx
     @johnlindquist/worktree
