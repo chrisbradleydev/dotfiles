@@ -101,6 +101,7 @@ PACKAGES=(
     i2pd
     imagemagick
     ipcalc
+    iperf3
     iproute2mac
     irssi
     jenv
