@@ -52,5 +52,5 @@ export PATH=${KREW_ROOT:-$HOME/.krew}/bin:$PATH
 export PATH=$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH
 export PATH=$HOMEBREW_PREFIX/opt/curl/bin:$PATH
 export PATH=$HOMEBREW_PREFIX/opt/openjdk/bin:$PATH
-export PATH=$HOMEBREW_PREFIX/opt/postgresql@15/bin:$PATH
+export PATH=$HOMEBREW_PREFIX/opt/postgresql@17/bin:$PATH
 export PATH=$PNPM_HOME:$PATH
