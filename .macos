@@ -131,7 +131,7 @@ PACKAGES=(
     openssl
     pgcli
     php@8.4
-    postgresql@15
+    postgresql@17
     protobuf
     protoc-gen-grpc-swift
     protoc-gen-grpc-web
