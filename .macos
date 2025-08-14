@@ -291,6 +291,7 @@ GO_INSTALLS=(
     github.com/air-verse/air
     github.com/alexkohler/cfmt
     github.com/bojand/ghz/cmd/ghz
+    github.com/bokwoon95/wgo
     github.com/bufbuild/buf/cmd/buf
     github.com/derailed/k9s
     github.com/derailed/popeye
