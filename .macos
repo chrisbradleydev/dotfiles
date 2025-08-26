@@ -194,6 +194,7 @@ CASKS=(
     authy
     bartender
     bisq
+    blender
     brave-browser
     charles
     chromedriver
