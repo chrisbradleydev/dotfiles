@@ -382,6 +382,7 @@ RUST_INSTALLS=(
     serie
     tealdeer
     tokei
+    viddy
     welle
 )
 
