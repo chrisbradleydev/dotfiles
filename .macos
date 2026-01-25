@@ -342,6 +342,7 @@ NPM_INSTALLS=(
     @johnlindquist/file-forge
     @johnlindquist/ghx
     @johnlindquist/worktree
+    @sourcegraph/amp
 )
 
 for i in "${NPM_INSTALLS[@]}"; do
