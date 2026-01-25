@@ -37,6 +37,7 @@ export PYENV_ROOT=$HOME/.pyenv
 export PNPM_HOME=$HOME/Library/pnpm
 export GLAB_SEND_TELEMETRY=false
 export GPG_TTY=$(tty)
+export ANDROID_HOME=$HOME/Library/Android/sdk
 
 # paths
 export PATH=$BUN_INSTALL/bin:$PATH
@@ -48,6 +49,7 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
 export PATH=$HOME/.jenv/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
+export PATH=$HOME/flutter/bin:$PATH
 export PATH=${KREW_ROOT:-$HOME/.krew}/bin:$PATH
 export PATH=$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH
 export PATH=$HOMEBREW_PREFIX/opt/curl/bin:$PATH
