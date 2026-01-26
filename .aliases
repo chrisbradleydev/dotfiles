@@ -28,15 +28,9 @@ alias dbfn="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt org.mozilla.night
 alias obb="open $SE_DOCUMENTS/Brave\ Browser\ Private.app"
 alias obc="open $SE_DOCUMENTS/Google\ Chrome\ Incognito.app"
 
-# composer
-alias c="composer"
-alias cda="composer dump-autoload"
-alias cg="composer global"
-alias ci="composer install"
-alias co="composer outdated"
-alias cr="composer require"
-alias cu="composer uninstall"
-alias cv="composer --version"
+# cursor
+alias c="open . -a Cursor"
+alias cdot="open ~/.dotfiles -a Cursor"
 
 # directory
 alias cd-="cd -"
@@ -103,10 +97,11 @@ alias gsp="git stash pop"
 
 # golang
 alias gbo="go build -o"
+alias ggu="go get -u ./..."
 alias gmt="go mod tidy"
 alias gr.="go run ."
 alias grr.="go run -race ."
-alias grm="go run main.go"
+alias grt="go test -v ./..."
 
 # grep
 alias grep="grep --color=auto"
@@ -143,14 +138,6 @@ alias krc="kubectl config current-context"
 alias krn='kubectl config get-contexts --no-headers "$(krc)" | awk "{print \$5}" | sed "s/^$/default/"'
 alias ksr='kubectl scale --replicas'
 
-# minikube
-alias mk="minikube"
-alias mka="minikube addons"
-alias mks="minikube service"
-
-# node
-alias nv="node -v"
-
 # npm
 alias naf="npm audit fix"
 alias ncc="npm cache clean --force"
@@ -171,19 +158,6 @@ alias nrss="npm run ssr:serve"
 alias nrst="npm run start"
 alias nrt="npm run test"
 alias nrw="npm run watch"
-
-# php
-alias pa="php artisan"
-alias pamc="php artisan make:component"
-alias pamm="php artisan make:model"
-alias pams="php artisan make:seeder"
-alias pamt="php artisan make:test"
-alias pasi="php artisan sail:install"
-alias pat="php artisan test"
-alias pv="php --version"
-
-# sail
-alias sail="[ -f sail ] && bash sail || bash ./vendor/bin/sail"
 
 # ssh
 alias ssh="TERM=xterm-256color ssh"
@@ -206,10 +180,4 @@ alias tf="terraform"
 
 # vscode
 alias vs="open . -a \"Visual Studio Code\""
-alias vsd="open ~/.dotfiles -a \"Visual Studio Code\""
-
-# yarn
-alias yb="yarn build"
-alias yd="yarn dev"
-alias yg="yarn global list"
-alias ys="yarn serve"
+alias vsdot="open ~/.dotfiles -a \"Visual Studio Code\""
