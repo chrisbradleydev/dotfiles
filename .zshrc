@@ -73,6 +73,9 @@ source <(kind completion zsh)
 # https://github.com/kubernetes/kubernetes
 source <(kubectl completion zsh)
 
+# https://github.com/iximiuz/labctl
+source <(labctl completion zsh)
+
 # https://github.com/cantino/mcfly
 eval "$(mcfly init zsh)"
 
