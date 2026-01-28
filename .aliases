@@ -177,6 +177,7 @@ alias stzp="st ~/.zprofile"
 
 # terraform
 alias tf="terraform"
+alias tfp="terraform plan"
 
 # vscode
 alias vs="open . -a \"Visual Studio Code\""
