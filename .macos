@@ -380,6 +380,7 @@ RUST_INSTALLS=(
     atac
     glim-tui
     just
+    just-lsp
     serie
     tealdeer
     tokei
