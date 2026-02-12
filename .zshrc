@@ -103,6 +103,8 @@ GC_SDK=$HOMEBREW_PREFIX/share/google-cloud-sdk
 [[ -s $GC_SDK/path.zsh.inc ]] && source $GC_SDK/path.zsh.inc
 
 if [[ "$(whoami)" == "chris_bradley" ]]; then
+    # changie-git-analyzer completions
+    [[ -s $HOME/go/bin/changie-git-analyzer ]] && source <($HOME/go/bin/changie-git-analyzer completion zsh)
     # platform-operator completions
     [[ -s $HOME/go/bin/platctl ]] && source <($HOME/go/bin/platctl completion zsh)
     # sweetctl completions
