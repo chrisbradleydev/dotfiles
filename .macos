@@ -399,6 +399,7 @@ done
 
 echo "clone dotfiles"
 git clone https://github.com/chrisbradleydev/dotfiles.git "${HOME}/.dotfiles"
+ln -s "${HOME}/.dotfiles/k9s" "${HOME}/Library/Application Support/k9s"
 ln -s "${HOME}/.dotfiles/ghostty" "${HOME}/.config/ghostty"
 ln -s "${HOME}/.dotfiles/sheldon" "${HOME}/.config/sheldon"
 ln -s "${HOME}/.dotfiles/nvim" "${HOME}/.config/nvim"
