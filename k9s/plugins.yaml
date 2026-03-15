@@ -15,30 +15,23 @@ plugins:
     description: Add debug container
     scopes:
       - containers
-    command: bash
+    command: sh
     background: false
     confirm: true
     args:
       - -c
-      - "kubectl debug -it -n=$NAMESPACE $POD --target=$NAME --image=nicolaka/netshoot:v0.11 --share-processes -- bash"
+      - "kubectl debug -it -n=$NAMESPACE $POD --target=$NAME --image=docker.io/library/busybox:latest --share-processes -- sh"
   stern:
     shortCut: Ctrl-L
     confirm: false
     description: "Logs <stern>"
     scopes:
       - po
-    command: kubectl
+    command: sh
     background: false
     args:
-      - kubectl
-      - stern
-      - --tail
-      - 10
-      - $FILTER
-      - -n
-      - $NAMESPACE
-      - --context
-      - $CONTEXT
+      - -c
+      - "kubectl stern --tail 10 $FILTER -n $NAMESPACE --context $CONTEXT"
   watch-events:
     shortCut: Shift-E
     confirm: false
