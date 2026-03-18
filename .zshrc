@@ -103,12 +103,16 @@ GC_SDK=$HOMEBREW_PREFIX/share/google-cloud-sdk
 [[ -s $GC_SDK/path.zsh.inc ]] && source $GC_SDK/path.zsh.inc
 
 if [[ "$(whoami)" == "chris_bradley" ]]; then
-    # changie-git-analyzer completions
-    [[ -s $HOME/go/bin/changie-git-analyzer ]] && source <($HOME/go/bin/changie-git-analyzer completion zsh)
-    # platform-operator completions
-    [[ -s $HOME/go/bin/platctl ]] && source <($HOME/go/bin/platctl completion zsh)
-    # sweetctl completions
-    [[ -s $HOME/go/bin/sweetctl ]] && source <($HOME/go/bin/sweetctl completion zsh)
+    BREWBIN=$HOMEBREW_PREFIX/bin
+
+    CHANGIE=$BREWBIN/changie-git-analyzer
+    [[ -s $CHANGIE ]] && source <($CHANGIE completion zsh)
+
+    PLATCTL=$GOBIN/platctl
+    [[ -s $PLATCTL ]] && source <($PLATCTL completion zsh)
+
+    SWEETCTL=$BREWBIN/sweetctl
+    [[ -s $SWEETCTL ]] && source <($SWEETCTL completion zsh)
 fi
 
 # profiling with zprof
