@@ -145,6 +145,7 @@ PACKAGES=(
     rustup
     sheldon
     siege
+    sipcalc
     skaffold
     smartmontools
     snyk
