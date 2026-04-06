@@ -3,15 +3,16 @@ return {
 		"neovim/nvim-lspconfig",
 		opts = {
 			diagnostics = { virtual_text = { prefix = "icons" } },
-			capabilities = {
-				workspace = {
-					didChangeWatchedFiles = {
-						dynamicRegistration = false,
+			servers = {
+				["*"] = {
+					capabilities = {
+						workspace = {
+							didChangeWatchedFiles = {
+								dynamicRegistration = false,
+							},
+						},
 					},
 				},
-			},
-			---@type lspconfig.options
-			servers = {
 				lua_ls = {
 					-- cmd = { "/home/folke/projects/lua-language-server/bin/lua-language-server" },
 					-- single_file_support = true,
