@@ -105,13 +105,16 @@ GC_SDK=$HOMEBREW_PREFIX/share/google-cloud-sdk
 if [[ "$(whoami)" == "chris_bradley" ]]; then
     BREWBIN=$HOMEBREW_PREFIX/bin
 
-    CHANGIE=$BREWBIN/changie-git-analyzer
+    # CHANGIE=$BREWBIN/changie-git-analyzer
+    # CHANGIE=$GOBIN/changie-git-analyzer
     [[ -s $CHANGIE ]] && source <($CHANGIE completion zsh)
 
+    PLATCTL=$BREWBIN/platctl
     PLATCTL=$GOBIN/platctl
     [[ -s $PLATCTL ]] && source <($PLATCTL completion zsh)
 
     SWEETCTL=$BREWBIN/sweetctl
+    SWEETCTL=$GOBIN/sweetctl
     [[ -s $SWEETCTL ]] && source <($SWEETCTL completion zsh)
 fi
 
