@@ -39,8 +39,12 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # bind option + left and option + right
-bindkey '^[^[[D' backward-word
-bindkey '^[^[[C' forward-word
+# terminal
+bindkey '^[b' backward-word
+bindkey '^[f' forward-word
+# vscode
+bindkey '\e[1;3D' backward-word
+bindkey '\e[1;3C' forward-word
 
 # bind shift + tab
 # https://github.com/zsh-users/zsh-autosuggestions#key-bindings
