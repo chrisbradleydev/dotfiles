@@ -55,6 +55,7 @@ PACKAGES=(
     bash
     bat
     btop
+    bufbuild/buf/buf
     cmatrix
     cocoapods
     composer
