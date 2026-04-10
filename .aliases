@@ -36,7 +36,7 @@ alias cdot="open ~/.dotfiles -a Cursor"
 alias cd-="cd -"
 alias cd..="cd .."
 alias ll="ls -lah --color=auto"
-alias lsg="ls -lah | grep"
+alias lsg="ls -lah | grep -i"
 alias o="open ."
 
 # docker
