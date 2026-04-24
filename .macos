@@ -308,6 +308,7 @@ GO_INSTALLS=(
     github.com/romshark/templier
     github.com/segmentio/golines
     github.com/spf13/cobra-cli
+    github.com/sqlc-dev/sqlc/cmd/sqlc
     github.com/wagoodman/dive
     github.com/yannh/kubeconform/cmd/kubeconform
     golang.org/x/pkgsite/cmd/pkgsite
