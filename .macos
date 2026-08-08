@@ -34,8 +34,10 @@ echo "homebrew"
 
 echo "brew taps"
 TAPS=(
+    bufbuild/buf
+    docker/tap
     hashicorp/tap
-    snyk/tap
+    jwbargsten/misc
     teamookla/speedtest
 )
 
@@ -56,6 +58,7 @@ PACKAGES=(
     bat
     btop
     bufbuild/buf/buf
+    bun
     cmatrix
     cocoapods
     composer
@@ -149,7 +152,6 @@ PACKAGES=(
     sipcalc
     skaffold
     smartmontools
-    snyk
     sops
     speedtest
     sponge
@@ -334,23 +336,21 @@ done
 echo "node and npm"
 eval "$(fnm env)"
 cat >~/.nvmrc <<EOF
-22
+24
 EOF
 fnm install --lts
-fnm use 22
+fnm use 24
 
-NPM_INSTALLS=(
-    @anthropic-ai/claude-code
+BUN_INSTALLS=(
+    @earendil-works/pi-coding-agent
     @google/gemini-cli
-    @johnlindquist/file-forge
-    @johnlindquist/ghx
-    @johnlindquist/worktree
     @sourcegraph/amp
+    snyk
 )
 
-for i in "${NPM_INSTALLS[@]}"; do
-    echo "npm install $i"
-    npm i -g $i
+for i in "${BUN_INSTALLS[@]}"; do
+    echo "bun install $i"
+    bun i -g --ignore-scripts $i
 done
 
 ###############################################################################
