@@ -39,6 +39,8 @@ export GLAB_SEND_TELEMETRY=false
 export GPG_TTY=$(tty)
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export RBENV_HOME=$HOME/.rbenv
+export VISUAL="subl --wait"
+export EDITOR=$VISUAL
 
 # paths
 export PATH=$BUN_INSTALL/bin:$PATH
