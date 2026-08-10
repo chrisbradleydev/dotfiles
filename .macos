@@ -350,7 +350,7 @@ BUN_INSTALLS=(
 
 for i in "${BUN_INSTALLS[@]}"; do
     echo "bun install $i"
-    bun i -g --ignore-scripts $i
+    bun i -g $i
 done
 
 ###############################################################################
