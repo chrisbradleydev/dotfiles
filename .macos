@@ -342,9 +342,9 @@ fnm install --lts
 fnm use 24
 
 BUN_INSTALLS=(
+    @ampcode/cli
     @earendil-works/pi-coding-agent
     @google/gemini-cli
-    @sourcegraph/amp
     snyk
 )
 
