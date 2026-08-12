@@ -1,5 +1,11 @@
+# https://herdr.dev/docs/config-reference/
+
 onboarding = false
 
 [keys]
 # optional (default is "ctrl+b")
 # prefix = "ctrl+b"
+
+# worktree
+open_worktree = "prefix+shift+o"
+remove_worktree = "prefix+shift+p"
