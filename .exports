@@ -39,6 +39,7 @@ export GLAB_SEND_TELEMETRY=false
 export GPG_TTY=$(tty)
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export RBENV_HOME=$HOME/.rbenv
+export K9S_CONFIG_DIR=$HOME/.config/k9s
 
 # paths
 export PATH=$BUN_INSTALL/bin:$PATH
