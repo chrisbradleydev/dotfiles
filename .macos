@@ -38,7 +38,6 @@ TAPS=(
     docker/tap
     hashicorp/tap
     jwbargsten/misc
-    teamookla/speedtest
 )
 
 for i in "${TAPS[@]}"; do
@@ -75,8 +74,6 @@ PACKAGES=(
     exiftool
     ffmpeg
     figlet
-    fish
-    flyctl
     fnm
     fortune
     fswatch
@@ -94,7 +91,6 @@ PACKAGES=(
     helm
     helmfile
     helmify
-    heroku/brew/heroku
     htop
     httpd
     httpie
@@ -153,11 +149,9 @@ PACKAGES=(
     skaffold
     smartmontools
     sops
-    speedtest
     sponge
     sqlite
     starship
-    stern
     stripe/stripe-cli/stripe
     swift-protobuf
     tfenv
@@ -173,7 +167,6 @@ PACKAGES=(
     wget
     wrk
     xcodegen
-    yarn
     yq
     yt-dlp
     zig
@@ -190,12 +183,8 @@ echo "brew casks"
 CASKS=(
     ableton-live-suite
     adobe-creative-cloud
-    airtable
-    alacritty
-    alex313031-thorium
     alfred
     audacity
-    authy
     bartender
     bisq
     blender
@@ -229,7 +218,6 @@ CASKS=(
     insomnia
     intellij-idea-ce
     ipfs
-    iterm2
     izotope-product-portal
     jitsi
     karabiner-elements
