@@ -333,6 +333,7 @@ BUN_INSTALLS=(
     @ampcode/cli
     @earendil-works/pi-coding-agent
     @google/gemini-cli
+    @openai/codex
     snyk
 )
 
