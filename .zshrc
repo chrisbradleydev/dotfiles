@@ -65,6 +65,9 @@ source <(glab completion -s zsh)
 # https://github.com/helm/helm
 source <(helm completion zsh)
 
+# https://github.com/herdrdev/herdr
+source <(herdr completion zsh)
+
 # https://github.com/istio/istio
 source <(istioctl completion zsh)
 
