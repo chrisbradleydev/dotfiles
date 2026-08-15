@@ -1,14 +1,11 @@
 #!/usr/bin/env zsh
 
+# %x → path of the file being executed (.functions)
+# :A → resolve symlinks / canonical path
+# :h → parent directory (the repo root)
+source "${${(%):-%x}:A:h}/.colors"
+
 preexec() {
-    # https://en.wikipedia.org/wiki/ANSI_escape_code
-    local G="\033[0;32m"
-    local _G="\033[1;4;32m"
-    local B="\033[0;34m"
-    local _B="\033[1;4;34m"
-    local Y="\033[0;33m"
-    local _Y="\033[1;4;33m"
-    local RS="\033[0m"
     echo "${G}\U21B3${RS} ${_Y}${1}${RS} ${B}@${RE} ${G}$(date '+%Y-%m-%d %H:%M:%S')${RS}"
 }
 
@@ -41,8 +38,6 @@ google() {
 }
 
 kubernetes_context_and_namespace() {
-    local _Y="\033[1;4;33m"
-    local RS="\033[0m"
     echo "  Context: ${_Y}$(krc)${RS}\nNamespace: ${_Y}$(krn)${RS}"
 }
 
