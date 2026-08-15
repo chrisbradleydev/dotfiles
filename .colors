@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# https://en.wikipedia.org/wiki/ANSI_escape_code
+readonly  R=$'\033[0;31m'
+readonly _R=$'\033[1;4;31m'
+readonly  G=$'\033[0;32m'
+readonly _G=$'\033[1;4;32m'
+readonly  Y=$'\033[0;33m'
+readonly _Y=$'\033[1;4;33m'
+readonly  B=$'\033[0;34m'
+readonly _B=$'\033[1;4;34m'
+readonly  C=$'\033[0;36m'
+readonly _C=$'\033[1;4;36m'
+readonly  M=$'\033[0;35m'
+readonly _M=$'\033[1;4;35m'
+readonly  W=$'\033[0;37m'
+readonly _W=$'\033[1;4;37m'
+readonly RS=$'\033[0m'
+readonly BD=$'\033[1m'
