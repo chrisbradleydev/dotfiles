@@ -1,8 +1,37 @@
+#!/usr/bin/env zsh
+
+# zsh modules
+# https://zsh.sourceforge.io/Doc/Release/Zsh-Modules.html
+# uncomment zmodload and zprof to enable profiling
 # zmodload zsh/zprof
+
+# %x → path of the file being executed (.zshrc)
+# :A → resolve symlinks / canonical path
+# :h → parent directory (the repo root)
+export DOTFILES="${${(%):-%x}:A:h}"
+readonly DOTFILES
+
+fpath=($HOME/.local/share/zsh/functions $fpath)
 skip_global_compinit=1
-HISTFILE=~/.zsh_history
+HISTFILE=$HOME/.zsh_history
 HISTSIZE=30000
 SAVEHIST=30000
+
+# zsh options
+# https://zsh.sourceforge.io/Doc/Release/Options-Index.html
+# navigation
+# https://zsh.sourceforge.io/Doc/Release/Options.html#Changing-Directories
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+setopt PUSHD_SILENT
+# history
+# https://zsh.sourceforge.io/Doc/Release/Options.html#History
+setopt APPEND_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt INC_APPEND_HISTORY
 
 # spaceship-prompt options
 SPACESHIP_CHAR_SUFFIX=" "
@@ -14,29 +43,27 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 # fzf options
 export FZF_DEFAULT_OPTS="--border --layout=reverse --no-sort --prompt=\"ಠ_ಠ \""
 
-# load plugins
-eval "$(/opt/homebrew/bin/sheldon source)"
-
-fpath=(~/.local/share/zsh/functions $fpath)
+# functions
+# https://zsh.sourceforge.io/Doc/Release/Functions-Index.html
 autoload -Uz add-zsh-hook
 autoload -Uz compinit
+
+# aliases, colors, exports, and functions
+source $DOTFILES/.aliases
+source $DOTFILES/.colors
+source $DOTFILES/.exports
+source $DOTFILES/.functions
+
+# load plugins
+eval "$(sheldon source)"
+
+# compinit
+# https://zsh.sourceforge.io/Doc/Release/Completion-System.html#Use-of-compinit
 compinit -u
 
-# aliases, exports, and functions
-source ~/.dotfiles/.aliases
-source ~/.dotfiles/.exports
-source ~/.dotfiles/.functions
-
-# options
-setopt append_history \
-    hist_ignore_all_dups \
-    hist_ignore_space \
-    hist_reduce_blanks \
-    inc_append_history
-
-# bind up and down arrow keys
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+# bind after deferred history-substring-search loads
+zsh-defer bindkey '^[[A' history-substring-search-up
+zsh-defer bindkey '^[[B' history-substring-search-down
 
 # bind option + left and option + right
 # terminal
@@ -125,5 +152,5 @@ if [[ "$(whoami)" == "chris_bradley" ]]; then
     [[ -s $SWEETCTL ]] && source <($SWEETCTL completion zsh)
 fi
 
-# profiling with zprof
+# uncomment zmodload and zprof to enable profiling
 # zprof
