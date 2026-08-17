@@ -1,14 +1,5 @@
 #!/usr/bin/env zsh
 
-# %x → path of the file being executed (.functions)
-# :A → resolve symlinks / canonical path
-# :h → parent directory (the repo root)
-source "${${(%):-%x}:A:h}/.colors"
-
-preexec() {
-    echo "${G}\U21B3${RS} ${_Y}${1}${RS} ${B}@${RE} ${G}$(date '+%Y-%m-%d %H:%M:%S')${RS}"
-}
-
 auto_switch_node_version() {
     if [[ -f .nvmrc ]]; then
         CURRENT_NODE_VERSION=$(fnm current)
@@ -31,15 +22,14 @@ auto_update_quokka_node_path() {
     fi
 }
 
-google() {
-    query=$(perl -MURI::Escape -e 'print uri_escape($ARGV[0])' "$*")
-    url="https://google.com/search?q=$query"
-    w3m "$url"
-}
-
 kubernetes_context_and_namespace() {
     echo "  Context: ${_Y}$(krc)${RS}\nNamespace: ${_Y}$(krn)${RS}"
 }
 
+preexec_timestamp() {
+    echo "${G}\U21B3${RS} ${_Y}${1}${RS} ${B}@${RE} ${G}$(date '+%Y-%m-%d %H:%M:%S')${RS}"
+}
+
 # https://zsh.sourceforge.io/Doc/Release/Functions.html
 # add-zsh-hook chpwd auto_update_quokka_node_path
+add-zsh-hook preexec preexec_timestamp
