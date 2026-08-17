@@ -162,7 +162,6 @@ PACKAGES=(
     tree
     unbound
     vercel-cli
-    w3m
     watch
     watchman
     wget
