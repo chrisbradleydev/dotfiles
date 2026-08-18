@@ -48,10 +48,11 @@ export FZF_DEFAULT_OPTS="--border --layout=reverse --no-sort --prompt=\"ಠ_ಠ 
 autoload -Uz add-zsh-hook
 autoload -Uz compinit
 
-# aliases, colors, exports, and functions
+# order matters
+# exports first, then aliases, colors, and functions
+source $DOTFILES/.exports
 source $DOTFILES/.aliases
 source $DOTFILES/.colors
-source $DOTFILES/.exports
 source $DOTFILES/.functions
 
 # load plugins
