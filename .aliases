@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# gnu overides
+alias grep="$HOMEBREW_PREFIX/bin/ggrep"
+alias make="$HOMEBREW_PREFIX/bin/gmake"
+alias sed="$HOMEBREW_PREFIX/bin/gsed"
+
 # brew
 alias b="brew"
 alias bc="brew cleanup"
@@ -102,9 +107,6 @@ alias gmt="go mod tidy"
 alias gr.="go run ."
 alias grr.="go run -race ."
 alias grt="go test -v ./..."
-
-# grep
-alias grep="grep --color=auto"
 
 # helm
 alias h="helm"
