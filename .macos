@@ -88,6 +88,7 @@ PACKAGES=(
     gnupg
     go
     golang-migrate
+    govc
     hashicorp/tap/vault
     helm
     helmfile
@@ -117,6 +118,7 @@ PACKAGES=(
     kubeseal
     kustomize
     lolcat
+    make
     maven
     mcfly
     minikube
