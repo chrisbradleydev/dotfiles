@@ -11,8 +11,8 @@
 ### Clone the Repository
 
 ```sh
-git clone https://github.com/chrisbradleydev/dotfiles.git .dotfiles
-cd .dotfiles
+git clone https://github.com/chrisbradleydev/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
 ```
 
 ### Run the guided setup script
