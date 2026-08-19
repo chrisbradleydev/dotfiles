@@ -9,7 +9,6 @@
 # :A → resolve symlinks / canonical path
 # :h → parent directory (the repo root)
 export DOTFILES="${${(%):-%x}:A:h}"
-readonly DOTFILES
 
 fpath=($HOME/.local/share/zsh/functions $fpath)
 skip_global_compinit=1
