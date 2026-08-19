@@ -85,6 +85,7 @@ PACKAGES=(
     gitlab-runner
     glab
     gnu-sed
+    gnu-tar
     gnupg
     go
     golang-migrate
