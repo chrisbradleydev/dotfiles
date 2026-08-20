@@ -394,6 +394,7 @@ done
 
 echo "clone dotfiles"
 git clone https://github.com/chrisbradleydev/dotfiles.git "${HOME}/.dotfiles"
+ln -s "${HOME}/.dotfiles/.agents"         "${HOME}/.agents"
 ln -s "${HOME}/.dotfiles/.config/ghostty" "${HOME}/.config/ghostty"
 ln -s "${HOME}/.dotfiles/.config/k9s"     "${HOME}/.config/k9s"
 ln -s "${HOME}/.dotfiles/.config/herdr"   "${HOME}/.config/herdr"
