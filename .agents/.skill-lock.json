@@ -1,0 +1,60 @@
+{
+  "version": 3,
+  "skills": {
+    "herdr": {
+      "source": "herdrdev/herdr",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/herdrdev/herdr.git",
+      "skillPath": "skills/herdr/SKILL.md",
+      "skillFolderHash": "f8bb649bb92ddc99e6af463ab9a635da98c7b129",
+      "installedAt": "2026-08-13T22:16:24.882Z",
+      "updatedAt": "2026-08-20T20:30:15.904Z"
+    },
+    "technical-writing": {
+      "source": "cursor/plugins",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cursor/plugins.git",
+      "skillPath": "pstack/skills/technical-writing/SKILL.md",
+      "skillFolderHash": "08b040cf2ec3e053b51d08ea0a56138483b87697",
+      "installedAt": "2026-08-20T20:29:30.345Z",
+      "updatedAt": "2026-08-20T20:29:30.345Z"
+    },
+    "unslop": {
+      "source": "cursor/plugins",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cursor/plugins.git",
+      "skillPath": "pstack/skills/unslop/SKILL.md",
+      "skillFolderHash": "6161508c5c7959b156ff0e4e10b510863b51f9cc",
+      "installedAt": "2026-08-20T20:30:00.453Z",
+      "updatedAt": "2026-08-20T20:30:00.453Z"
+    },
+    "self-optimizing-system": {
+      "source": "chrisbradleydev/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/chrisbradleydev/skills.git",
+      "skillPath": "self-optimizing-system/SKILL.md",
+      "skillFolderHash": "0d90cb7ba3a10506ded3e92ec6f5d0e96bc6b144",
+      "installedAt": "2026-08-20T20:30:56.811Z",
+      "updatedAt": "2026-08-20T20:30:56.811Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "antigravity-cli",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed",
+    "claude-code"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/chrisbradleydev/skills/refs/heads/main/self-optimizing-system/schema/artifact.schema.json",
+  "title": "Self-Optimizing System Artifact",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "data": {
+      "type": "object",
+      "description": "Data is an intentionally unstructured key value map which can evolve over time.",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "metadata": {
+      "$ref": "#/$defs/ArtifactMeta",
+      "description": "Standard metadata stored with every Artifact."
+    }
+  },
+  "$defs": {
+    "ArtifactMeta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "annotations": {
+          "type": "object",
+          "description": "Annotations is an intentionally unstructured key value map which can evolve over time.",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "creationTimestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "CreationTimestamp is represented in RFC3339 form and is in UTC."
+        }
+      }
+    }
+  }
+}
