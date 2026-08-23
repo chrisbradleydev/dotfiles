@@ -1,0 +1,12 @@
+{
+  "lastChangelogVersion": "0.84.2",
+  "theme": "catppuccin-macchiato",
+  "defaultProvider": "anthropic",
+  "defaultModel": "claude-opus-5",
+  "defaultThinkingLevel": "medium",
+  "enableInstallTelemetry": false,
+  "quietStartup": false,
+  "externalEditor": "vim",
+  "npmCommand": ["bun"],
+  "packages": []
+}

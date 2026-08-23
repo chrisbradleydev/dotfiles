@@ -1,0 +1,23 @@
+{
+  "name": ".pi",
+  "type": "module",
+  "private": true,
+  "packageManager": "bun@1.4.0",
+  "workspaces": [
+    "agent/extensions/*"
+  ],
+  "scripts": {
+    "check": "echo 'Workspace checks go here'"
+  },
+  "dependencies": {
+    "@earendil-works/pi-ai": "^0.84.2",
+    "@earendil-works/pi-coding-agent": "^0.84.2",
+    "@earendil-works/pi-tui": "^0.84.2"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.0"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  }
+}
