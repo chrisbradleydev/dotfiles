@@ -20,3 +20,8 @@ cd ~/.dotfiles
 ```sh
 ./macos
 ```
+
+## Acknowledgments
+
+- [Mathias Bynens](https://github.com/mathiasbynens)
+- [Dillon Mulroy](https://github.com/dmmulroy)
