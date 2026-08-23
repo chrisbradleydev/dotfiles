@@ -401,6 +401,7 @@ ln -s "${HOME}/.dotfiles/.config/k9s"     "${HOME}/.config/k9s"
 ln -s "${HOME}/.dotfiles/.config/herdr"   "${HOME}/.config/herdr"
 ln -s "${HOME}/.dotfiles/.config/nvim"    "${HOME}/.config/nvim"
 ln -s "${HOME}/.dotfiles/.config/sheldon" "${HOME}/.config/sheldon"
+ln -s "${HOME}/.dotfiles/.pi"             "${HOME}/.pi"
 ln -s "${HOME}/.dotfiles/.vimrc"          "${HOME}/.vimrc"
 ln -s "${HOME}/.dotfiles/.zshrc"          "${HOME}/.zshrc"
 
