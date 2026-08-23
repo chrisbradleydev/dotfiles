@@ -25,3 +25,4 @@ cd ~/.dotfiles
 
 - [Mathias Bynens](https://github.com/mathiasbynens)
 - [Dillon Mulroy](https://github.com/dmmulroy)
+- [Lauren Tan](https://github.com/poteto)
