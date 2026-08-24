@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.84.2",
+  "lastChangelogVersion": "0.84.3",
   "theme": "catppuccin-macchiato",
   "defaultProvider": "openai",
   "defaultModel": "gpt-5.6-sol",
