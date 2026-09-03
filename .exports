@@ -40,7 +40,7 @@ export K9S_CONFIG_DIR=$HOME/.config/k9s
 # editor drives the config-editing aliases in the shared .aliases; set here
 # (exports is sourced before aliases) so the aliases can expand it
 case $DOTFILES_OS in
-    darwin) export EDITOR=subl ;;
+    darwin) export EDITOR=nvim ;;
     *)      export EDITOR=vim ;;
 esac
 
