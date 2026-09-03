@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-- macOS
+- macOS or Linux
 
 ## Installation
 

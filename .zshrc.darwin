@@ -1,0 +1,40 @@
+#!/usr/bin/env zsh
+
+# macOS-only .zshrc key bindings and completions
+
+# bind after deferred history-substring-search loads
+zsh-defer bindkey '^[[A' history-substring-search-up
+zsh-defer bindkey '^[[B' history-substring-search-down
+
+# bind option + left and option + right
+# terminal
+bindkey '^[b' backward-word
+bindkey '^[f' forward-word
+# vscode
+bindkey '\e[1;3D' backward-word
+bindkey '\e[1;3C' forward-word
+
+# bind shift + tab
+# https://github.com/zsh-users/zsh-autosuggestions#key-bindings
+bindkey '^[[Z' autosuggest-execute
+
+# google cloud sdk completions
+GC_SDK=$HOMEBREW_PREFIX/share/google-cloud-sdk
+[[ -s $GC_SDK/completion.zsh.inc ]] && source $GC_SDK/completion.zsh.inc
+[[ -s $GC_SDK/path.zsh.inc ]] && source $GC_SDK/path.zsh.inc
+
+if [[ "$(whoami)" == "chris_bradley" ]]; then
+    BREWBIN=$HOMEBREW_PREFIX/bin
+
+    # CHANGIE=$BREWBIN/changie-git-analyzer
+    # CHANGIE=$GOBIN/changie-git-analyzer
+    [[ -s $CHANGIE ]] && source <($CHANGIE completion zsh)
+
+    PLATCTL=$BREWBIN/platctl
+    PLATCTL=$GOBIN/platctl
+    [[ -s $PLATCTL ]] && source <($PLATCTL completion zsh)
+
+    SWEETCTL=$BREWBIN/sweetctl
+    # SWEETCTL=$GOBIN/sweetctl
+    [[ -s $SWEETCTL ]] && source <($SWEETCTL completion zsh)
+fi

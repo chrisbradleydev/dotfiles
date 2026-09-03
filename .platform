@@ -1,0 +1,17 @@
+#!/usr/bin/env zsh
+
+# platform detection and capability helpers
+# sourced first so DOTFILES_OS and have() are available everywhere
+
+# $OSTYPE is set by zsh itself, so this costs no fork
+case $OSTYPE in
+    darwin*) DOTFILES_OS=darwin ;;
+    linux*)  DOTFILES_OS=linux ;;
+    *)       DOTFILES_OS=unknown ;;
+esac
+export DOTFILES_OS
+
+# have <cmd> is true when $1 is an executable on PATH.
+# zsh invalidates the $commands hash on PATH assignment, so this stays
+# correct even after .exports rewrites PATH.
+have() { (( $+commands[$1] )) }

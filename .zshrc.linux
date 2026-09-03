@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+# linux-only .zshrc key bindings
+
+# bind after deferred history-substring-search loads
+zsh-defer bindkey '\eOA' history-substring-search-up
+zsh-defer bindkey '\eOB' history-substring-search-down

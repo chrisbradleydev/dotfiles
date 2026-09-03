@@ -1,48 +1,10 @@
-#!/usr/bin/env bash
-
-# gnu overides
-alias grep="$HOMEBREW_PREFIX/bin/ggrep"
-alias make="$HOMEBREW_PREFIX/bin/gmake"
-alias sed="$HOMEBREW_PREFIX/bin/gsed"
-
-# brew
-alias b="brew"
-alias bc="brew cleanup"
-alias bd="brew doctor"
-alias bh="brew help"
-alias bi="brew install"
-alias bic="brew install --cask"
-alias bl="brew list"
-alias blg="brew list | grep"
-alias bs="brew services"
-alias bt="brew tap"
-alias bu="brew uninstall"
-alias buc="brew uninstall --cask"
-alias buu="brew update && brew upgrade"
-
-# browser
-SE_DOCUMENTS="$HOME/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents"
-alias dbb="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt com.brave.Browser"
-alias dbbn="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt com.brave.Browser.nightly"
-alias dbc="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt com.google.Chrome"
-alias dbcc="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt com.google.Chrome.canary"
-alias dbs="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt com.apple.Safari"
-alias dbsp="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt com.apple.SafariTechnologyPreview"
-alias dbf="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt org.mozilla.firefox"
-alias dbfn="osascript $SE_DOCUMENTS/Set\ Default\ Browser.scpt org.mozilla.nightly"
-alias obb="open $SE_DOCUMENTS/Brave\ Browser\ Private.app"
-alias obc="open $SE_DOCUMENTS/Google\ Chrome\ Incognito.app"
-
-# cursor
-alias c="open . -a Cursor"
-alias cdot="open ~/.dotfiles -a Cursor"
+#!/usr/bin/env zsh
 
 # directory
 alias cd-="cd -"
 alias cd..="cd .."
 alias ll="ls -lah --color=auto"
 alias lsg="ls -lah | grep -i"
-alias o="open ."
 
 # docker
 alias d="docker"
@@ -121,7 +83,6 @@ alias ht="helm template"
 alias hu="helm uninstall"
 
 # ip
-alias ipl="ifconfig -l | xargs -n1 ipconfig getifaddr"
 alias ip4="dig @resolver1.opendns.com A myip.opendns.com +short -4"
 alias ip6="dig @resolver1.opendns.com AAAA myip.opendns.com +short -6"
 
@@ -164,23 +125,19 @@ alias nrw="npm run watch"
 # ssh
 alias ssh="TERM=xterm-256color ssh"
 
-# sublime text
-alias sta="subl ~/.dotfiles/.aliases"
-alias stc="subl ~/.ssh/config"
-alias ste="subl ~/.dotfiles/.exports"
-alias stf="subl ~/.dotfiles/.functions"
-alias sth="subl /etc/hosts"
-alias stk="subl ~/.ssh/known_hosts"
-alias stq="subl ~/.quokka/config.json"
-alias sts="subl /etc/shells"
-alias stz="subl ~/.dotfiles/.zshrc"
-alias stzh="subl ~/.zsh_history"
-alias stzp="subl ~/.zprofile"
+# edit config (uses $EDITOR, set per-platform in .exports)
+alias sta="$EDITOR ~/.dotfiles/.aliases"
+alias stc="$EDITOR ~/.ssh/config"
+alias ste="$EDITOR ~/.dotfiles/.exports"
+alias stf="$EDITOR ~/.dotfiles/.functions"
+alias sth="$EDITOR /etc/hosts"
+alias stk="$EDITOR ~/.ssh/known_hosts"
+alias stq="$EDITOR ~/.quokka/config.json"
+alias sts="$EDITOR /etc/shells"
+alias stz="$EDITOR ~/.dotfiles/.zshrc"
+alias stzh="$EDITOR ~/.zsh_history"
+alias stzp="$EDITOR ~/.zprofile"
 
 # terraform
 alias tf="terraform"
 alias tfp="terraform plan"
-
-# vscode
-alias vs="open . -a \"Visual Studio Code\""
-alias vsdot="open ~/.dotfiles -a \"Visual Studio Code\""

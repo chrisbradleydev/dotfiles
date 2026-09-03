@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+# linux-only aliases, sourced after the shared .aliases
+
+# directory
+alias o="xdg-open ."
+
+# ip
+alias ipl="ip -brief address show dev eth0 | awk '{print $3}' | cut -d/ -f1"

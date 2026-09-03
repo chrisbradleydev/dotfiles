@@ -37,8 +37,13 @@ use = [
     "plugins/colorize/colorize.plugin.zsh",
     "plugins/command-not-found/command-not-found.plugin.zsh",
     "plugins/dirhistory/dirhistory.plugin.zsh",
-    "plugins/sublime/sublime.plugin.zsh",
 ]
+
+# macOS-only oh-my-zsh
+[plugins.oh-my-zsh-darwin]
+github = "ohmyzsh/ohmyzsh"
+profiles = ["darwin"]
+use = ["plugins/sublime/sublime.plugin.zsh"]
 
 # super necessary plugins
 [plugins.zsh-autosuggestions]

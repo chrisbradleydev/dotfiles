@@ -1,32 +1,30 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # constants
 export ARCH=$(uname -m)
-[[ $ARCH == "arm64" ]] &&
-    export CPU="Apple silicon" &&
-    export HOMEBREW_PREFIX=/opt/homebrew &&
-    export HOMEBREW_REPOSITORY=$HOMEBREW_PREFIX
-[[ $ARCH == "x86_64" ]] &&
-    export CPU="Intel" &&
-    export HOMEBREW_PREFIX=/usr/local &&
-    export HOMEBREW_REPOSITORY=$HOMEBREW_PREFIX/Homebrew
-export HOMEBREW_FORCE_BREWED_CURL=1
-export HOMEBREW_NO_ANALYTICS=1
-export HOMEBREW_NO_AUTO_UPDATE=1
-export HOMEBREW_CELLAR=$HOMEBREW_PREFIX/Cellar
 export PAGER=/usr/bin/less
 export CLICOLOR=1
-export DOTNET_ROOT=$HOMEBREW_PREFIX/opt/dotnet/libexec
 export HOST_UID=$(id -u)
 export USERNAME=$(whoami)
-export NAME=$(eval "dscl . -read "/Users/$(whoami | awk '{print $1}')" RealName | sed -n 's/^ //g;2p'")
-export NAME_ARRAY=($NAME)
+
+# real name lookup differs per platform
+# resolved here (not in the .exports.$os sibling) because the derived
+# NAME_ARRAY / FIRST_NAME / LAST_NAME logic below is shared and the sibling
+# is sourced after this file
+case $DOTFILES_OS in
+    darwin) export NAME=$(dscl . -read "/Users/$USERNAME" RealName | sed -n 's/^ //g;2p') ;;
+    linux)  export NAME=$(getent passwd "$USERNAME" | cut -d: -f5 | cut -d, -f1) ;;
+esac
+# ${=NAME} forces word splitting; zsh does not split unquoted params by default
+export NAME_ARRAY=(${=NAME})
 export NAME_ARRAY_LENGTH=${#NAME_ARRAY[@]}
 export FIRST_NAME="Jedi"
 export LAST_NAME="Master"
+# zsh arrays are 1-indexed
 [[ $NAME_ARRAY_LENGTH -eq 2 ]] &&
-    export FIRST_NAME=${NAME_ARRAY[0]} &&
-    export LAST_NAME=${NAME_ARRAY[1]}
+    export FIRST_NAME=${NAME_ARRAY[1]} &&
+    export LAST_NAME=${NAME_ARRAY[2]}
+
 export NVM_AUTOLOAD=1
 export BUN_INSTALL=$HOME/.bun
 export GOPATH=$HOME/go
@@ -34,30 +32,40 @@ export GOBIN=$GOPATH/bin
 export CARGO_HOME=$HOME/.cargo
 export RUSTUP_HOME=$HOME/.rustup
 export PYENV_ROOT=$HOME/.pyenv
-export PNPM_HOME=$HOME/Library/pnpm
 export GLAB_SEND_TELEMETRY=false
 export GPG_TTY=$(tty)
-export ANDROID_HOME=$HOME/Library/Android/sdk
 export RBENV_HOME=$HOME/.rbenv
 export K9S_CONFIG_DIR=$HOME/.config/k9s
 
+# editor drives the config-editing aliases in the shared .aliases; set here
+# (exports is sourced before aliases) so the aliases can expand it
+case $DOTFILES_OS in
+    darwin) export EDITOR=subl ;;
+    *)      export EDITOR=vim ;;
+esac
+
 # paths
-export PATH=$BUN_INSTALL/bin:$PATH
-export PATH=$CARGO_HOME/bin:$PATH
-export PATH=$GOBIN:$PATH
-export PATH=$PYENV_ROOT/bin:$PATH
-export PATH=$PYENV_ROOT/shims:$PATH
-export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/.composer/vendor/bin:$PATH
-export PATH=$HOME/.docker/bin:$PATH
-export PATH=$HOME/.jenv/bin:$PATH
-export PATH=$RBENV_HOME/bin:$PATH
-export PATH=$RBENV_HOME/versions/$(cat $RBENV_HOME/version)/bin:$PATH
-export PATH=$HOME/flutter/bin:$PATH
-export PATH=${KREW_ROOT:-$HOME/.krew}/bin:$PATH
-export PATH=$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH
-export PATH=$HOMEBREW_PREFIX/opt/curl/bin:$PATH
-export PATH=$HOMEBREW_PREFIX/opt/openjdk/bin:$PATH
-export PATH=$HOMEBREW_PREFIX/opt/postgresql@17/bin:$PATH
-export PATH=$HOMEBREW_PREFIX/opt/rustup/bin:$PATH
-export PATH=$PNPM_HOME:$PATH
+# an array literal reads top-to-bottom (first entry = highest priority).
+# os-specific entries (e.g. homebrew) are prepended by the .exports.$os sibling.
+typeset -U path PATH
+path=(
+    $HOME/.local/bin
+    $BUN_INSTALL/bin
+    $CARGO_HOME/bin
+    $GOBIN
+    $PYENV_ROOT/bin
+    $PYENV_ROOT/shims
+    $RBENV_HOME/bin
+    $HOME/.composer/vendor/bin
+    $HOME/.docker/bin
+    $HOME/.jenv/bin
+    $HOME/flutter/bin
+    ${KREW_ROOT:-$HOME/.krew}/bin
+    $path
+)
+# the active ruby version's bin, only if rbenv has a version pinned
+[[ -r $RBENV_HOME/version ]] &&
+    path=($RBENV_HOME/versions/$(cat $RBENV_HOME/version)/bin $path)
+
+# keep only directories that exist
+path=($^path(N-/))

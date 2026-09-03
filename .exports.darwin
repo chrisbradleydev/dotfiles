@@ -1,0 +1,32 @@
+#!/usr/bin/env zsh
+
+# macOS-only exports, sourced after the shared .exports
+
+# homebrew, keyed off the cpu architecture
+[[ $ARCH == "arm64" ]] &&
+    export CPU="Apple silicon" &&
+    export HOMEBREW_PREFIX=/opt/homebrew &&
+    export HOMEBREW_REPOSITORY=$HOMEBREW_PREFIX
+[[ $ARCH == "x86_64" ]] &&
+    export CPU="Intel" &&
+    export HOMEBREW_PREFIX=/usr/local &&
+    export HOMEBREW_REPOSITORY=$HOMEBREW_PREFIX/Homebrew
+export HOMEBREW_FORCE_BREWED_CURL=1
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_CELLAR=$HOMEBREW_PREFIX/Cellar
+
+export DOTNET_ROOT=$HOMEBREW_PREFIX/opt/dotnet/libexec
+export ANDROID_HOME=$HOME/Library/Android/sdk
+
+# prepend homebrew paths at highest priority, then drop any that don't exist
+path=(
+    $HOMEBREW_PREFIX/bin
+    $HOMEBREW_PREFIX/sbin
+    $HOMEBREW_PREFIX/opt/curl/bin
+    $HOMEBREW_PREFIX/opt/openjdk/bin
+    $HOMEBREW_PREFIX/opt/postgresql@17/bin
+    $HOMEBREW_PREFIX/opt/rustup/bin
+    $path
+)
+path=($^path(N-/))

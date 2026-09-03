@@ -47,110 +47,82 @@ export FZF_DEFAULT_OPTS="--border --layout=reverse --no-sort --prompt=\"ಠ_ಠ 
 autoload -Uz add-zsh-hook
 autoload -Uz compinit
 
+# platform detection and have() helper
+source $DOTFILES/.platform
+
 # order matters
 # exports first, then aliases, colors, and functions
-source $DOTFILES/.exports
-source $DOTFILES/.aliases
-source $DOTFILES/.colors
-source $DOTFILES/.functions
+# each shared file may have an optional .$DOTFILES_OS sibling
+for f in exports aliases colors functions; do
+    source $DOTFILES/.$f
+    [[ -r $DOTFILES/.$f.$DOTFILES_OS ]] && source $DOTFILES/.$f.$DOTFILES_OS
+done
 
 # load plugins
+export SHELDON_PROFILE=$DOTFILES_OS
 eval "$(sheldon source)"
 
 # compinit
 # https://zsh.sourceforge.io/Doc/Release/Completion-System.html#Use-of-compinit
 compinit -u
 
-# bind after deferred history-substring-search loads
-zsh-defer bindkey '^[[A' history-substring-search-up
-zsh-defer bindkey '^[[B' history-substring-search-down
-
-# bind option + left and option + right
-# terminal
-bindkey '^[b' backward-word
-bindkey '^[f' forward-word
-# vscode
-bindkey '\e[1;3D' backward-word
-bindkey '\e[1;3C' forward-word
-
-# bind shift + tab
-# https://github.com/zsh-users/zsh-autosuggestions#key-bindings
-bindkey '^[[Z' autosuggest-execute
-
 # https://docs.docker.com/engine/cli/completion/#zsh
-source <(docker completion zsh)
+have docker && source <(docker completion zsh)
 
 # https://github.com/Schniz/fnm
-eval "$(fnm env)"
+have fnm && eval "$(fnm env)"
 
 # https://cli.github.com
-source <(gh completion -s zsh)
+have gh && source <(gh completion -s zsh)
 
 # https://gitlab.com/gitlab-org/cli
-source <(glab completion -s zsh)
+have glab && source <(glab completion -s zsh)
 
 # https://github.com/helm/helm
-source <(helm completion zsh)
+have helm && source <(helm completion zsh)
 
 # https://github.com/herdrdev/herdr
-source <(herdr completion zsh)
+have herdr && source <(herdr completion zsh)
 
 # https://github.com/istio/istio
-source <(istioctl completion zsh)
+have istioctl && source <(istioctl completion zsh)
 
 # https://github.com/jenv/jenv
-eval "$(jenv init -)"
+have jenv && eval "$(jenv init -)"
 
 # https://github.com/kubernetes-sigs/kind
-source <(kind completion zsh)
+have kind && source <(kind completion zsh)
 
 # https://github.com/kubernetes/kubernetes
-source <(kubectl completion zsh)
+have kubectl && source <(kubectl completion zsh)
 
 # https://github.com/iximiuz/labctl
-source <(labctl completion zsh)
+have labctl && source <(labctl completion zsh)
 
 # https://github.com/cantino/mcfly
-eval "$(mcfly init zsh)"
+have mcfly && eval "$(mcfly init zsh)"
 
 # https://github.com/pyenv/pyenv
-eval "$(pyenv init -)"
+have pyenv && eval "$(pyenv init -)"
 
 # https://github.com/pyenv/pyenv-virtualenv
-eval "$(pyenv virtualenv-init -)"
+have pyenv && eval "$(pyenv virtualenv-init -)"
 
 # https://github.com/rbenv/rbenv
-eval "$(rbenv init - zsh)"
+have rbenv && eval "$(rbenv init - zsh)"
 
 # https://github.com/regclient/regclient
-eval "$(regctl completion zsh)"
+have regctl && eval "$(regctl completion zsh)"
 
 # https://github.com/ajeetdsouza/zoxide
-eval "$(zoxide init zsh)"
+have zoxide && eval "$(zoxide init zsh)"
 
 # bun completions
 [[ -s $HOME/.bun/_bun ]] && source $HOME/.bun/_bun
 
-# google cloud sdk completions
-GC_SDK=$HOMEBREW_PREFIX/share/google-cloud-sdk
-[[ -s $GC_SDK/completion.zsh.inc ]] && source $GC_SDK/completion.zsh.inc
-[[ -s $GC_SDK/path.zsh.inc ]] && source $GC_SDK/path.zsh.inc
-
-if [[ "$(whoami)" == "chris_bradley" ]]; then
-    BREWBIN=$HOMEBREW_PREFIX/bin
-
-    # CHANGIE=$BREWBIN/changie-git-analyzer
-    # CHANGIE=$GOBIN/changie-git-analyzer
-    [[ -s $CHANGIE ]] && source <($CHANGIE completion zsh)
-
-    PLATCTL=$BREWBIN/platctl
-    PLATCTL=$GOBIN/platctl
-    [[ -s $PLATCTL ]] && source <($PLATCTL completion zsh)
-
-    SWEETCTL=$BREWBIN/sweetctl
-    # SWEETCTL=$GOBIN/sweetctl
-    [[ -s $SWEETCTL ]] && source <($SWEETCTL completion zsh)
-fi
+# os-specific and per-machine overrides
+[[ -r $DOTFILES/.zshrc.$DOTFILES_OS ]] && source $DOTFILES/.zshrc.$DOTFILES_OS
+[[ -r $DOTFILES/.zshrc.local ]] && source $DOTFILES/.zshrc.local
 
 # uncomment zmodload and zprof to enable profiling
 # zprof
