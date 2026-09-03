@@ -6,4 +6,4 @@
 alias o="xdg-open ."
 
 # ip
-alias ipl="ip -brief address show dev eth0 | awk '{print $3}' | cut -d/ -f1"
+alias ipl='ip -4 -o addr show dev eth0 | sed -n "s/.*inet \([^\/]*\)\/.*/\1/p"'
