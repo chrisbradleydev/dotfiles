@@ -10,7 +10,6 @@
 # :h → parent directory (the repo root)
 export DOTFILES="${${(%):-%x}:A:h}"
 
-fpath=($HOME/.local/share/zsh/functions $fpath)
 skip_global_compinit=1
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=30000
@@ -62,42 +61,25 @@ done
 export SHELDON_PROFILE=$DOTFILES_OS
 eval "$(sheldon source)"
 
+# completions: your own overrides first, then brew formulas, then system.
+# $HOMEBREW_PREFIX is set by the .exports.$os sibling above; compinit reads
+# fpath below. (N-/) drops entries whose directory doesn't exist.
+typeset -U fpath FPATH
+fpath=(
+    $HOME/.local/share/zsh/functions(N-/)
+    $HOMEBREW_PREFIX/share/zsh/site-functions(N-/)
+    $fpath
+)
+
 # compinit
 # https://zsh.sourceforge.io/Doc/Release/Completion-System.html#Use-of-compinit
 compinit -u
 
-# https://docs.docker.com/engine/cli/completion/#zsh
-have docker && source <(docker completion zsh)
-
 # https://github.com/Schniz/fnm
 have fnm && eval "$(fnm env)"
 
-# https://cli.github.com
-have gh && source <(gh completion -s zsh)
-
-# https://gitlab.com/gitlab-org/cli
-have glab && source <(glab completion -s zsh)
-
-# https://github.com/helm/helm
-have helm && source <(helm completion zsh)
-
-# https://github.com/herdrdev/herdr
-have herdr && source <(herdr completion zsh)
-
-# https://github.com/istio/istio
-have istioctl && source <(istioctl completion zsh)
-
 # https://github.com/jenv/jenv
 have jenv && eval "$(jenv init -)"
-
-# https://github.com/kubernetes-sigs/kind
-have kind && source <(kind completion zsh)
-
-# https://github.com/kubernetes/kubernetes
-have kubectl && source <(kubectl completion zsh)
-
-# https://github.com/iximiuz/labctl
-have labctl && source <(labctl completion zsh)
 
 # https://github.com/cantino/mcfly
 have mcfly && eval "$(mcfly init zsh)"
@@ -110,9 +92,6 @@ have pyenv && eval "$(pyenv virtualenv-init -)"
 
 # https://github.com/rbenv/rbenv
 have rbenv && eval "$(rbenv init - zsh)"
-
-# https://github.com/regclient/regclient
-have regctl && eval "$(regctl completion zsh)"
 
 # https://github.com/ajeetdsouza/zoxide
 have zoxide && eval "$(zoxide init zsh)"
