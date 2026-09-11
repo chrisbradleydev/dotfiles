@@ -1,0 +1,16 @@
+#!/usr/bin/env zsh
+
+# linux-only exports, sourced after the shared .exports
+
+export HOMEBREW_PREFIX=/home/linuxbrew/.linuxbrew
+export HOMEBREW_REPOSITORY=$HOMEBREW_PREFIX/Homebrew
+export HOMEBREW_CELLAR=$HOMEBREW_PREFIX/Cellar
+
+# prepend homebrew paths at highest priority, then drop any that don't exist
+path=(
+    $HOMEBREW_PREFIX/bin
+    $HOMEBREW_PREFIX/sbin
+    $HOMEBREW_PREFIX/opt/curl/bin
+    $path
+)
+path=($^path(N-/))

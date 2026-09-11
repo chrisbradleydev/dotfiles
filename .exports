@@ -25,6 +25,11 @@ export LAST_NAME="Master"
     export FIRST_NAME=${NAME_ARRAY[1]} &&
     export LAST_NAME=${NAME_ARRAY[2]}
 
+# cross-platform homebrew settings
+export HOMEBREW_FORCE_BREWED_CURL=1
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 export NVM_AUTOLOAD=1
 export BUN_INSTALL=$HOME/.bun
 export GOPATH=$HOME/go
