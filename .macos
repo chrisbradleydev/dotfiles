@@ -165,6 +165,7 @@ PACKAGES=(
     tor
     tree
     unbound
+    uv
     vercel-cli
     watch
     watchman
