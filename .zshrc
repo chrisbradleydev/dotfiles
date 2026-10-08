@@ -66,6 +66,7 @@ eval "$(sheldon source)"
 # fpath below. (N-/) drops entries whose directory doesn't exist.
 typeset -U fpath FPATH
 fpath=(
+    $HOME/.zfunc(N-/)
     $HOME/.local/share/zsh/functions(N-/)
     $HOMEBREW_PREFIX/share/zsh/site-functions(N-/)
     $fpath
