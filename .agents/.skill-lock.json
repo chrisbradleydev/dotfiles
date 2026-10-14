@@ -6,27 +6,27 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/herdrdev/herdr.git",
       "skillPath": "skills/herdr/SKILL.md",
-      "skillFolderHash": "f8bb649bb92ddc99e6af463ab9a635da98c7b129",
+      "skillFolderHash": "2be0d86d481d1bb29c62e11ef37b78d27d01b478",
       "installedAt": "2026-08-13T22:16:24.882Z",
-      "updatedAt": "2026-08-20T20:30:15.904Z"
+      "updatedAt": "2026-10-13T18:34:26.735Z"
     },
     "technical-writing": {
       "source": "cursor/plugins",
       "sourceType": "github",
       "sourceUrl": "https://github.com/cursor/plugins.git",
       "skillPath": "pstack/skills/technical-writing/SKILL.md",
-      "skillFolderHash": "08b040cf2ec3e053b51d08ea0a56138483b87697",
+      "skillFolderHash": "f35560fd015d95ae92eb3c7414d3a48065299dfa",
       "installedAt": "2026-08-20T20:29:30.345Z",
-      "updatedAt": "2026-08-20T20:29:30.345Z"
+      "updatedAt": "2026-10-13T18:34:30.749Z"
     },
     "unslop": {
       "source": "cursor/plugins",
       "sourceType": "github",
       "sourceUrl": "https://github.com/cursor/plugins.git",
       "skillPath": "pstack/skills/unslop/SKILL.md",
-      "skillFolderHash": "6161508c5c7959b156ff0e4e10b510863b51f9cc",
+      "skillFolderHash": "4e572dd70e5557f490e3991c52ea58f0dcee8936",
       "installedAt": "2026-08-20T20:30:00.453Z",
-      "updatedAt": "2026-08-20T20:30:00.453Z"
+      "updatedAt": "2026-10-13T18:34:32.316Z"
     },
     "self-optimizing-system": {
       "source": "chrisbradleydev/skills",
