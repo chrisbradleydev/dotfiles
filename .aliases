@@ -98,8 +98,8 @@ alias ht="helm template"
 alias hu="helm uninstall"
 
 # ip
-alias ip4="dig @resolver1.opendns.com A myip.opendns.com +short -4"
-alias ip6="dig @resolver1.opendns.com AAAA myip.opendns.com +short -6"
+alias ip4="kdig @resolver1.opendns.com A myip.opendns.com +short -4 +tls"
+alias ip6="kdig @resolver1.opendns.com AAAA myip.opendns.com +short -6 +tls"
 
 # kubernetes
 alias k="kubectl"
