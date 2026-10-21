@@ -159,6 +159,7 @@ PACKAGES=(
     starship
     stripe/stripe-cli/stripe
     swift-protobuf
+    tea
     tfenv
     tilt
     tmux
