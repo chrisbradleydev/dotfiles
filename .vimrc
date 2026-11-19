@@ -1,5 +1,6 @@
 syntax on
 set autoindent
+set expandtab
 set ignorecase
 set incsearch
 set list
@@ -7,7 +8,8 @@ set listchars=tab:\|-,trail:_
 set nocompatible
 set number
 set ruler
-set shiftwidth=4
+set shiftwidth=2
 set smartcase
-set tabstop=4
+set softtabstop=2
+set tabstop=2
 set textwidth=80
