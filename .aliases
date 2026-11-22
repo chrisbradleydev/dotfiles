@@ -2,9 +2,8 @@
 
 # brew
 alias b="brew"
-alias bc="brew cleanup"
+alias bcp="brew cleanup --prune=all"
 alias bd="brew doctor"
-alias bh="brew help"
 alias bi="brew install"
 alias bic="brew install --cask"
 alias bl="brew list"
